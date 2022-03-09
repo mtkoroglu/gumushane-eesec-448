@@ -11,13 +11,13 @@ bağlantısından çok önce kayıt olup $57 ödemiştim. Ayrıca Adrian Rosebro
 
 https://www.pyimagesearch.com/pyimagesearch-university/
 
-Bu plana yaklaşık olarak $300 gibi bir ücretle kaydolabiliyorsunuz. Bu programdaki **OpenCV 101 — OpenCV Basics** dersindeki adımları bu derste işleyeceğiz. Sizin bu kurs ve planlara kaydolmanız zorunlu değil.
+Bu plana yaklaşık olarak $300 gibi bir ücretle kaydolabiliyorsunuz. Adrian'ın **pyimagesearch university** planından **OpenCV 101 — OpenCV Basics** dersinde öğretilen konuları bu derste işleyeceğiz. Sizlerin bu kurs ve planlara kaydolmanız zorunlu değil. DBS ve bu sayfayı takip ederseniz yeterli olacaktır.
 
-Buradaki projelerimizde **Python 3.9.6** ve **OpenCV 4.5.5** kullanıyoruz. Aşağıda açıklamalarını/sonuçlarını gördüğünüz projelerin **py** ve **ipynb** uzantılı (bazen MATLAB ve C++ kodlarını da koyabiliriz ki MATLAB kodlarının uzantısı **m** iken C++ kodlarının uzantısı **cpp** olarak görünecektir) kodları yukarıda **project** isimli dosyada bulabilirsiniz. Bilgisayarınıza Python yüklemek için aşağıdaki resime tıkladığınızda açılan videoyu takip edebilirsiniz. Bu videoda ayrıca **OpenCV** yüklemeye de başlıyoruz ama bir hata ile karşılaşınca yarıda kalıyor.
+Bu sayfadaki projelerde **Python 3.9.6** ve **OpenCV 4.5.5** kullanacağız. Aşağıda açıklamalarını/sonuçlarını gördüğünüz projelerin **py** uzantılı **Python** kodlarını yukarıda **project** isimli dosyada bulabilirsiniz. Bilgisayarınıza Python yüklemek için aşağıdaki resime tıkladığınızda açılan videoyu takip edebilirsiniz. Bu videoda ayrıca **OpenCV** yüklemeye de başlıyoruz ama bir hata ile karşılaşınca yarıda kalıyor.
 
 [![IMAGE ALT TEXT HERE](figure/install-python.jpg)](https://www.youtube.com/watch?v=HwQ46b3KmUw)
 
-Karşılaşılan hatayı çözüp OpenCV yüklemeyi tamamladığımız video için aşağıdaki videoyu izleyebilirsiniz.
+Karşılaşılan hatayı çözüp **OpenCV** yüklemeyi tamamladığımız video için aşağıdaki videoyu izleyebilirsiniz.
 
 [![IMAGE ALT TEXT HERE](figure/opencv-python-resized.jpg)](https://www.youtube.com/watch?v=9DwK0K8UcAw)
 
