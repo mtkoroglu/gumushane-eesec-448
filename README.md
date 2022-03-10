@@ -37,7 +37,7 @@ Yüklediğimiz resmin **features** denilen özelliklerine bakmak istediğimizde 
 dir(resim)
 ```
 
-komutunu yazabiliriz. Karşımıza çıkan özelliklerden birisi de **shape** yani resmin şekli (bu bizim **çok sık** kullanacağımız bir özellik - **FİNAL SINAVINDA KARŞIMIZA ÇIKACAK**). Aşağıdaki kod resmin **yüksekliğini** (height), **genişliğini** (width) ve BGR (Blue-Green-Red yani Mavi-Yeşil-Kırmızı) kanal sayısını (channels) **print** komutuyla ekrana basıyor. Burada yükseklik satır sayısına, genişlik sütun sayısına eşit. Aşağıdaki kod satırında **resim.shape[0]** ve **resim.shape[1]** komutları sırasıyla resmin yükseklik ve genişliğini piksel cinsinden bir sayı olarak ekrana basıyor. **FİNAL SINAVINDA ÇIKACAK** 
+komutunu yazabiliriz. Karşımıza çıkan özelliklerden birisi de **shape** yani resmin şekli (bu bizim **çok sık** kullanacağımız bir özellik). Aşağıdaki kod resmin **yüksekliğini** (height), **genişliğini** (width) ve BGR (Blue-Green-Red yani Mavi-Yeşil-Kırmızı) kanal sayısını (channels) **print** komutuyla ekrana basıyor. Burada yükseklik satır sayısına, genişlik sütun sayısına eşit. Aşağıdaki kod satırında **resim.shape[0]** ve **resim.shape[1]** komutları sırasıyla resmin yükseklik ve genişliğini piksel cinsinden bir sayı olarak ekrana basıyor.
 
 ```
 print('yükseklik = %i   genişlik = %i   kanal sayısı = %i' %(resim.shape[0], resim.shape[1], resim.shape[2]))
