@@ -44,7 +44,7 @@ print('yükseklik = %i   genişlik = %i   kanal sayısı = %i' %(resim.shape[0],
 ```
 
 Aşağıdaki videoyu izleyerek yukarıda bir kısmı açıklanan ve tamamı aşağıda verilen kodu **Jupyter Notebook**'da gerçekleyebilirsiniz.
-[![IMAGE ALT TEXT HERE](figure/imread_puttext_resize_imwrite.jpg)](https://youtu.be/2bLhk2sV_jk)
+[![IMAGE ALT TEXT HERE](figure/imread_puttext_resize_imwrite.jpg)](https://youtu.be/622veo4_lDw)
 
 ```
 import cv2 # OpenCV kütüphanesine erişim
