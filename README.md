@@ -61,9 +61,9 @@ yaziliResim = cv2.putText(resim, 'Gumushane', org, font, fontScale, color, thick
 # resmi yeniden boyutlandır, dosyaya kaydet ve ekranda görüntüle
 s = 0.2 # scale - ölçek
 dim = (int(s*resim.shape[1]), int(s*resim.shape[0])) # boyut
-yeniYaziliResim = cv2.resize(yaziliResim, dim, interpolation = cv2.INTER_AREA)
-cv2.imwrite('Gumushane.jpg', yeniYaziliResim, [cv2.IMWRITE_JPEG_QUALITY, 100])
-cv2.imshow("Uzerine yazi yazilmis ve yeniden boyutlandirilmis resim", yeniYaziliResim)
+kucukResim = cv2.resize(yaziliResim, dim, interpolation = cv2.INTER_AREA)
+cv2.imwrite('Gumushane.jpg', kucukResim, [cv2.IMWRITE_JPEG_QUALITY, 100])
+cv2.imshow("Uzerine yazi yazilmis ve yeniden boyutlandirilmis resim", kucukResim)
 cv2.waitKey(0) # klavyede herhangi bir tuşa basana kadar ekranda görüntüle
 ```
 
