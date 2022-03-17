@@ -61,7 +61,11 @@ cv2.waitKey(0) # klavyede herhangi bir tuşa basana kadar ekranda görüntüle
 
 ## Proje 2: Web Kamerasına Erişim
 
-Video dediğimiz şey ard arda yakalanan (capture) resimlerin ekranda seri halde görüntülenmesinden başka birşey değil. Burada FPS kavramı karşımıza çıkıyor. Yani **Frame per Second**, Türkçesi **saniyedeki kare sayısı**. Genelde bu değer standart web kameraları için 30. OpenCV kullanarak bilgisayarımızın web kamerasını aşağıdaki komutla açabiliriz.
+Video dediğimiz şey ard arda yakalanan (İng. capture) resimlerin ekranda seri halde görüntülenmesinden başka birşey değil. Burada **FPS** kavramı karşımıza çıkıyor. Yani **Frame per Second**, Türkçesi **saniyedeki kare sayısı**. Aşağıdaki animasyonda aynı hareketin değişik FPS değerlerinde yakalanmaş halini izleyebilirsiniz.
+
+<img src="https://www.productioncrate.com/news/wp-content/uploads/2019/08/ezgif-1-e18c2f9c89ad.gif" alt="FPS simulation" height="200"/>
+
+Genelde bu değer standart web kameraları için 30. Bilgisayarımızın web kamerasını OpenCV kullanarak aşağıdaki gibi açabiliriz.
 
 ```
 cap = cv2.VideoCapture(0)
