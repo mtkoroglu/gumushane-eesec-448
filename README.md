@@ -59,6 +59,31 @@ cv2.imshow("Uzerine yazi yazilmis ve yeniden boyutlandirilmis resim", kucukResim
 cv2.waitKey(0) # klavyede herhangi bir tuşa basana kadar ekranda görüntüle
 ```
 
+## Proje 2: Web Kamerasına Erişim
+
+```
+import cv2
+cap = cv2.VideoCapture(0)
+if cap.isOpened() == False:
+    print('Web kamerasına erişimde sorun!')
+else:
+    print('Kameranın FPS değeri %i.' %cap.get(cv2.CAP_PROP_FPS))
+while cap.isOpened() == True:
+    ret, frame = cap.read()
+    if ret == True: # eğer kareyi yakaladıysak
+        cv2.imshow('web kamerasi renkli resim', frame)
+        if cv2.waitKey(1) & 0xFF == ord('q'): # eğer bir an bile q'ya basarsa
+            cv2.imwrite('web kamerasi resim.jpg', frame, [cv2.IMWRITE_JPEG_QUALITY, 100])
+            break
+    else: # eğer kareyi yakalayamadıysak
+        print('Kare yakalanamadı!')
+        break
+cap.release()
+cv2.destroyAllWindows()
+```
+
+Video için aşağıdaki resme tıklayınız.
+[![IMAGE ALT TEXT HERE](https://www.manmade2.com/wp-content/uploads/2016/10/webCm1.png)](https://youtu.be/0LjEFyVVs0g)
 
 ### Referanslar
 [1] OpenCV 4.5.5 Dökümantasyonu - https://docs.opencv.org/4.5.5/</br>
