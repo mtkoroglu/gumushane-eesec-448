@@ -80,7 +80,7 @@ else: ## eğer açıldıysa
     print('Kameranın FPS değeri %i.' %cap.get(cv2.CAP_PROP_FPS))
 ```
 
-Eğer kamera yoksa veya erişimde (veya bağlantıda) bir sıkıntı yaşandıysa o zaman ekrana **Web kamerasına erişimde sorun yaşandı!** yazılacak. Aksi durumda kameradan kareler (İng. frame) sürekli geliyor olacak ve web kamerasının FPS değerini ekrana basacağız. Kameraya başarıyla eriştiğimizi kabul ederek devam ediyoruz. Şimdi görüntü sürekli gelmeye devam edeceğinden, web kamerası görüntü verdiği müddetçe aktif olacak bir döngü oluşturup, bu döngü içine her girişte web kamerasından resmi alıp **frame** isimli bir değişkene atayalım ve ardından döngüden çıkmadan bu yakalanan renkli resmi ekranda **imshow()** komutu ile görüntüleyelim.
+Eğer kamera yoksa veya erişimde (veya bağlantıda) bir sıkıntı yaşandıysa o zaman ekrana **Web kamerasına erişimde sorun yaşandı!** yazılacak. Aksi durumda kameradan kareler (İng. frame) sürekli geliyor olacak ve web kamerasının FPS değerini ekrana basacağız. Kameraya başarıyla eriştiğimizi kabul ederek devam ediyoruz. Şimdi görüntü sürekli gelmeye devam edeceğinden, web kamerası kare yakaladığı müddetçe aktif olacak bir döngü oluşturalım. Bu döngü içine her girişte web kamerasından resmi alıp **frame** isimli bir değişkene atayalım. Döngüden çıkmadan yakalanan renkli resmi ekranda **imshow()** komutu ile görüntüleyelim ve eğer kullanıcı **'q'** tuşuna bir an bile basarsa (imlecin görüntülediğimiz video ekranı üzerine tıklı olması lazım) o zaman o anda **frame** değişkeninde RAM hafızadaki resmi hard diskte dosyaya yazıp hem döngüden çıkalım hem de programı sonlandıralım.
 
 ```
 import cv2
@@ -90,17 +90,17 @@ if cap.isOpened() == False:
 else:
     print('Kameranın FPS değeri %i.' %cap.get(cv2.CAP_PROP_FPS))
 while cap.isOpened() == True:
-    ret, frame = cap.read()
+    ret, frame = cap.read() # web kamerası ile kare yakala
     if ret == True: # eğer kareyi yakaladıysak
-        cv2.imshow('web kamerasi renkli resim', frame)
+        cv2.imshow('web kamerasi renkli resim', frame) # yakalanan kareyi ekranda görüntüle
         if cv2.waitKey(1) & 0xFF == ord('q'): # eğer bir an bile q'ya basarsa
-            cv2.imwrite('web kamerasi resim.jpg', frame, [cv2.IMWRITE_JPEG_QUALITY, 100])
-            break
+            cv2.imwrite('web kamerasi resim.jpg', frame, [cv2.IMWRITE_JPEG_QUALITY, 100]) # dosyaya yaz 
+            break # ve döngüden çık
     else: # eğer kareyi yakalayamadıysak
-        print('Kare yakalanamadı!')
-        break
-cap.release()
-cv2.destroyAllWindows()
+        print('Kare yakalanamadı!') # ekrana uyarı mesajı yaz
+        break # ve döngüden çık
+cap.release() # release serbest bırak demek
+cv2.destroyAllWindows() # bütün pencereleri kapat ve programı sonlandır
 ```
 
 Video için aşağıdaki resme tıklayınız.
