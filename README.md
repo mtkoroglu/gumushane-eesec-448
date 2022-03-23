@@ -20,6 +20,32 @@ Bu sayfadaki projelerde **Python 3.9.6** ve **OpenCV 4.5.5** kullanacağız. Aş
 Karşılaşılan hatayı çözüp **OpenCV** yüklemeyi tamamladığımız video için aşağıdaki resme tıklayabilirsiniz.
 
 [![IMAGE ALT TEXT HERE](figure/opencv-python-resized.jpg)](https://www.youtube.com/watch?v=9DwK0K8UcAw)
+#### Kullandığımız Komutlar
+Masaüstünde **EESEC 448** isimli klasörü oluşturduktan sonra **Windows PowerShell**'de gerekli **cd** komutlarıyla bu klasörün içine girin. Sonra sanal ortam (İng. virtual environment) oluşturmak için 
+
+```
+python -m venv opencv-env
+```
+
+yazın. Ardından bulunduğunuz dizinde 
+
+```
+.\opencv-env\Scripts\activate
+```
+
+komutunu girerek sanal ortamı aktif hale getirin. Bunu müteakiben sırasıyla 
+
+```
+pip install opencv-contrib-python streamlit jupyter moviepy ipykernel matplotlib
+```
+
+ve
+
+```
+pip install pyautogui mediapipe mime
+```
+
+yazıp çalıştırarak bilgisayarımızda OpenCV koşturabilmek için gerekli olan bütün paket ve kütüphaneleri yükleyin.
 
 ## Proje 1: Resim Yükleme
 ### Yüklenen Resmin Üzerine Yazı Yazma, Resmi Yeniden Boyutlandırma, Ekranda Görüntüleme ve Dosyaya Kaydetme
@@ -61,7 +87,6 @@ cv2.waitKey(0) # klavyede herhangi bir tuşa basana kadar ekranda görüntüle
 ```
 
 ## Proje 2: Web Kamerasına Erişim
-
 Video dediğimiz şey ard arda yakalanan (İng. capture) resimlerin ekranda seri halde görüntülenmesinden başka birşey değil. Burada **FPS** kavramı karşımıza çıkıyor. Yani **Frame per Second**, Türkçesi **saniyedeki kare sayısı**. Aşağıdaki animasyonda [2] aynı hareketin değişik FPS değerlerinde yakalanmış halini izleyebilirsiniz. Animasyonda da görüldüğü gibi yüksek FPS değerleri ayrıntıları gözlemleyebilmeyi artırsa da daha fazla işlem yapıldığından dolayı bilgisayarı yoracaktır. Karşımıza çıkan FPS kavramını Sinyaller-Sistemler ve Haberleşme derslerinde gördüğünüz **örnekleme frekansı** (İng. sampling frequency) olarak düşünebilirsiniz.
 
 <img src="https://www.productioncrate.com/news/wp-content/uploads/2019/08/ezgif-1-e18c2f9c89ad.gif" alt="FPS simulation" height="200"/>
@@ -106,6 +131,10 @@ cv2.destroyAllWindows() # bütün pencereleri kapat ve programı sonlandır
 
 Video için aşağıdaki resme tıklayınız.
 [![IMAGE ALT TEXT HERE](https://www.manmade2.com/wp-content/uploads/2016/10/webCm1.png)](https://youtu.be/0LjEFyVVs0g)
+### Eşikleme, Filtreleme ve Görüntü İşleme Hızımızı Hesaplama
+En son videoda **VideoCapture()** komutuyla aktif hale getirdiğimiz web kamerasından yakaladığımız kareleri gerçek-zamanda (İng. real-time) ekranda görüntülemiştik. Ard arda ekrana koyduğumuz kareler video gibi gözükmüştü. Şimdi ise RGB yani renkli resim formatında yakalayıp görüntülediğimiz resmi ilk önce gri tonlu (İng. gray scale) resme çevireceğiz. Bu işlemle artık bir piksele ait üç şiddet değeri değil de tek bir şiddet değeri olacak. İlk yaptığımız projedeki kodu (başka bir resim için) Python konsoluna aşağıdaki gibi girersek 
+
+bahsettiğimiz üç şiddet değerini görmüş oluruz.
 
 ### Referanslar
 [1] OpenCV 4.5.5 Dökümantasyonu - https://docs.opencv.org/4.5.5/</br>
