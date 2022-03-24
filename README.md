@@ -134,7 +134,7 @@ Video için aşağıdaki resme tıklayınız.
 
 ## Proje 3: Filtreleme
 
-## Proje 4: Pixel Değerlerine Erişim, RGB - Gri Tonlu - Siyah Beyaz Uzay, Eşikleme ve Görüntü İşleme Hızımızı Hesaplama
+## Proje 4: Piksel Değerlerine Erişim, RGB - Gri Tonlu - Siyah Beyaz Uzay, Eşikleme ve Görüntü İşleme Hızımızı Hesaplama
 En son videoda **VideoCapture()** komutuyla aktif hale getirdiğimiz web kamerasından yakaladığımız kareleri gerçek-zamanda (İng. real-time) ekranda görüntülemiştik. Ard arda ekrana koyduğumuz kareler video gibi gözükmüştü. Şimdi ise RGB yani renkli resim formatında yakalayıp görüntülediğimiz resmi ilk önce gri tonlu (İng. gray scale) resme çevireceğiz. Bu işlemle artık bir piksele ait üç şiddet değeri değil de tek bir şiddet değeri olacak. İlk yaptığımız projedeki kodu (başka bir resim için) Python konsoluna aşağıdaki gibi girersek 
 
 bahsettiğimiz üç şiddet değerini görmüş oluruz.
