@@ -45,7 +45,9 @@ ve
 pip install pyautogui mediapipe mime
 ```
 
-yazıp çalıştırarak bilgisayarımızda OpenCV koşturabilmek için gerekli olan bütün paket ve kütüphaneleri yükleyin.
+yazıp çalıştırarak bilgisayarımızda OpenCV koşturabilmek için gerekli olan bütün paket ve kütüphaneleri yükleyin. Bilgisayarımıza Python ve OpenCV yükledikten sonra opencv-env isimli bir sanal ortam oluşturup içerisine OpenCV ve bağımlı olduğu kütüphaneleri yüledik. Derste kullanacağımız Visual Studio Code editöründe kod yazarken kullanacağımız OpenCV fonksiyonları hakkında yardım alabilmek için Visual Studio Code'a sanal ortamımızı kaydetmemiz lazım. Bu işlem için aşağıdaki resme tıklayınca açılan videoyu izleyin.
+
+[![IMAGE ALT TEXT HERE](figure/opencv-env VSC.jpg)](https://youtu.be/6Z5lM1WqBXU)
 
 ## Proje 1: Resim Yükleme
 ### Yüklenen Resmin Üzerine Yazı Yazma, Resmi Yeniden Boyutlandırma, Ekranda Görüntüleme ve Dosyaya Kaydetme
