@@ -21,7 +21,7 @@ Karşılaşılan hatayı çözüp **OpenCV** yüklemeyi tamamladığımız video
 
 [![IMAGE ALT TEXT HERE](figure/opencv-python-resized.jpg)](https://www.youtube.com/watch?v=9DwK0K8UcAw)
 #### Kullandığımız Komutlar
-Masaüstünde **EESEC 448** isimli klasörü oluşturduktan sonra **Windows PowerShell**'de gerekli **cd** komutlarıyla bu klasörün içine girin. Sonra sanal ortam (İng. virtual environment) oluşturmak için 
+Masaüstünde **EESEC 448** isimli klasörü oluşturduktan sonra **Windows PowerShell**'de gerekli **cd** komutlarıyla bu klasörün içine girin. Sonra **sanal ortam** (İng. **virtual environment**) oluşturmak için 
 
 ```
 python -m venv opencv-env
@@ -33,7 +33,7 @@ yazın. Ardından bulunduğunuz dizinde
 .\opencv-env\Scripts\activate
 ```
 
-komutunu girerek sanal ortamı aktif hale getirin. Bunu müteakiben sırasıyla 
+komutunu girerek sanal ortamı **aktif** hale getirin. Bunu müteakiben sırasıyla 
 
 ```
 pip install opencv-contrib-python streamlit jupyter moviepy ipykernel matplotlib
@@ -45,9 +45,13 @@ ve
 pip install pyautogui mediapipe mime
 ```
 
-yazıp çalıştırarak bilgisayarımızda OpenCV koşturabilmek için gerekli olan bütün paket ve kütüphaneleri yükleyin. Bilgisayarımıza Python ve OpenCV yükledikten sonra opencv-env isimli bir sanal ortam oluşturup içerisine OpenCV ve bağımlı olduğu kütüphaneleri yüledik. Derste kullanacağımız Visual Studio Code editöründe kod yazarken kullanacağımız OpenCV fonksiyonları hakkında yardım alabilmek için Visual Studio Code'a sanal ortamımızı kaydetmemiz lazım. Bu işlem için aşağıdaki resme tıklayınca açılan videoyu izleyin.
+komutlarını koşturarak bilgisayarımızda **OpenCV** koşturabilmek için gerekli olan bütün **paket** ve **kütüphane**leri yükleyin.
+
+Bilgisayarımıza **Python** yükledikten sonra **opencv-env** isimli bir sanal ortam oluşturup içerisine **OpenCV** ve **bağımlı** olduğu kütüphaneleri yüledik. Derste kullanacağımız **Visual Studio Code** (VSC) editöründe kod yazarken kullanacağımız **OpenCV** fonksiyonları hakkında yardım alabilmek için VSC'ye sanal ortamımızı kaydetmemiz/tanıtmamız lazım. Bu işlem için aşağıdaki resme tıklayınca açılan videoyu izleyin.
 
 [![IMAGE ALT TEXT HERE](figure/opencv_env_VSC.jpg)](https://youtu.be/6Z5lM1WqBXU)
+
+Ara sınavda **OpenCV**'yi bilgisayarımıza direk değil de **sanal ortam**a yüklememizle ilgili bir soru soracağım. 
 
 ## Proje 1: Resim Yükleme
 ### Yüklenen Resmin Üzerine Yazı Yazma, Resmi Yeniden Boyutlandırma, Ekranda Görüntüleme ve Dosyaya Kaydetme
