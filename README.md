@@ -164,8 +164,9 @@ cap.release()
 cv2.destroyAllWindows()
 ```
 
-Bu kodun web kamerası ile test edilişi için aşağıdaki resme tıklayınca açılan kısa videoyu izleyin.
-[![IMAGE ALT TEXT HERE](https://www.manmade2.com/wp-content/uploads/2016/10/webCm1.png)](https://youtu.be/0LjEFyVVs0g)
+Bu kodun değişik filtre ve parametreler için koşturulmasını görmek için aşağıdaki resme tıklayın. Açılan videoda ayrıca EESEC 448'de verilecek ekstra puan ve ödevlerle ilgili bilgi de mevcut. Herşeye ek olarak yaptığımız ilk iki projedeki bazı fonksiyonları kullanarak web kamerası kodu çalıştırılınca gelen video üzerine dinamik bir şekilde kare numarasını yazdırmayı da bulabilirsiniz.
+
+[![IMAGE ALT TEXT HERE](https://docs.opencv.org/3.4/filter.jpg)](https://youtu.be/0LjEFyVVs0g)
 
 ## Proje 4: Görüntü İşleme Hızını Hesaplama
 
