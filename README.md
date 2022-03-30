@@ -169,13 +169,16 @@ Bu kodun değişik filtre ve parametreler için koşturulmasını görmek için 
 [![IMAGE ALT TEXT HERE](https://docs.opencv.org/3.4/filter.jpg)](https://youtu.be/0LjEFyVVs0g)
 
 ## Proje 4: Görüntü İşleme Hızını Hesaplama
+Filtreleme konusunda kullandığımız **BilateralFilter()** komutu üç girişe sahipti. İlk girişi olan k pencere boyutunun filtrelemeye olan etkisini yukarıdaki videoda ve derste görmüştük. Bilateral filtre gördüğümüz öbür üç filtreden farklı olarak k değerinin artmasıyla artan işlem yükünden dolayı bilgisayarda veri işleme hızımız denilebilecek FPS'yi azaltıyor. Biz de derste bu hızı hem anlık hem de zamanda bir pencerede ortalamasını alarak hesaplayıp görselleştireceğiz.
 
-## Proje 5: NumPy Kullanarak Kendi Sentetik Resmimizi Oluşturma
+## Proje 5: NumPy Kullanarak Kendi Sentetik Resmimizi Oluşturma ve Resimleri Birleştirme
 
 ## Proje 6: Piksel Değerlerine Erişim, RGB - Gri Tonlu - Siyah Beyaz Uzay, Eşikleme
 En son videoda **VideoCapture()** komutuyla aktif hale getirdiğimiz web kamerasından yakaladığımız kareleri gerçek-zamanda (İng. real-time) ekranda görüntülemiştik. Ard arda ekrana koyduğumuz kareler video gibi gözükmüştü. Şimdi ise RGB yani renkli resim formatında yakalayıp görüntülediğimiz resmi ilk önce gri tonlu (İng. gray scale) resme çevireceğiz. Bu işlemle artık bir piksele ait üç şiddet değeri değil de tek bir şiddet değeri olacak. İlk yaptığımız projedeki kodu (başka bir resim için) Python konsoluna aşağıdaki gibi girersek 
 
 bahsettiğimiz üç şiddet değerini görmüş oluruz.
+
+## ARA SINAV
 
 ### Referanslar
 [1] OpenCV 4.5.5 Dökümantasyonu - https://docs.opencv.org/4.5.5/</br>
