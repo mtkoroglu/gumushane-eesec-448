@@ -142,7 +142,7 @@ Video için aşağıdaki resme tıklayınız.
 ## Proje 3: Filtreleme
 Görüntü işleme denince belki de akla gelen ilk şey olan filtreleme ile devam ediyoruz. Burada OpenCV kütüphanesinin Görüntü İşleme ana modülünde (**imgproc**) hazır olan filtrelerden normalize edilmiş kutu filtresi (İng. normalized box filter) **blur()**, istatistikteki en popüler dağılım olan Gaussian (veya Normal) fonksiyonundan esinlenerek tasarlanmış Gaussian filtresi **GaussianFilter()**, yine istatistikte bir algoritma olarak karşımıza çıkan medyan filtresi **medianBlur()** ve de Gaussian filtresinin piksel şiddet değişimlerinin çok olduğu yerleri bulandırmayan ve resmi aynen Snapshot uygulamasında olduğu gibi oldukça artistik hale getiren versiyonu olan **BilateralFilter()** komutlarını kullanarak ilk önce web kamerasından gelen video akışını filtreleyeceğiz. Ardından da aynı komutları tek bir resim üzerine uygulayıp sonuçları inceleyeceğiz. Yukarıda isimleri verilen filtrelerle ilgili bit tutorial'a ihtiyacı olanlar derste üzerinde konuştuğumuz [3]'den faydalanabilirler. Derste yazdığımız kod aşağıda.
 
-``
+```
 import cv2
 cap = cv2.VideoCapture(0) # web kamerasını aç
 while True:
@@ -162,7 +162,7 @@ while True:
         break # --> döngüyü sonlandır
 cap.release()
 cv2.destroyAllWindows()
-``
+```
 
 Bu kodun web kamerası ile test edilişi için aşağıdaki resme tıklayınca açılan kısa videoyu izleyin.
 [![IMAGE ALT TEXT HERE](https://www.manmade2.com/wp-content/uploads/2016/10/webCm1.png)](https://youtu.be/0LjEFyVVs0g)
