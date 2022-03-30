@@ -140,8 +140,38 @@ Video için aşağıdaki resme tıklayınız.
 [![IMAGE ALT TEXT HERE](https://www.manmade2.com/wp-content/uploads/2016/10/webCm1.png)](https://youtu.be/0LjEFyVVs0g)
 
 ## Proje 3: Filtreleme
+Görüntü işleme denince belki de akla gelen ilk şey olan filtreleme ile devam ediyoruz. Burada OpenCV kütüphanesinin Görüntü İşleme ana modülünde (**imgproc**) hazır olan filtrelerden normalize edilmiş kutu filtresi (İng. normalized box filter) **blur()**, istatistikteki en popüler dağılım olan Gaussian (veya Normal) fonksiyonundan esinlenerek tasarlanmış Gaussian filtresi **GaussianFilter()**, yine istatistikte bir algoritma olarak karşımıza çıkan medyan filtresi **medianBlur()** ve de Gaussian filtresinin piksel şiddet değişimlerinin çok olduğu yerleri bulandırmayan ve resmi aynen Snapshot uygulamasında olduğu gibi oldukça artistik hale getiren versiyonu olan **BilateralFilter()** komutlarını kullanarak ilk önce web kamerasından gelen video akışını filtreleyeceğiz. Ardından da aynı komutları tek bir resim üzerine uygulayıp sonuçları inceleyeceğiz. Yukarıda isimleri verilen filtrelerle ilgili bit tutorial'a ihtiyacı olanlar derste üzerinde konuştuğumuz [3]'den faydalanabilirler. Derste yazdığımız kod aşağıda.
 
-## Proje 4: Piksel Değerlerine Erişim, RGB - Gri Tonlu - Siyah Beyaz Uzay, Eşikleme ve Görüntü İşleme Hızımızı Hesaplama
+``
+import cv2
+cap = cv2.VideoCapture(0) # web kamerasını aç
+while True:
+    ret, frame = cap.read() # frame yakaladığımız görüntü yani kare
+    k = 15 # kernel size - pencere boyutu
+    # aşağıda değişik filtrelerle resmi filtreleyelim
+    # filtered = cv2.blur(frame, (k,k))
+    # filtered = cv2.GaussianBlur(frame, (k,k), 0)
+    # filtered = cv2.medianFilter(frame, k)
+    # filtered = cv2.bilateralFilter(frame, k, 90, 90)
+    windowText = '(%i x %i) pencere boyutu ile filtrelenmis video' %(k,k)
+    cv2.imshow('web kamerasi', frame)
+    cv2.imshow(windowText, filtered)
+    if cv2.waitKey(1) & 0xFF == ord('q'): # eğer bir an bile q'ya basılırsa -->
+        cv2.imwrite('web kamerasi.jpg', frame, [cv2.IMWRITE_JPEG_QUALITY, 100])
+        cv2.imwrite('web kamerasi filtrelenmis.jpg', filtered, [cv2.IMWRITE_JPEG_QUALITY, 100])
+        break # --> döngüyü sonlandır
+cap.release()
+cv2.destroyAllWindows()
+``
+
+Bu kodun web kamerası ile test edilişi için aşağıdaki resme tıklayınca açılan kısa videoyu izleyin.
+[![IMAGE ALT TEXT HERE](https://www.manmade2.com/wp-content/uploads/2016/10/webCm1.png)](https://youtu.be/0LjEFyVVs0g)
+
+## Proje 4: Görüntü İşleme Hızını Hesaplama
+
+## Proje 5: NumPy Kullanarak Kendi Sentetik Resmimizi Oluşturma
+
+## Proje 6: Piksel Değerlerine Erişim, RGB - Gri Tonlu - Siyah Beyaz Uzay, Eşikleme
 En son videoda **VideoCapture()** komutuyla aktif hale getirdiğimiz web kamerasından yakaladığımız kareleri gerçek-zamanda (İng. real-time) ekranda görüntülemiştik. Ard arda ekrana koyduğumuz kareler video gibi gözükmüştü. Şimdi ise RGB yani renkli resim formatında yakalayıp görüntülediğimiz resmi ilk önce gri tonlu (İng. gray scale) resme çevireceğiz. Bu işlemle artık bir piksele ait üç şiddet değeri değil de tek bir şiddet değeri olacak. İlk yaptığımız projedeki kodu (başka bir resim için) Python konsoluna aşağıdaki gibi girersek 
 
 bahsettiğimiz üç şiddet değerini görmüş oluruz.
@@ -149,9 +179,9 @@ bahsettiğimiz üç şiddet değerini görmüş oluruz.
 ### Referanslar
 [1] OpenCV 4.5.5 Dökümantasyonu - https://docs.opencv.org/4.5.5/</br>
 [2] FPS animasyonu - https://news.productioncrate.com/tag/fps/</br>
-[3] Standard Kütüphane ve **numpy** ile Rasgele Sayı, Dizi ve Matris Üretme - https://machinelearningmastery.com/how-to-generate-random-numbers-in-python/</br>
-[4] OpenCV'de Eşikleme (Thresholding) [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2021/04/28/opencv-thresholding-cv2-threshold/</br>
-[5] OpenCV'de Görüntü Filtreleme (Bulandırma) [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2021/04/28/opencv-smoothing-and-blurring/</br>
+[3] OpenCV'de Görüntü Filtreleme (Bulandırma) [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2021/04/28/opencv-smoothing-and-blurring/</br>
+[4] Standard Kütüphane ve **numpy** ile Rasgele Sayı, Dizi ve Matris Üretme - https://machinelearningmastery.com/how-to-generate-random-numbers-in-python/</br>
+[5] OpenCV'de Eşikleme (Thresholding) [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2021/04/28/opencv-thresholding-cv2-threshold/</br>
 [6] OpenCV'de **Haar Cascade** Metodu ile Yüz Tespiti [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2021/04/05/opencv-face-detection-with-haar-cascades/</br>
 [7] Raspberry Pi ve OpenCV kullanarak Pan-Tilt Kamera ile Yüz Takibi [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2019/04/01/pan-tilt-face-tracking-with-a-raspberry-pi-and-opencv/</br>
 [8] Haar Cascade ile Yüz ve Göz Tespiti (OpenCV tutorial) - https://docs.opencv.org/4.x/db/d28/tutorial_cascade_classifier.html</br>
