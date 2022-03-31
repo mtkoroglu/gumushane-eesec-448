@@ -54,7 +54,7 @@ Yukarıdaki videolarda bilgisayarımıza **Python** yükledikten sonra **opencv-
 
 Ara sınavda **OpenCV**'yi bilgisayarımıza direk değil de **sanal ortam**a yüklememizle ilgili bir soru soracağım.
 
-## Proje 1: Resim Yükleme
+## Proje 1: Resim Yükleme ve Görüntüleme (load-display-image)
 ### Yüklenen Resmin Üzerine Yazı Yazma, Resmi Yeniden Boyutlandırma, Ekranda Görüntüleme ve Dosyaya Kaydetme
 Bu egzersizde **OpenCV** kütüphanesinden **imread()**, **putText()**, **resize()**, **imshow()** ve **imwrite()** fonksiyonlarını kullanacağız. Resim yüklemek için kullandığımız fonksiyon olan **imread()**, argüman (yani giriş) olarak uzantısıyla beraber resim/fotoğraf ismi kabul ediyor. Yani fonksiyona *string* veri tipinde resmin uzantılı ismini giriş olarak veriyoruz. Mesela burada fotoğrafımızın ismi **IMG_20210616_202539.jpg** olduğundan **imread('IMG_20210616_202539.jpg')** şeklinde fonksiyonu çağırdığımızda resmi bizim ismini verdiğimiz değişkene atıyor. Bu arada gözden kaçırmayın, bütün fonksiyonları her zaman **cv2** anahtar kelimemizin sonuna **nokta** koyup çağırıyoruz, çünkü **cv2** yazdığımız kodda **OpenCV** kütüphanesini temsil ediyor. Zaten bu yüzden her kodumuzun başında **import cv2** diye bir komutla **OpenCV**'yi aktif hale getirmiş oluyoruz. Sonuç olarak, eğer **IMG_20210616_202539.jpg** isimli bir fotoğrafı **OpenCV**'de **resim** isminde bir değişkene atamak istiyorsak, o zaman aşağıdaki kodu koşturmalıyız.
 
@@ -93,7 +93,7 @@ cv2.imshow("Uzerine yazi yazilmis ve yeniden boyutlandirilmis resim", kucukResim
 cv2.waitKey(0) # klavyede herhangi bir tuşa basana kadar ekranda görüntüle
 ```
 
-## Proje 2: Web Kamerasına Erişim
+## Proje 2: Web Kamerası (web-cam-stream)
 Video dediğimiz şey ard arda yakalanan (İng. **capture**) resimlerin ekranda seri halde görüntülenmesinden başka birşey değil. Burada **FPS** kavramı karşımıza çıkıyor. Yani **Frame per Second**, Türkçesi **saniyedeki kare sayısı**. Aşağıdaki animasyonda [2] aynı hareketin değişik FPS değerlerinde yakalanmış halini izleyebilirsiniz. Animasyonda da görüldüğü gibi yüksek FPS değerleri ayrıntıları gözlemleyebilmeyi artırsa da daha fazla işlem yapıldığından dolayı bilgisayarı yoracaktır. Karşımıza çıkan FPS kavramını Sinyaller-Sistemler ve Haberleşme derslerinde gördüğünüz **örnekleme frekansı** (İng. sampling frequency) olarak düşünebilirsiniz.
 
 <img src="https://www.productioncrate.com/news/wp-content/uploads/2019/08/ezgif-1-e18c2f9c89ad.gif" alt="FPS simulation" height="200"/>
@@ -139,8 +139,8 @@ cv2.destroyAllWindows() # bütün pencereleri kapat ve programı sonlandır
 Video için aşağıdaki resme tıklayınız.
 [![IMAGE ALT TEXT HERE](https://www.manmade2.com/wp-content/uploads/2016/10/webCm1.png)](https://youtu.be/0LjEFyVVs0g)
 
-## Proje 3: Filtreleme
-Görüntü işleme denince belki de akla gelen ilk şey olan filtreleme ile devam ediyoruz. Burada OpenCV kütüphanesinin Görüntü İşleme ana modülünde (**imgproc**) hazır olan filtrelerden normalize edilmiş kutu filtresi (İng. normalized box filter) **blur()**, istatistikteki en popüler dağılım olan Gaussian (veya Normal) fonksiyonundan esinlenerek tasarlanmış Gaussian filtresi **GaussianFilter()**, yine istatistikte bir algoritma olarak karşımıza çıkan medyan filtresi **medianBlur()** ve de Gaussian filtresinin piksel şiddet değişimlerinin çok olduğu yerleri bulandırmayan ve resmi aynen Snapshot uygulamasında olduğu gibi oldukça artistik hale getiren versiyonu olan **BilateralFilter()** komutlarını kullanarak ilk önce web kamerasından gelen video akışını filtreleyeceğiz. Ardından da aynı komutları tek bir resim üzerine uygulayıp sonuçları inceleyeceğiz. Yukarıda isimleri verilen filtrelerle ilgili bit tutorial'a ihtiyacı olanlar derste üzerinde konuştuğumuz [3]'den faydalanabilirler. Derste yazdığımız kod aşağıda.
+## Proje 3: Filtreleme (filtering)
+Görüntü işleme denince belki de akla gelen ilk şey olan **filtreleme** ile devam ediyoruz. Burada OpenCV kütüphanesinin Görüntü İşleme ana modülünde (**imgproc**) hazır olan filtrelerden normalize edilmiş kutu filtresi (İng. normalized box filter) **blur()**, istatistikteki en popüler dağılım olan Gaussian (öbür ismiyle Normal) fonksiyonu kullanan Gaussian filtresi **GaussianFilter()**, yine istatistikte bir algoritma olarak karşımıza çıkan medyan filtresi **medianBlur()** ve de Gaussian filtresinin piksel şiddet değişimlerinin çok olduğu yerleri bulandırmayan ve resmi aynen Snapshot uygulamasında olduğu gibi oldukça artistik hale getiren versiyonu olan **BilateralFilter()** komutlarını kullanarak ilk önce web kamerasından gelen video akışını filtreleyeceğiz. Ardından da aynı komutları tek bir resim üzerine uygulayıp sonuçları inceleyeceğiz (**ÖDEV 1**). Yukarıda isimleri verilen filtrelerle ilgili bir tutorial'a ihtiyacı olanlar derste baktığımız [3]'den faydalanabilirler. Yazdığımız kod aşağıda.
 
 ```
 import cv2
@@ -164,12 +164,12 @@ cap.release()
 cv2.destroyAllWindows()
 ```
 
-Bu kodun değişik filtre ve parametreler için koşturulmasını görmek için aşağıdaki resme tıklayın. Açılan videoda ayrıca **EESEC 448**'de verilecek ekstra puan ve ödevlerle ilgili bilgi de mevcut. Herşeye ek olarak yaptığımız ilk iki projedeki bazı fonksiyonları kullanarak web kamerası kodu çalıştırılınca gelen video üzerine **dinamik** bir şekilde kare numarasını yazdırma, farklı isimlerle resim kaydetme ve kaydedilen bu resimler hakkındaki bilgiyi yine dinamik bir biçimde konsol ekranına yazdırma işlemlerini de videoda bulabilirsiniz. Videonun sonunda ilk ödev sözlü olarak açıklanıyor. Ara sınav notuna +3 puan eklemek isteyenler ödevlerini yapıp bana kodlarını email atsınlar. Ödevin teslim tarihi ve vakti 31 Mart 2022 saat sabah 9:15'e kadar.
+Bu kodun değişik filtre ve parametreler için koşturulmasını görmek için aşağıdaki resme tıklayın. Açılan videoda ayrıca **EESEC 448**'de verilecek ekstra puan ve ödevlerle ilgili bilgi de mevcut. Herşeye ek olarak yaptığımız ilk iki projedeki bazı fonksiyonları kullanarak web kamerası kodu çalıştırılınca gelen video üzerine **dinamik** bir şekilde (1) yakalanan kare numarasını yazdırma, (2) farklı isimlerle resim kaydetme ve (3) kaydedilen bu resimler hakkındaki bilgiyi yine dinamik bir biçimde konsol ekranına yazdırma işlemlerini de videoda bulabilirsiniz. Videonun sonunda ilk ödev sözlü olarak açıklanıyor. Ara sınav notuna +3 puan eklemek isteyenler yazdıkları kodu bana email atsınlar. Ödevin son teslim tarihi ve vakti 31 Mart 2022 saat sabah 9:15.
 
 [![IMAGE ALT TEXT HERE](https://docs.opencv.org/3.4/filter.jpg)](https://youtu.be/gbO0RVemXB0)
 
 ## Proje 4: Görüntü İşleme Hızını Hesaplama
-Filtreleme dersinde kullandığımız **BilateralFilter()** komutu üç girişe sahipti. İlk girişi olan pencere boyutunu parametresinin filtrelemeye olan etkisini yukarıdaki videoda ve derste görmüştük. Bilateral filtre gördüğümüz öbür üç filtreden farklı olarak k değerinin artmasıyla artan işlem yükünden dolayı bilgisayarda veri işleme hızımız denilebilecek FPS'yi azaltıyor. Biz de derste bu hızı hem anlık hem de zamanda bir pencerede ortalamasını alarak (yani filtreleyerek) hesaplayıp görselleştireceğiz. Aşağıdakin kodun yazılmasını ve koşturulmasını kodun altındaki resme tıklayarak izleyebilirsiniz.
+Filtreleme dersinde kullandığımız **BilateralFilter()** komutu üç girişe sahipti. İlk girişi olan pencere boyutunu parametresinin filtrelemeye olan etkisini yukarıdaki videoda ve derste görmüştük. Bilateral filtre gördüğümüz öbür üç filtreden farklı olarak k değerinin artmasıyla artan işlem yükünden dolayı işlem hızına tekabül eden FPS'yi azaltıyor. Biz de derste bu hızı hesaplayıp resim üzerine **putText()** komutu ile yazdırarak görselleştireceğiz. Aşağıdaki kodun yazılmasını ve koşturulmasını kodun altındaki resme tıklayarak izleyebilirsiniz.
 
 ```
 import cv2
@@ -198,7 +198,7 @@ cv2.destroyAllWindows()
 ## Proje 5: NumPy Kullanarak Kendi Sentetik Resmimizi Oluşturma ve Resimleri Birleştirme
 
 ## Proje 6: Piksel Değerlerine Erişim, RGB - Gri Tonlu - Siyah Beyaz Uzay, Eşikleme
-En son videoda **VideoCapture()** komutuyla aktif hale getirdiğimiz web kamerasından yakaladığımız kareleri gerçek-zamanda (İng. real-time) ekranda görüntülemiştik. Ard arda ekrana koyduğumuz kareler video gibi gözükmüştü. Şimdi ise RGB yani renkli resim formatında yakalayıp görüntülediğimiz resmi ilk önce gri tonlu (İng. gray scale) resme çevireceğiz. Bu işlemle artık bir piksele ait üç şiddet değeri değil de tek bir şiddet değeri olacak. İlk yaptığımız projedeki kodu (başka bir resim için) Python konsoluna aşağıdaki gibi girersek 
+En son videoda **VideoCapture()** komutuyla aktif hale getirdiğimiz web kamerasıyla yakaladığımız kareleri gerçek-zamanda (İng. real-time) ekranda görüntülemiştik. Ard arda ekrana koyduğumuz kareler video gibi gözükmüştü. Şimdi ise RGB yani renkli resim formatında yakalayıp görüntülediğimiz resmi ilk önce gri tonlu (İng. gray scale) resme çevireceğiz. Bu işlemle artık bir piksele ait üç şiddet değeri değil de tek bir şiddet değeri olacak. İlk yaptığımız projedeki kodu (başka bir resim için) Python konsoluna aşağıdaki gibi girersek 
 
 bahsettiğimiz üç şiddet değerini görmüş oluruz.
 
