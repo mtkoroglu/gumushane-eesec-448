@@ -169,7 +169,31 @@ Bu kodun değişik filtre ve parametreler için koşturulmasını görmek için 
 [![IMAGE ALT TEXT HERE](https://docs.opencv.org/3.4/filter.jpg)](https://youtu.be/gbO0RVemXB0)
 
 ## Proje 4: Görüntü İşleme Hızını Hesaplama
-Filtreleme dersinde kullandığımız **BilateralFilter()** komutu üç girişe sahipti. İlk girişi olan pencere boyutunu parametresinin filtrelemeye olan etkisini yukarıdaki videoda ve derste görmüştük. Bilateral filtre gördüğümüz öbür üç filtreden farklı olarak k değerinin artmasıyla artan işlem yükünden dolayı bilgisayarda veri işleme hızımız denilebilecek FPS'yi azaltıyor. Biz de derste bu hızı hem anlık hem de zamanda bir pencerede ortalamasını alarak (yani filtreleyerek) hesaplayıp görselleştireceğiz.
+Filtreleme dersinde kullandığımız **BilateralFilter()** komutu üç girişe sahipti. İlk girişi olan pencere boyutunu parametresinin filtrelemeye olan etkisini yukarıdaki videoda ve derste görmüştük. Bilateral filtre gördüğümüz öbür üç filtreden farklı olarak k değerinin artmasıyla artan işlem yükünden dolayı bilgisayarda veri işleme hızımız denilebilecek FPS'yi azaltıyor. Biz de derste bu hızı hem anlık hem de zamanda bir pencerede ortalamasını alarak (yani filtreleyerek) hesaplayıp görselleştireceğiz. Aşağıdakin kodun yazılmasını ve koşturulmasını kodun altındaki resme tıklayarak izleyebilirsiniz.
+
+```
+import cv2
+import time
+cap = cv2.VideoCapture(1)
+timePrevious = time.time()
+while True:
+    ret, frame = cap.read()
+    filtered = cv2.bilateralFilter(frame, 27, 75, 85)
+    timeCurrent = time.time() # şu anki zaman
+    elapsedTime = timeCurrent - timePrevious # geçen zaman
+    FPS = 1 / elapsedTime
+    text = 'FPS = %.2f' %FPS
+    filtered = cv2.putText(filtered, text, (30, 50), 0, 1, (0, 0, 0), 1, 1)
+    cv2.imshow('bilateral filtre', filtered)
+    print('Bilateral filtre %.5fs\'de koştu.' %elapsedTime)
+    timePrevious = timeCurrent
+    if cv2.waitKey(1) & 0xFF == ord('q'): # eğer bir an bile q'ya basarsa -->
+        break # --> programı sonlandır
+cap.release()
+cv2.destroyAllWindows()
+```
+
+[![IMAGE ALT TEXT HERE](figure/bilateral filter processing speed.jpg)](https://youtu.be/gbO0RVemXB0)
 
 ## Proje 5: NumPy Kullanarak Kendi Sentetik Resmimizi Oluşturma ve Resimleri Birleştirme
 
