@@ -164,12 +164,12 @@ cap.release()
 cv2.destroyAllWindows()
 ```
 
-Bu kodun değişik filtre ve parametreler için koşturulmasını görmek için aşağıdaki resme tıklayın. Açılan videoda ayrıca **EESEC 448**'de verilecek ekstra puan ve ödevlerle ilgili bilgi de mevcut. Herşeye ek olarak yaptığımız ilk iki projedeki bazı fonksiyonları kullanarak web kamerası kodu çalıştırılınca gelen video üzerine **dinamik** bir şekilde kare numarasını yazdırma, farklı isimlerle resim kaydetme ve kaydedilen bu resimler hakkındaki bilgiyi yine dinamik bir biçimde konsol ekranına yazdırma işlemlerini de videoda bulabilirsiniz. Videonun sonunda ilk ödev sözlü olarak açıklanıyor. Ara sınav notuna +5 puan eklemek isteyenler ödevlerini yapıp bana kodlarını email atsınlar. Ödevin teslim tarihi ve vakti 31 Mart 2022 saat sabah 9:15'e kadar.
+Bu kodun değişik filtre ve parametreler için koşturulmasını görmek için aşağıdaki resme tıklayın. Açılan videoda ayrıca **EESEC 448**'de verilecek ekstra puan ve ödevlerle ilgili bilgi de mevcut. Herşeye ek olarak yaptığımız ilk iki projedeki bazı fonksiyonları kullanarak web kamerası kodu çalıştırılınca gelen video üzerine **dinamik** bir şekilde kare numarasını yazdırma, farklı isimlerle resim kaydetme ve kaydedilen bu resimler hakkındaki bilgiyi yine dinamik bir biçimde konsol ekranına yazdırma işlemlerini de videoda bulabilirsiniz. Videonun sonunda ilk ödev sözlü olarak açıklanıyor. Ara sınav notuna +3 puan eklemek isteyenler ödevlerini yapıp bana kodlarını email atsınlar. Ödevin teslim tarihi ve vakti 31 Mart 2022 saat sabah 9:15'e kadar.
 
 [![IMAGE ALT TEXT HERE](https://docs.opencv.org/3.4/filter.jpg)](https://youtu.be/gbO0RVemXB0)
 
 ## Proje 4: Görüntü İşleme Hızını Hesaplama
-Filtreleme konusunda kullandığımız **BilateralFilter()** komutu üç girişe sahipti. İlk girişi olan k pencere boyutunun filtrelemeye olan etkisini yukarıdaki videoda ve derste görmüştük. Bilateral filtre gördüğümüz öbür üç filtreden farklı olarak k değerinin artmasıyla artan işlem yükünden dolayı bilgisayarda veri işleme hızımız denilebilecek FPS'yi azaltıyor. Biz de derste bu hızı hem anlık hem de zamanda bir pencerede ortalamasını alarak hesaplayıp görselleştireceğiz.
+Filtreleme dersinde kullandığımız **BilateralFilter()** komutu üç girişe sahipti. İlk girişi olan pencere boyutunu parametresinin filtrelemeye olan etkisini yukarıdaki videoda ve derste görmüştük. Bilateral filtre gördüğümüz öbür üç filtreden farklı olarak k değerinin artmasıyla artan işlem yükünden dolayı bilgisayarda veri işleme hızımız denilebilecek FPS'yi azaltıyor. Biz de derste bu hızı hem anlık hem de zamanda bir pencerede ortalamasını alarak (yani filtreleyerek) hesaplayıp görselleştireceğiz.
 
 ## Proje 5: NumPy Kullanarak Kendi Sentetik Resmimizi Oluşturma ve Resimleri Birleştirme
 
