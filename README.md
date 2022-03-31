@@ -193,7 +193,7 @@ cap.release()
 cv2.destroyAllWindows()
 ```
 
-[![IMAGE ALT TEXT HERE](figure/bilateral filter processing speed.jpg)](https://youtu.be/07E6AFL08DA)
+[![IMAGE ALT TEXT HERE](figure/bilateral\ filter\ processing\ speed.jpg)](https://youtu.be/07E6AFL08DA)
 
 ## Proje 5: NumPy Kullanarak Kendi Sentetik Resmimizi Oluşturma ve Resimleri Birleştirme
 
