@@ -2,7 +2,7 @@ import cv2
 image = cv2.imread('giraffe.jpg')
 
 # görüntüyü değişik filtrelerden geçirelim
-k = 45 # pencere boyutu
+k = 25 # pencere boyutu
 fimage1 = cv2.blur(image, (k,k))
 fimage2 = cv2.GaussianBlur(image, (k, k), 0)
 fimage3 = cv2.medianBlur(image, k)
@@ -36,6 +36,6 @@ cv2.destroyAllWindows()
 # filtrelenmiş ve üzerine filtre ismi yazılmış resimleri dosyaya kaydedip çıkalım
 cv2.imwrite('original.jpg', image, [cv2.IMWRITE_JPEG_QUALITY, 100])
 cv2.imwrite('blur filter.jpg', fimage1, [cv2.IMWRITE_JPEG_QUALITY, 100])
-cv2.imwrite('gaussian blur filter.jpg', fimage1, [cv2.IMWRITE_JPEG_QUALITY, 100])
-cv2.imwrite('median filter.jpg', fimage1, [cv2.IMWRITE_JPEG_QUALITY, 100])
-cv2.imwrite('bilateral filter.jpg', fimage1, [cv2.IMWRITE_JPEG_QUALITY, 100])
+cv2.imwrite('gaussian blur filter.jpg', fimage2, [cv2.IMWRITE_JPEG_QUALITY, 100])
+cv2.imwrite('median filter.jpg', fimage3, [cv2.IMWRITE_JPEG_QUALITY, 100])
+cv2.imwrite('bilateral filter.jpg', fimage4, [cv2.IMWRITE_JPEG_QUALITY, 100])
