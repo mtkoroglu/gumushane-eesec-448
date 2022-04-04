@@ -169,7 +169,7 @@ Bu kodun değişik filtre ve parametreler için koşturulmasını görmek için 
 [![IMAGE ALT TEXT HERE](https://docs.opencv.org/3.4/filter.jpg)](https://youtu.be/gbO0RVemXB0)
 
 ## Proje 4: Görüntü İşleme Hızını Hesaplama
-Filtreleme dersinde kullandığımız **BilateralFilter()** komutu üç girişe sahipti. İlk girişi olan pencere boyutunu parametresinin filtrelemeye olan etkisini yukarıdaki videoda ve derste görmüştük. Bilateral filtre gördüğümüz öbür üç filtreden farklı olarak k değerinin artmasıyla artan işlem yükünden dolayı işlem hızına tekabül eden FPS'yi azaltıyor. Biz de derste bu hızı hesaplayıp resim üzerine **putText()** komutu ile yazdırarak görselleştireceğiz. Aşağıdaki kodun yazılmasını ve koşturulmasını kodun altındaki resme tıklayarak izleyebilirsiniz.
+Filtreleme dersinde kullandığımız **BilateralFilter()** komutu üç girişe sahipti. İlk girişi olan pencere boyutunu parametresinin filtrelemeye olan etkisini yukarıdaki videoda ve derste görmüştük. Bilateral filtre gördüğümüz öbür üç filtreden farklı olarak k değerinin artmasıyla artan işlem yükünden dolayı işlem hızına tekabül eden FPS'yi azaltıyor. Biz de derste bu hızı Pyhthon'ın **time** paketini [4] kullanarak hesaplayıp resim üzerine **putText()** komutu ile yazdırarak görselleştireceğiz. Aşağıdaki kodun yazılmasını ve koşturulmasını kodun altındaki resme tıklayarak izleyebilirsiniz.
 
 ```
 import cv2
@@ -195,12 +195,30 @@ cv2.destroyAllWindows()
 
 [![görüntü işleme hızını hesaplama](figure/bilateral_filter_processing_speed.jpg)](https://youtu.be/07E6AFL08DA)
 
-## Proje 5: NumPy Kullanarak Kendi Sentetik Resmimizi Oluşturma ve Resimleri Birleştirme
+Dersi hatırlayacak olursak, ilk önce hızını ölçmek istediğimiz **BilateralFilter()** komutundan hemen önce bilgisayarın içindeki kronometreden faydalanarak **timeStart** ismiyle zamanı yakalamıştık. Görüntü işlemeyi yaptıktan hemen sonra **timeStop** ismiyle yine zamanı yakalayıp **timeElapsed = timeStop - timeStart** şeklinde geçen zamanı hesaplamıştık. Daha sonra kodun üzerinde düşündüğümüzde sonsuz döngüde olduğumuzu göz önünde bulundurarak iki ayrı zaman yakalama yerine bir kez zamanı da yakalayarak görüntü işleme hızımızı ölçebileceğimizi anlamıştık. Yukarıdaki kod bu ikinci metoda ait. Bu metodda döngünün sonundan başa dönmeden hemen önce **timePrevious = timeCurrent** şeklinde yukarıda hesapta kullanılan şu andaki zamanı bir sonraki adım için geçmiş zaman haline getirme işlemi mutlaka yapılmak zorunda. Döngüye her başlandığında zaten yeri geldiğinde o andaki zaman **timeCurrent = time.time()** komutuyla yakalanıyor. Bu işin mantığını kendiniz biraz düşünerek anlamanız lazım.
 
-## Proje 6: Piksel Değerlerine Erişim, RGB - Gri Tonlu - Siyah Beyaz Uzay, Eşikleme
-En son videoda **VideoCapture()** komutuyla aktif hale getirdiğimiz web kamerasıyla yakaladığımız kareleri gerçek-zamanda (İng. real-time) ekranda görüntülemiştik. Ard arda ekrana koyduğumuz kareler video gibi gözükmüştü. Şimdi ise RGB yani renkli resim formatında yakalayıp görüntülediğimiz resmi ilk önce gri tonlu (İng. gray scale) resme çevireceğiz. Bu işlemle artık bir piksele ait üç şiddet değeri değil de tek bir şiddet değeri olacak. İlk yaptığımız projedeki kodu (başka bir resim için) Python konsoluna aşağıdaki gibi girersek 
+## Proje 5: Piksel Değerlerine Erişim, RGB - Gri Tonlu - Siyah Beyaz Uzay, Eşikleme
+İkinci hafta yaptığımız ilk projede öğrendiğimiz bazı bilgileri burada kullanacağız. Mesela burada **albert_einstein.jpg** isminde bir fotoğrafı OpenCV kullanarak bilgisayarımıza okuyalım ve bu renkli resmi analiz edelim. Aşağıdaki kod resmi okur ve ekrana sırasıyla resmin yüksekliğini ve genişliğini piksel cinsinden basar. Ayrıca fotoğrafın kanal sayısı denilen bilgiyi ekrana yazar.
 
-bahsettiğimiz üç şiddet değerini görmüş oluruz.
+```
+img = cv2.imread('albert_einstein.jpg')
+print('Yükseklik = %i piksel   Genişlik = %i piksel' %(img.shape[0], img.shape[1]))
+print('Kanal sayısı = %i' %img.shape[2])
+```
+
+Burada kanal sayısının renkl bir resim için üç olduğunu görüyoruz. Bu şekilde üç kanalın oluşturmuş olduğu renkli bir resme RGB resim deniyor. Baş harfleri Red-Green-Blue yani Kırmızı-Yeşil-Mavi. İnsan gözünün yaklaşık olarak kırmızıya %30, yeşile %60 ve maviye %10 duyarlı olduğu kabul ediliyor. Bu noktada kendimiz renkli resimden tek kanallı gri tonlu bir resim elde edelim fakat önce bir pikselin şiddet değeri nedir anlamamız gerekiyor. Python konsoluna
+gidip yüklenen resmin ilk pikseli olan sol en üst pikselin şiddet değerine ulaşmak için
+
+```
+img[0][0]
+```
+
+yazalım. Bize bir dizi halinde üç değer döndürdüğü gibi veri tipini de **uint8** olarak gösteriyor. Bir pikselin şiddet değeri **8 bit unsigned integer** yani 8 bitlik (1 byte) işaretsiz tam sayı aralığında olabiliyor. Tek kanal için 0 kodu siyahı, 255 ise beyazı temsil ediyor. Ara değerler gri tonları oluşturuyor. Sonuç olarak üç kanalın farklı kombinasyonları aşağıdaki gibi renkleri oluşturuyor.
+
+<p align="center"><img src="https://929687.smushcdn.com/2633864/wp-content/uploads/2021/04/opencv_color_spaces_rgb_cube.png?lossy=1&strip=1&webp=1" alt="RGB kübü" height="200"></p>
+
+## Proje 6: NumPy Kullanarak Kendi Sentetik Resmimizi Oluşturma ve Resimleri Birleştirme
+
 
 ## ARA SINAV
 
@@ -208,11 +226,11 @@ bahsettiğimiz üç şiddet değerini görmüş oluruz.
 [1] OpenCV 4.5.5 Dökümantasyonu - https://docs.opencv.org/4.5.5/</br>
 [2] FPS animasyonu - https://news.productioncrate.com/tag/fps/</br>
 [3] OpenCV'de Görüntü Filtreleme (Bulandırma) [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2021/04/28/opencv-smoothing-and-blurring/</br>
-[4] Standard Kütüphane ve **numpy** ile Rasgele Sayı, Dizi ve Matris Üretme - https://machinelearningmastery.com/how-to-generate-random-numbers-in-python/</br>
-[5] OpenCV'de Eşikleme (Thresholding) [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2021/04/28/opencv-thresholding-cv2-threshold/</br>
-[6] OpenCV'de **Haar Cascade** Metodu ile Yüz Tespiti [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2021/04/05/opencv-face-detection-with-haar-cascades/</br>
-[7] Raspberry Pi ve OpenCV kullanarak Pan-Tilt Kamera ile Yüz Takibi [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2019/04/01/pan-tilt-face-tracking-with-a-raspberry-pi-and-opencv/</br>
-[8] Haar Cascade ile Yüz ve Göz Tespiti (OpenCV tutorial) - https://docs.opencv.org/4.x/db/d28/tutorial_cascade_classifier.html</br>
-[9] OpenCV'de Renk Uzayları Arasında Dönüşüm - https://www.pyimagesearch.com/2021/04/28/opencv-color-spaces-cv2-cvtcolor/</br>
-[10] OpenCV ile Yeşil Top Tespiti (Takibi) - https://www.pyimagesearch.com/2015/09/14/ball-tracking-with-opencv/</br>
-[11] OpenCV'de **time** paketi kullanılarak FPS hesaplanması - https://www.geeksforgeeks.org/python-displaying-real-time-fps-at-which-webcam-video-file-is-processed-using-opencv/
+[4] OpenCV'de **time** paketi kullanılarak FPS hesaplanması - https://www.geeksforgeeks.org/python-displaying-real-time-fps-at-which-webcam-video-file-is-processed-using-opencv/</br>
+[5] OpenCV'de Renk Uzayları Arasında Dönüşüm - https://www.pyimagesearch.com/2021/04/28/opencv-color-spaces-cv2-cvtcolor/</br>
+[6] Standard Kütüphane ve **numpy** ile Rasgele Sayı, Dizi ve Matris Üretme - https://machinelearningmastery.com/how-to-generate-random-numbers-in-python/</br>
+[7] OpenCV'de Eşikleme (Thresholding) [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2021/04/28/opencv-thresholding-cv2-threshold/</br>
+[8] OpenCV'de **Haar Cascade** Metodu ile Yüz Tespiti [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2021/04/05/opencv-face-detection-with-haar-cascades/</br>
+[9] Raspberry Pi ve OpenCV kullanarak Pan-Tilt Kamera ile Yüz Takibi [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2019/04/01/pan-tilt-face-tracking-with-a-raspberry-pi-and-opencv/</br>
+[10] Haar Cascade ile Yüz ve Göz Tespiti (OpenCV tutorial) - https://docs.opencv.org/4.x/db/d28/tutorial_cascade_classifier.html</br>
+[11] OpenCV ile Yeşil Top Tespiti (Takibi) - https://www.pyimagesearch.com/2015/09/14/ball-tracking-with-opencv/</br>
