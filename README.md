@@ -215,7 +215,18 @@ img[0][0]
 
 yazalım. Bize bir dizi halinde üç değer döndürdüğü gibi veri tipini de **uint8** olarak gösteriyor. Bir pikselin şiddet değeri **8 bit unsigned integer** yani 8 bitlik (1 byte) işaretsiz tam sayı aralığında olabiliyor. Tek kanal için 0 kodu siyahı, 255 ise beyazı temsil ediyor. Ara değerler gri tonları oluşturuyor. Sonuç olarak üç kanalın farklı kombinasyonları aşağıdaki gibi renkleri oluşturuyor.
 
-<p align="center"><img src="https://929687.smushcdn.com/2633864/wp-content/uploads/2021/04/opencv_color_spaces_rgb_cube.png?lossy=1&strip=1&webp=1" alt="RGB kübü" height="200"></p>
+<p align="center"><img src="https://929687.smushcdn.com/2633864/wp-content/uploads/2021/04/opencv_color_spaces_rgb_cube.png?lossy=1&strip=1&webp=1" alt="RGB kübü" height="360"></p>
+
+*Şekil 2* RGB kübü ([5]'in izni ile).
+
+Okuduğumuz olduğumuz renkli resmi yukarıda bahsettiğimiz RGB ağırlıkları olan (0.3, 0.6, 0.1) ile gri tonlu bir resme dönüştürmek ve yeni oluşan gri tonlu resimde yukarıda incelediğimiz sol üst pikselin yeni oluşan şiddet değerini görüntülemek için aşağıdaki satırları koşturalım. Burada kullandığımız **cvtColor()** fonksiyonu **convert color** kısaltması, Türkçe olarak renk uzayları arasında dönüşüm manasına geliyor.
+
+```
+imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+imgGray[0][0]
+```
+
+Görüldüğü gibi artık üç değer yerine tek bir piksel şiddet değeri var. Bütün piksel şiddet değerleri [0-255] aralığında bir tam sayı değeri alıyor. Şu ana kadar olan kısmı hem tek bir resim hem de web kamerası üzerinde örnek bir kodla anlamak için aşağıdaki resme tıklayınca açılan videoyu izleyin.
 
 ## Proje 6: NumPy Kullanarak Kendi Sentetik Resmimizi Oluşturma ve Resimleri Birleştirme
 
