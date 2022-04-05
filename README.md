@@ -252,7 +252,7 @@ Resmin üzerindeki her pikselin şiddet değerini eşik değer (İng. threshold)
 
 Burada OpenCV kullanarak hem video hem gif animasyonu yapan kodları **project/color-space** dizininde bulabilirsiniz diye ekleyelim.
 
-
+<p align="center"><img src="figure/black and white.gif" alt="resim eşikleme animasyon" width=%100 height=auto></p>
 
 ## Proje 6: NumPy Kullanarak Sentetik Resim Oluşturma, Resimleri Birleştirme, Kendi Eşik Fonksiyonumuzu Yazma ve OpenCV ile Hız Bakımından Kıyaslama
 Ara sınavdan önceki bu son projemizde döngüleri kullanmayı iyice öğreneceğiz.
