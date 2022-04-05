@@ -242,6 +242,14 @@ Artık her bir piksele gittiğimizde üç değil bir tane şiddet değeri var. H
 
 <p align="center"><img src="figure/gray scale.jpg" alt="gri tonlar ve piksel değerleri" width=%100 height=auto></p>
 
+Resmin üzerindeki her pikselin şiddet değerini eşik değer (İng. threshold) olan T ile kıyaslayalım. Eğer piksel değeri T'den küçükse o zaman o pikselin değerini 0 yapalım, küçük değil de büyük eşitse o zaman da pikselin değerini maksimum değer olan 255 yapalım. Bunun için OpenCV'de **threshold()** fonksiyonunu kullanacağız.
+
+```
+(T, imgBW) = cv2.threshold(imgGray, T, 255, cv2.THRESH_BINARY)
+```
+
+<p align="center"><img src="figure/gray scale and BW resized.jpg" alt="gri tonlu ve siyah beyaz resim" width=%100 height=auto></p>
+
 ## Proje 6: NumPy Kullanarak Kendi Sentetik Resmimizi Oluşturma ve Resimleri Birleştirme
 
 
