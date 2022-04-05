@@ -214,7 +214,13 @@ Python konsolunda yüklenen fotoğrafın ilk pikselinin (i.e., sol en üst pikse
 img[0][0]
 ```
 
-yazarız. Bize bir dizi halinde üç değer döndürdüğü gibi veri tipini de **uint8** olarak gösteriyor. Bir pikselin şiddet değeri **8 bit unsigned integer** yani 8 bitlik (1 byte) işaretsiz tam sayı aralığında olabiliyor. Tek kanal için 0 kodu siyahı, 255 ise beyazı temsil ediyor. Ara değerler gri tonları oluşturuyor. Sonuç olarak üç kanalın farklı kombinasyonları aşağıdaki gibi renkleri oluşturuyor.
+yazarız. Alternatif olarak 
+
+```
+img[0,0]
+```
+
+de yazılabilir. Bize bir dizi halinde üç değer döndürdüğü gibi veri tipini de **uint8** olarak gösteriyor. Bir pikselin şiddet değeri **8 bit unsigned integer** yani 8 bitlik (1 byte) işaretsiz tam sayı aralığında olabiliyor. Tek kanal için 0 kodu siyahı, 255 ise beyazı temsil ediyor. Ara değerler gri tonları oluşturuyor. Sonuç olarak üç kanalın farklı kombinasyonları aşağıdaki gibi renkleri oluşturuyor.
 
 <p align="center"><img src="https://929687.smushcdn.com/2633864/wp-content/uploads/2021/04/opencv_color_spaces_rgb_cube.png?lossy=1&strip=1&webp=1" alt="RGB kübü" height="360"></p>
 
@@ -227,7 +233,9 @@ imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 imgGray[0][0]
 ```
 
-Görüldüğü gibi artık üç değer yerine tek bir piksel şiddet değeri var. Bütün piksel şiddet değerleri [0-255] aralığında bir tam sayı değeri alıyor. Şu ana kadar olan kısmı hem tek bir resim hem de web kamerası üzerinde örnek bir kodla anlamak için aşağıdaki resme tıklayınca açılan videoyu izleyin.
+Görüldüğü gibi artık üç değer yerine tek bir piksel şiddet değeri var. Bütün piksel şiddet değerleri [0-255] aralığında bir tam sayı değeri alıyor.
+
+<p align="center"><img src="figure/rgb and gray scale resized.jpg" alt="RGB ve gri tonlu resim" height="200"></p>
 
 #### Gri Tonlu Resimden Siyah Beyaz Resime
 
