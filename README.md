@@ -235,7 +235,7 @@ imgGray[0][0]
 
 Görüldüğü gibi artık üç değer yerine tek bir piksel şiddet değeri var. Bütün piksel şiddet değerleri [0-255] aralığında bir tam sayı değeri alıyor.
 
-<p align="center"><img src="figure/RGB and gray scale resized.jpg" alt="RGB ve gri tonlu resim" height="400" style="vertical-align:middle;margin:50px 0px"></p>
+<p align="center"><img src="figure/RGB and gray scale resized.jpg" alt="RGB ve gri tonlu resim" width=%100 height=auto></p>
 
 #### Gri Tonlu Resimden Siyah Beyaz Resime
 
