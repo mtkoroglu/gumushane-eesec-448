@@ -238,7 +238,9 @@ Görüldüğü gibi artık üç değer yerine tek bir piksel şiddet değeri var
 <p align="center"><img src="figure/RGB and gray scale resized.jpg" alt="RGB ve gri tonlu resim" width=%100 height=auto></p>
 
 #### Gri Tonlu Resimden Siyah Beyaz Resime
+Artık her bir piksele gittiğimizde üç değil bir tane şiddet değeri var. Her bir piksel şiddet değeri bilgisayar hafısaında **uint8** veri tipine uygun olan bir byte'da tutuluyor. İkilik sistemi (binary) hatırlayacak olursak: 1 byte = 8 bit. Toplam alabileceği piksel şiddet değeri 2<sup>8</sup>=256. Burada 0'dan başlandığından dolayı maksimum piksel şiddet değeri 2<sup>8</sup>-1=255 olur.
 
+<p align="center"><img src="figure/gray scale.jpg" alt="gri tonlar ve piksel değerleri" width=%100 height=auto></p>
 
 ## Proje 6: NumPy Kullanarak Kendi Sentetik Resmimizi Oluşturma ve Resimleri Birleştirme
 
