@@ -235,9 +235,13 @@ Görüldüğü gibi artık üç değer yerine tek bir piksel şiddet değeri var
 
 <p align="center"><img src="figure/RGB and gray scale resized.jpg" alt="RGB ve gri tonlu resim" width=%100 height=auto></p>
 
-Artık her bir piksele gittiğimizde üç değil bir tane şiddet değeri var. Her bir piksel şiddet değeri bilgisayar hafısaında **uint8** veri tipine uygun olan bir byte'da tutuluyor. İkilik sistemi (binary) hatırlayacak olursak: 1 byte = 8 bit. Toplam alabileceği piksel şiddet değeri 2<sup>8</sup>=256. Burada 0'dan başlandığından dolayı maksimum piksel şiddet değeri 2<sup>8</sup>-1=255 olur.
+Artık her bir piksel için üç değil bir tane şiddet değeri var. Piksel şiddet değerleri bilgisayar hafızasında **uint8** veri tipine uygun olan bir **byte**'da tutuluyor. İkilik sistemi (binary) hatırlayacak olursak: 1 byte = 8 bit. Toplam alabileceği piksel şiddet değeri 2<sup>8</sup>=256. Burada 0'dan başlandığından dolayı maksimum piksel şiddet değeri 2<sup>8</sup>-1=255 olur.
 
 <p align="center"><img src="figure/gray scale.jpg" alt="gri tonlar ve piksel değerleri" width=%100 height=auto></p>
+
+Yukarıda RGB kübünü inceleyerek renkleri nasıl oluşturduğumuzu anlayabiliriz. **Önemli Not:** OpenCV'de renkli resmin kanal sırası RGB değil BGR'dır. Örnek olarak aşağıda belirtilen renklerden sarı rengin kodu (0,255,255), cyan rengi kodu (255, 255, 0) ve magenta rengi kodu (255,0,255) olarak bulunabilir. Bunu hızlıca geçtiğimiz haftaki web kamerası fps hızını resim üzerinde görselleştirme kodunda test edebiliriz.
+
+<p align="center"><img src="figure/opencv_color_spaces_rgb_cube.png" alt="RGB kübü renk kodu örnekleri" width=%100 height=auto></p>
 
 #### Gri Tonlu Resimden Siyah Beyaz Resim Elde Etme (Eşikleme - Thresholding)
 Resimde yer alan her pikselin şiddet değerini eşik değer (İng. threshold) olan T ile kıyaslayalım. Burada 0<T<255 her hangi bir değer. Eğer piksel değeri T'den küçükse o zaman o pikselin değerini 0 yapalım, küçük değil de büyük eşitse o zaman da pikselin değerini maksimum değer olan 255 yapalım. Biraz düşünecek olursak küçük T değerleri için daha beyaz, büyük T değerleri için daha siyah bir resim oluşacağını anlayabilirsiniz. Eşikleme işlemi için OpenCV'de **threshold()** fonksiyonunu kullanacağız.
