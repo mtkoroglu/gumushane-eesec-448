@@ -168,7 +168,7 @@ Bu kodun değişik filtre ve parametreler için koşturulmasını görmek için 
 
 [![IMAGE ALT TEXT HERE](https://docs.opencv.org/3.4/filter.jpg)](https://youtu.be/gbO0RVemXB0)
 
-## Proje 4: Görüntü İşleme Hızını Hesaplama
+## Proje 4: Görüntü İşleme Hızını Hesaplama (processing-speed)
 Filtreleme dersinde kullandığımız **BilateralFilter()** komutu üç girişe sahipti. İlk girişi olan pencere boyutunu parametresinin filtrelemeye olan etkisini yukarıdaki videoda ve derste görmüştük. Bilateral filtre gördüğümüz öbür üç filtreden farklı olarak k değerinin artmasıyla artan işlem yükünden dolayı işlem hızına tekabül eden FPS'yi azaltıyor. Biz de derste bu hızı Pyhthon'ın **time** paketini [4] kullanarak hesaplayıp resim üzerine **putText()** komutu ile yazdırarak görselleştireceğiz. Aşağıdaki kodun yazılmasını ve koşturulmasını kodun altındaki resme tıklayarak izleyebilirsiniz.
 
 ```
@@ -187,7 +187,7 @@ while True:
     cv2.imshow('bilateral filtre', filtered)
     print('Bilateral filtre %.5fs\'de koştu.' %elapsedTime)
     timePrevious = timeCurrent
-    if cv2.waitKey(1) & 0xFF == ord('q'): # eğer bir an bile q'ya basarsa -->
+    if cv2.waitKey(1) & 0xFF == ord('q'): # eğer bir an bile q'ya basılırsa -->
         break # --> programı sonlandır
 cap.release()
 cv2.destroyAllWindows()
@@ -206,7 +206,7 @@ print('Yükseklik = %i piksel   Genişlik = %i piksel' %(img.shape[0], img.shape
 print('Kanal sayısı = %i' %img.shape[2])
 ```
 
-Burada kanal sayısının renkli bir resim için üç olduğunu görüyoruz. Bu şekilde üç kanalın oluşturmuş olduğu renkli bir resme **RGB** resim deniyor. Baş harfleri **Red**-**Green**-**Blue** yani **Kırmızı**-**Yeşil**-**Mavi**. İnsan gözünün yaklaşık olarak kırmızıya %30, yeşile %60 ve maviye %10 duyarlı olduğu kabul ediliyor.
+Burada kanal sayısının renkli bir resim için üç olduğunu görüyoruz. Bu şekilde üç kanalın oluşturmuş olduğu renkli bir resme **RGB** resim deniyor. Baş harfleri **Red**-**Green**-**Blue** yani **Kırmızı**-**Yeşil**-**Mavi**. **Not:** İnsan gözünün yaklaşık olarak kırmızıya %30, yeşile %60 ve maviye %10 duyarlı olduğu kabul ediliyor.
 #### Piksel Şiddet Değerleri
 Python konsolunda yüklenen fotoğrafın ilk pikselinin (i.e., sol en üst piksel) şiddet değerine ulaşmak için
 
@@ -222,7 +222,7 @@ img[0,0]
 
 de yazılabilir. Bize bir dizi halinde üç değer döndürdüğü gibi veri tipini de **uint8** olarak gösteriyor. Bir pikselin şiddet değeri **8 bit unsigned integer** yani 8 bitlik (1 byte) işaretsiz tam sayı aralığında olabiliyor. Tek kanal için 0 kodu siyahı, 255 ise beyazı temsil ediyor. Ara değerler gri tonları oluşturuyor. Sonuç olarak üç kanalın farklı kombinasyonları aşağıdaki gibi renkleri oluşturuyor. Aşağıda RGB kübünü görebilirsiniz ([5]'in izni ile).
 
-<p align="center"><img src="https://929687.smushcdn.com/2633864/wp-content/uploads/2021/04/opencv_color_spaces_rgb_cube.png?lossy=1&strip=1&webp=1" alt="RGB kübü" height="360"></p>
+<p align="center"><img src="https://929687.smushcdn.com/2633864/wp-content/uploads/2021/04/opencv_color_spaces_rgb_cube.png?lossy=1&strip=1&webp=1" alt="RGB kübü" width=%100 height=auto></p>
 
 Renkli resmi yukarıda bahsettiğimiz RGB ağırlıkları olan (0.3, 0.6, 0.1) ile gri tonlu bir resme dönüştürmek ve yeni oluşan gri tonlu resimde yukarıda incelediğimiz sol üst pikselin yeni oluşan şiddet değerini görüntülemek için aşağıdaki satırları koşturalım. Burada kullandığımız **cvtColor()** fonksiyonu **convert color** kısaltması, Türkçe olarak renk uzayları arasında dönüşüm manasına geliyor.
 
@@ -235,12 +235,12 @@ Görüldüğü gibi artık üç değer yerine tek bir piksel şiddet değeri var
 
 <p align="center"><img src="figure/RGB and gray scale resized.jpg" alt="RGB ve gri tonlu resim" width=%100 height=auto></p>
 
-#### Gri Tonlu Resimden Siyah Beyaz Resime
 Artık her bir piksele gittiğimizde üç değil bir tane şiddet değeri var. Her bir piksel şiddet değeri bilgisayar hafısaında **uint8** veri tipine uygun olan bir byte'da tutuluyor. İkilik sistemi (binary) hatırlayacak olursak: 1 byte = 8 bit. Toplam alabileceği piksel şiddet değeri 2<sup>8</sup>=256. Burada 0'dan başlandığından dolayı maksimum piksel şiddet değeri 2<sup>8</sup>-1=255 olur.
 
 <p align="center"><img src="figure/gray scale.jpg" alt="gri tonlar ve piksel değerleri" width=%100 height=auto></p>
 
-Resmin üzerindeki her pikselin şiddet değerini eşik değer (İng. threshold) olan T ile kıyaslayalım. Eğer piksel değeri T'den küçükse o zaman o pikselin değerini 0 yapalım, küçük değil de büyük eşitse o zaman da pikselin değerini maksimum değer olan 255 yapalım. Bunun için OpenCV'de **threshold()** fonksiyonunu kullanacağız.
+#### Gri Tonlu Resimden Siyah Beyaz Resim Elde Etme (Eşikleme - Thresholding)
+Resimde yer alan her pikselin şiddet değerini eşik değer (İng. threshold) olan T ile kıyaslayalım. Burada 0<T<255 her hangi bir değer. Eğer piksel değeri T'den küçükse o zaman o pikselin değerini 0 yapalım, küçük değil de büyük eşitse o zaman da pikselin değerini maksimum değer olan 255 yapalım. Biraz düşünecek olursak küçük T değerleri için daha beyaz, büyük T değerleri için daha siyah bir resim oluşacağını anlayabilirsiniz. Eşikleme işlemi için OpenCV'de **threshold()** fonksiyonunu kullanacağız.
 
 ```
 (T, imgBW) = cv2.threshold(imgGray, T, 255, cv2.THRESH_BINARY)
