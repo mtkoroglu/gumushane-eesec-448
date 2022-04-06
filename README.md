@@ -222,7 +222,7 @@ img[0,0]
 
 de yazılabilir. Bize bir dizi halinde üç değer döndürdüğü gibi veri tipini de **uint8** olarak gösteriyor. Bir pikselin şiddet değeri **8 bit unsigned integer** yani 8 bitlik (1 byte) işaretsiz tam sayı aralığında olabiliyor. Tek kanal için 0 kodu siyahı, 255 ise beyazı temsil ediyor. Ara değerler gri tonları oluşturuyor. Sonuç olarak üç kanalın farklı kombinasyonları aşağıdaki gibi renkleri oluşturuyor. Aşağıda RGB kübünü görebilirsiniz ([5]'in izni ile).
 
-<p align="center"><img src="https://929687.smushcdn.com/2633864/wp-content/uploads/2021/04/opencv_color_spaces_rgb_cube.png?lossy=1&strip=1&webp=1" alt="RGB kübü" width=%100 height=auto></p>
+<p align="center"><img src="figure/opencv_color_spaces_rgb_cube.png" alt="RGB kübü renk kodu örnekleri" width=%100 height=auto></p>
 
 Renkli resmi yukarıda bahsettiğimiz RGB ağırlıkları olan (0.3, 0.6, 0.1) ile gri tonlu bir resme dönüştürmek ve yeni oluşan gri tonlu resimde yukarıda incelediğimiz sol üst pikselin yeni oluşan şiddet değerini görüntülemek için aşağıdaki satırları koşturalım. Burada kullandığımız **cvtColor()** fonksiyonu **convert color** kısaltması, Türkçe olarak renk uzayları arasında dönüşüm manasına geliyor.
 
@@ -239,9 +239,8 @@ Artık her bir piksel için üç değil bir tane şiddet değeri var. Piksel şi
 
 <p align="center"><img src="figure/gray scale.jpg" alt="gri tonlar ve piksel değerleri" width=%100 height=auto></p>
 
-Yukarıda RGB kübünü inceleyerek renkleri nasıl oluşturduğumuzu anlayabiliriz. **Önemli Not:** OpenCV'de renkli resmin kanal sırası RGB değil BGR'dır. Örnek olarak aşağıda belirtilen renklerden sarı rengin kodu (0,255,255), cyan rengi kodu (255, 255, 0) ve magenta rengi kodu (255,0,255) olarak bulunabilir. Bunu hızlıca geçtiğimiz haftaki web kamerası fps hızını resim üzerinde görselleştirme kodunda test edebiliriz.
+Yukarıda görseli verilen RGB kübünü inceleyerek renkleri nasıl oluşturduğumuzu anlayabiliriz. **Önemli Not:** OpenCV'de renkli resmin kanal sırası RGB değil BGR'dır. Örnek olarak yukarıda çember içinde gösterilen renklerden sarı rengin kodu (0,255,255), cyan rengi kodu (255, 255, 0) ve magenta rengi kodu (255,0,255) olarak bulunabilir. Bunu hızlıca geçtiğimiz haftaki web kamerası fps hızını resim üzerinde görselleştirme kodunda (veya ilk hafta Gümüşhane fotoğrafı üzerine yazı yazma kodunda) test edebiliriz.
 
-<p align="center"><img src="figure/opencv_color_spaces_rgb_cube.png" alt="RGB kübü renk kodu örnekleri" width=%100 height=auto></p>
 
 #### Gri Tonlu Resimden Siyah Beyaz Resim Elde Etme (Eşikleme - Thresholding)
 Resimde yer alan her pikselin şiddet değerini eşik değer (İng. threshold) olan T ile kıyaslayalım. Burada 0<T<255 her hangi bir değer. Eğer piksel değeri T'den küçükse o zaman o pikselin değerini 0 yapalım, küçük değil de büyük eşitse o zaman da pikselin değerini maksimum değer olan 255 yapalım. Biraz düşünecek olursak küçük T değerleri için daha beyaz, büyük T değerleri için daha siyah bir resim oluşacağını anlayabilirsiniz. Eşikleme işlemi için OpenCV'de **threshold()** fonksiyonunu kullanacağız.
