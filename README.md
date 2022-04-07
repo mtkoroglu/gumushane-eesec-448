@@ -169,7 +169,7 @@ Bu kodun değişik filtre ve parametreler için koşturulmasını görmek için 
 [![IMAGE ALT TEXT HERE](https://docs.opencv.org/3.4/filter.jpg)](https://youtu.be/gbO0RVemXB0)
 
 ## Proje 4: Görüntü İşleme Hızını Hesaplama (processing-speed)
-Filtreleme dersinde kullandığımız **BilateralFilter()** komutu üç girişe sahipti. İlk girişi olan pencere boyutunu parametresinin filtrelemeye olan etkisini yukarıdaki videoda ve derste görmüştük. Bilateral filtre gördüğümüz öbür üç filtreden farklı olarak k değerinin artmasıyla artan işlem yükünden dolayı işlem hızına tekabül eden FPS'yi azaltıyor. Biz de derste bu hızı Pyhthon'ın **time** paketini [4] kullanarak hesaplayıp resim üzerine **putText()** komutu ile yazdırarak görselleştireceğiz. Aşağıdaki kodun yazılmasını ve koşturulmasını kodun altındaki resme tıklayarak izleyebilirsiniz.
+Filtreleme dersinde kullandığımız **BilateralFilter()** komutu üç girişe sahipti. İlk girişi olan pencere boyutu parametresinin filtrelemeye olan etkisini yukarıdaki videoda ve derste görmüştük. Bilateral filtre gördüğümüz öbür üç filtreden farklı olarak pencere boyutunun artmasıyla (artan işlem yükünden dolayı) sinyal işleme hızını temsil eden FPS'yi azaltıyor. Biz de derste bu hızı Python'da **time** paketini [4] kullanarak FPS'yi hesaplayıp resim üzerine **putText()** komutu ile yazdıracağız. Aşağıdaki kodun yazılmasını ve koşturulmasını kodun altındaki resme tıklayarak izleyebilirsiniz.
 
 ```
 import cv2
@@ -178,7 +178,7 @@ cap = cv2.VideoCapture(1)
 timePrevious = time.time()
 while True:
     ret, frame = cap.read()
-    filtered = cv2.bilateralFilter(frame, 27, 75, 85)
+    filtered = cv2.bilateralFilter(frame, 21, 75, 85)
     timeCurrent = time.time() # şu anki zaman
     elapsedTime = timeCurrent - timePrevious # geçen zaman
     FPS = 1 / elapsedTime
@@ -259,7 +259,7 @@ Burada OpenCV kullanarak hem video hem gif animasyonu yapan kodları **project/b
 Yukarıda renkli resim, gri tonlu resim ve siyah beyaz resim hakkında anlattıklarımızı izleyebileceğiniz video bağlantısını DBS'de bulabilirsiniz.
 
 ## Proje 6: NumPy Kullanarak Sentetik Resim Oluşturma, Resimleri Birleştirme, Kendi Eşik Fonksiyonumuzu Yazma ve OpenCV ile Hız Bakımından Kıyaslama
-Ara sınavdan önceki bu son projemizde döngüleri kullanmayı iyice öğreneceğiz.
+
 
 ## ARA SINAV
 
