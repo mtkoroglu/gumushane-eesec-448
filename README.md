@@ -257,6 +257,8 @@ Burada OpenCV kullanarak hem video hem gif animasyonu yapan kodları **project/c
 
 <p align="center"><img src="figure/color gray and BW.gif" alt="web kamerası renkli gri tonlu ve siyah beyaz animasyon" width=%100 height=auto></p>
 
+Yukarıda renkli resim, gri tonlu resim ve siyah beyaz resim hakkında anlattıklarımızı izleyebileceğiniz video bağlantısını DBS'de bulabilirsiniz.
+
 ## Proje 6: NumPy Kullanarak Sentetik Resim Oluşturma, Resimleri Birleştirme, Kendi Eşik Fonksiyonumuzu Yazma ve OpenCV ile Hız Bakımından Kıyaslama
 Ara sınavdan önceki bu son projemizde döngüleri kullanmayı iyice öğreneceğiz.
 
