@@ -241,7 +241,6 @@ Artık her bir piksel için üç değil bir tane şiddet değeri var. Piksel şi
 
 Yukarıda görseli verilen RGB kübünü inceleyerek renkleri nasıl oluşturduğumuzu anlayabiliriz. **Önemli Not:** OpenCV'de renkli resmin kanal sırası RGB değil BGR'dır. Örnek olarak yukarıda çember içinde gösterilen renklerden sarı rengin kodu (0,255,255), cyan rengi kodu (255, 255, 0) ve magenta rengi kodu (255,0,255) olarak bulunabilir. Bunu hızlıca geçtiğimiz haftaki web kamerası fps hızını resim üzerinde görselleştirme kodunda (veya ilk hafta Gümüşhane fotoğrafı üzerine yazı yazma kodunda) test edebiliriz.
 
-
 #### Gri Tonlu Resimden Siyah Beyaz Resim Elde Etme (Eşikleme - Thresholding)
 Resimde yer alan her pikselin şiddet değerini eşik değer (İng. threshold) olan T ile kıyaslayalım. Burada 0<T<255 her hangi bir değer. Eğer piksel değeri T'den küçükse o zaman o pikselin değerini 0 yapalım, küçük değil de büyük eşitse o zaman da pikselin değerini maksimum değer olan 255 yapalım. Biraz düşünecek olursak küçük T değerleri için daha beyaz, büyük T değerleri için daha siyah bir resim oluşacağını anlayabilirsiniz. Eşikleme işlemi için OpenCV'de **threshold()** fonksiyonunu kullanacağız.
 
