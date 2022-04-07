@@ -237,7 +237,7 @@ Görüldüğü gibi artık üç değer yerine tek bir piksel şiddet değeri var
 
 Artık her bir piksel için üç değil bir tane şiddet değeri var. Piksel şiddet değerleri bilgisayar hafızasında **uint8** veri tipine uygun olan bir **byte**'da tutuluyor. İkilik sistemi (binary) hatırlayacak olursak: 1 byte = 8 bit. Toplam alabileceği piksel şiddet değeri 2<sup>8</sup>=256. Burada 0'dan başlandığından dolayı maksimum piksel şiddet değeri 2<sup>8</sup>-1=255 olur.
 
-<p align="center"><img src="figure/gray scale.jpg" alt="gri tonlar ve piksel değerleri" height="200"></p>
+<p align="center"><img src="figure/gray scale.jpg" alt="gri tonlar ve piksel değerleri" height="160"></p>
 
 Yukarıda görseli verilen RGB kübünü inceleyerek renkleri nasıl oluşturduğumuzu anlayabiliriz. **Önemli Not:** OpenCV'de renkli resmin kanal sırası RGB değil BGR'dır. Örnek olarak yukarıda çember içinde gösterilen renklerden sarı rengin kodu (0,255,255), cyan rengi kodu (255, 255, 0) ve magenta rengi kodu (255,0,255) olarak bulunabilir. Bunu hızlıca geçtiğimiz haftaki web kamerası fps hızını resim üzerinde görselleştirme kodunda (veya ilk hafta Gümüşhane fotoğrafı üzerine yazı yazma kodunda) test edebiliriz.
 
