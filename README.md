@@ -239,18 +239,20 @@ Artık her bir piksel için üç değil bir tane şiddet değeri var. Piksel şi
 
 <p align="center"><img src="figure/gray scale.jpg" alt="gri tonlar ve piksel değerleri" height="160"></p>
 
-Yukarıda görseli verilen RGB kübünü inceleyerek renkleri nasıl oluşturduğumuzu anlayabiliriz. **Önemli Not:** OpenCV'de renkli resmin kanal sırası RGB değil BGR'dır. Örnek olarak yukarıda çember içinde gösterilen renklerden sarı rengin kodu (0,255,255), cyan rengi kodu (255, 255, 0) ve magenta rengi kodu (255,0,255) olarak bulunabilir. Bunu hızlıca geçtiğimiz haftaki web kamerası fps hızını resim üzerinde görselleştirme kodunda (veya ilk hafta Gümüşhane fotoğrafı üzerine yazı yazma kodunda) test edebiliriz.
+Yukarıda görseli verilen RGB kübünü inceleyerek renkleri nasıl oluşturduğumuzu anlayabiliriz. **Önemli Not:** OpenCV'de renkli resmin kanal sırası RGB değil BGR'dır. Örnek olarak yukarıda çember içinde gösterilen renklerden sarı rengin kodu (0,255,255). Ara sınav ve final sınavında cyan, magenta, beyaz, siyah veya başka renk kodları sorularıyla karşılaşabilirsiniz.
 
 #### Gri Tonlu Resimden Siyah Beyaz Resim Elde Etme (Eşikleme - Thresholding)
-Resimde yer alan her pikselin şiddet değerini eşik değer (İng. threshold) olan T ile kıyaslayalım. Burada 0<T<255 her hangi bir değer. Eğer piksel değeri T'den küçükse o zaman o pikselin değerini 0 yapalım, küçük değil de büyük eşitse o zaman da pikselin değerini maksimum değer olan 255 yapalım. Biraz düşünecek olursak küçük T değerleri için daha beyaz, büyük T değerleri için daha siyah bir resim oluşacağını anlayabilirsiniz. Eşikleme işlemi için OpenCV'de **threshold()** fonksiyonunu kullanacağız.
+Resimde yer alan her pikselin şiddet değerini eşik değer (İng. threshold) olan T ile kıyaslayalım. Burada eşik değeri T'nin değer aralığı 0<T<255. Kullanıcı tarafından bu aralıktan bir eşik değer seçiliyor (e.g., T=60). Eğer piksel değeri T'den küçükse o zaman o pikselin değerini 0 yapalım, küçük değil de büyük eşitse o zaman da pikselin değerini maksimum değer olan 255 yapalım. Biraz düşünecek olursak **küçük T değerleri** için **daha beyaz**, **büyük T değerleri** için **daha siyah** bir resim oluşacağını anlayabilirsiniz (sınavda bununla alakalı mutlaka soru oluyor). Eşikleme işlemi için OpenCV'de **threshold()** fonksiyonunu kullanacağız.
 
 ```
 (T, imgBW) = cv2.threshold(imgGray, T, 255, cv2.THRESH_BINARY)
 ```
 
+OpenCV'de **threshold** fonksiyonunda biraz garip olan şey T'yi hem girişte hem de çıkışta görmemiz. Şunu bilin ki yukarıdaki kodu koşturursanız çıkışta gözlenen T değeri girişin aynısı oluyor. Kafanız karışmasın.
+
 <p align="center"><img src="figure/gray scale and BW resized.jpg" alt="gri tonlu ve siyah beyaz resim" width=%100 height=auto></p>
 
-Burada OpenCV kullanarak hem video hem gif animasyonu yapan kodları **project/bgr-gray-bw** dizininde bulabilirsiniz diye ekleyelim.
+Burada OpenCV kullanarak hem **video** hem **gif** animasyonu yapan kodları **project/bgr-gray-bw** dizininde bulabilirsiniz diye ekleyelim.
 
 <p align="center"><img src="figure/black and white.gif" alt="resim eşikleme animasyon" width=%100 height=auto></p>
 
