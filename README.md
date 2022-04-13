@@ -149,7 +149,7 @@ while True:
     ret, frame = cap.read() # frame yakaladığımız görüntü yani kare
     k = 15 # kernel size - pencere boyutu
     # aşağıda değişik filtrelerle resmi filtreleyelim
-    # filtered = cv2.blur(frame, (k,k))
+    filtered = cv2.blur(frame, (k,k))
     # filtered = cv2.GaussianBlur(frame, (k,k), 0)
     # filtered = cv2.medianFilter(frame, k)
     # filtered = cv2.bilateralFilter(frame, k, 90, 90)
@@ -163,6 +163,8 @@ while True:
 cap.release()
 cv2.destroyAllWindows()
 ```
+
+<p align="center"><img src="figure/birlesik resim dusuk boyut.jpg" alt="birleştirilmiş filtrelenmiş resimler" width=%100 height=auto></p>
 
 Bu kodun değişik filtre ve parametreler için koşturulmasını görmek için aşağıdaki resme tıklayın. Açılan videoda ayrıca **EESEC 448**'de verilecek ekstra puan ve ödevlerle ilgili bilgi de mevcut. Herşeye ek olarak yaptığımız ilk iki projedeki bazı fonksiyonları kullanarak web kamerası kodu çalıştırılınca gelen video üzerine **dinamik** bir şekilde (1) yakalanan kare numarasını yazdırma, (2) farklı isimlerle resim kaydetme ve (3) kaydedilen bu resimler hakkındaki bilgiyi yine dinamik bir biçimde konsol ekranına yazdırma işlemlerini de videoda bulabilirsiniz. Videonun sonunda ilk ödev sözlü olarak açıklanıyor. Ara sınav notuna +3 puan eklemek isteyenler yazdıkları kodu bana email atsınlar. Ödevin son teslim tarihi ve vakti 31 Mart 2022 saat sabah 9:15.
 
