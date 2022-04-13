@@ -262,8 +262,11 @@ Burada OpenCV kullanarak hem **video** hem **gif** animasyonu yapan kodları **p
 
 Yukarıda renkli resim, gri tonlu resim ve siyah beyaz resim hakkında anlattıklarımızı izleyebileceğiniz video bağlantısını DBS'de bulabilirsiniz.
 
-## Proje 6: NumPy Kullanarak Sentetik Resim Oluşturma, Resimleri Birleştirme, Kendi Eşik Fonksiyonumuzu Yazma ve OpenCV ile Hız Bakımından Kıyaslama
+## Proje 6: NumPy Kullanarak Gri Tonlu Sentetik Resim Oluşturma, Resimleri Birleştirme, Kendi Eşik Fonksiyonumuzu Yazma ve OpenCV ile Hız Bakımından Kıyaslama
 
+<p align="center"><img src="figure/siyah beyaz gri.jpg" alt="siyah beyaz gri" width=%100 height=auto></p>
+
+<p align="center"><img src="figure/gri tonlu desenler.jpg" alt="gri tonlu desenler" width=%100 height=auto></p>
 
 ## ARA SINAV
 
