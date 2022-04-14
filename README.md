@@ -294,8 +294,8 @@ for i in range(r): # satırları dolaşalım
 ## ARA SINAV
 Ara sınav 19 Nisan 2022 Salı günü D401'de 14:00-16:00 arasında yapılacaktır.
 
-## Proje 6 (devam): NumPy Kullanarak Resim Birleştirme ve Kendi threshold() fonksiyonumuzu yazma ve hız kıyası
-Ara sınavdan sonra ilk hafta devam edeceğiz.
+## Proje 6 (devam): NumPy Kullanarak Resim Birleştirme ve Kendi threshold() Fonksiyonumuzu Yazma ve OpenCV ile Hız Kıyası
+Ara sınavdan sonra **numpy** paketi kullanarak genişletilmiş resimler oluşturma ile devam edeceğiz. Kendimiz bir Python fonksiyonu yazacağız ve aynı işlevi gören OpenCV fonksiyonu ile **time** paketini kullanarak hız kıyasını yapacağız. Böylece OpenCV kütüphanesinin hız bakımından optimal olduğunu görmüş olacağız.
 
 ### Referanslar
 [1] OpenCV 4.5.5 Dökümantasyonu - https://docs.opencv.org/4.5.5/</br>
