@@ -263,8 +263,31 @@ Burada OpenCV kullanarak hem **video** hem **gif** animasyonu yapan kodları **p
 Yukarıda renkli resim, gri tonlu resim ve siyah beyaz resim hakkında anlattıklarımızı izleyebileceğiniz video bağlantısını DBS'de bulabilirsiniz.
 
 ## Proje 6: NumPy Kullanarak Gri Tonlu Sentetik Resim Oluşturma, Resimleri Birleştirme, Kendi Eşik Fonksiyonumuzu Yazma ve OpenCV ile Hız Bakımından Kıyaslama
+Ara sınavdan önceki dersimizde **numpy** paketine erişimi 
+
+```
+import numpy as np
+```
+
+komutuyla sağlayıp **numpy** paketi içinde tanımlı **zeros** ve **ones** komutlarıyla boş resim oluşturup bu resmin piksel değerlerine [0-255] arasında değişik değerler atamayı gördük. Aşağıdaki ilk resimde
+
+```
+imgBlack = np.zeros((256,256), np.uint8)
+imgWhite = 255*np.ones((256,256), np.uint8)
+imgGray = 127*np.ones((256,256), np.uint8)
+```
+
+kodunda oluşturduğumuz 256 satır 256 sütundan oluşan siyah, beyaz ve gri resimleri görebilirsiniz.
 
 <p align="center"><img src="figure/siyah beyaz gri.jpg" alt="siyah beyaz gri" width=%100 height=auto></p>
+
+Python'da **for** döngüsü kullanarak oluşturduğumuz 256x256'lık boş resmi dolaştığımız ve yukarıdaki çıktının aksine dinamik bir şekilde piksel değerlerini manipüle ettiğimiz (e.g., aynı satırdaki piksel değerlerini satır numarasına eşitlemek gibi) kod ve çıktısı da aşağıdadır. Kodların tam hallerini DBS'de ve yukarıda **project** dizininde **numpy** projesinde bulabilirsiniz.
+
+```
+for i in range(r): # satırları dolaşalım
+    for j in range(c): # sütunları dolaşalım
+        img[i,j] = i
+```
 
 <p align="center"><img src="figure/gri tonlu desenler.jpg" alt="gri tonlu desenler" width=%100 height=auto></p>
 
