@@ -286,7 +286,7 @@ Python'da **for** döngüsü kullanarak oluşturduğumuz 256x256'lık boş resmi
 ```
 for i in range(r): # satırları dolaşalım
     for j in range(c): # sütunları dolaşalım
-        img[i,j] = i
+        img[i,j] = i # siz de j veya (i+j)/2 deneyin
 ```
 
 <p align="center"><img src="figure/gri tonlu desenler.jpg" alt="gri tonlu desenler" width=%100 height=auto></p>
