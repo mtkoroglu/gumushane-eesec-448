@@ -262,7 +262,7 @@ Burada OpenCV kullanarak hem **video** hem **gif** animasyonu yapan kodları **p
 
 Yukarıda renkli resim, gri tonlu resim ve siyah beyaz resim hakkında anlattıklarımızı izleyebileceğiniz video bağlantısını DBS'de bulabilirsiniz.
 
-## Proje 6: NumPy Kullanarak Gri Tonlu Sentetik Resim Oluşturma, Resimleri Birleştirme, Kendi Eşik Fonksiyonumuzu Yazma ve OpenCV ile Hız Bakımından Kıyaslama
+## Proje 6: NumPy Kullanarak Gri Tonlu Sentetik Resim Oluşturma
 Ara sınavdan önceki dersimizde **numpy** paketine erişimi 
 
 ```
@@ -292,6 +292,10 @@ for i in range(r): # satırları dolaşalım
 <p align="center"><img src="figure/gri tonlu desenler.jpg" alt="gri tonlu desenler" width=%100 height=auto></p>
 
 ## ARA SINAV
+Ara sınav 19 Nisan 2022 Salı günü D401'de 14:00-16:00 arasında yapılacaktır.
+
+## Proje 6 (devam): NumPy Kullanarak Resim Birleştirme ve Kendi threshold() fonksiyonumuzu yazma ve hız kıyası
+Ara sınavdan sonra ilk hafta devam edeceğiz.
 
 ### Referanslar
 [1] OpenCV 4.5.5 Dökümantasyonu - https://docs.opencv.org/4.5.5/</br>
