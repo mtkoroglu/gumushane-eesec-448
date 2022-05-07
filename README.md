@@ -297,6 +297,9 @@ Ara sınav 19 Nisan 2022 Salı günü D401'de 14:00-16:00 arasında yapıldı. �
 ## Proje 6 (devam): NumPy Kullanarak Resim Birleştirme ve Kendi threshold() Fonksiyonumuzu Yazma ve OpenCV ile Hız Kıyası
 <p align="justify">Ara sınavdan sonra <b>numpy</b> paketi kullanarak genişletilmiş resimler oluşturma ile devam edeceğiz. Kendimiz bir Python fonksiyonu yazacağız ve aynı işlevi gören OpenCV fonksiyonu ile <b>time</b> paketini kullanarak hız kıyasını yapacağız. Böylece OpenCV kütüphanesinin hız bakımından optimal olduğunu görmüş olacağız.</p>
 
+
+## Proje 7: Yüz Tespiti (Haar Cascade metodu ile)
+
 ### Referanslar
 [1] OpenCV 4.5.5 Dökümantasyonu - https://docs.opencv.org/4.5.5/</br>
 [2] FPS animasyonu - https://news.productioncrate.com/tag/fps/</br>
