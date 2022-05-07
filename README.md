@@ -11,9 +11,9 @@ bağlantısından çok önce kayıt olup $57 ödemiştim. Ayrıca **Adrian Roseb
 
 https://www.pyimagesearch.com/pyimagesearch-university/
 
-<p align="justify" style="color: #0000ff">Bu plana yaklaşık olarak $300 gibi bir ücretle kaydolabiliyorsunuz. Adrian'ın **PyImageSearch university** planında **OpenCV 101 — OpenCV Basics** kursunda öğretilen konuların hepsini EEM 448'de işleyeceğiz. Sizlerin bu kurs ve planlara kaydolmanız zorunlu değil. DBS ve bu sayfayı takip ederseniz yeterli olacaktır.</p>
+<p align="justify">Bu plana yaklaşık olarak $300 gibi bir ücretle kaydolabiliyorsunuz. Adrian'ın <b>PyImageSearch university</b> planında </b>OpenCV 101 — OpenCV Basics</b> kursunda öğretilen konuların hepsini EEM 448'de işleyeceğiz. Sizlerin bu kurs ve planlara kaydolmanız zorunlu değil. DBS ve bu sayfayı takip ederseniz sizin için yeterli olacaktır.</p>
 
-<p align="justify" style="color: red">Bu sayfadaki projelerde **Python 3.9.6** ve **OpenCV 4.5.5** kullanacağız. Aşağıda açıklamalarını/sonuçlarını gördüğünüz projelerin **py** uzantılı **Python** kodlarını yukarıda **project** isimli dosyada bulabilirsiniz. Bilgisayarınıza **Python** yüklemek için aşağıdaki resime tıkladığınızda açılan videoyu takip edebilirsiniz. Bu videoda ayrıca **OpenCV** yüklemeye de başlıyoruz ama bir hata ile karşılaşınca yarıda kalıyor.</p>
+<p align="justify">Bu sayfadaki projelerde <b>Python 3.9.6</b> ve <b>OpenCV 4.5.5</b> kullanıyor olacağız. Aşağıda açıklamalarını/sonuçlarını gördüğünüz projelerin <b>py</b> uzantılı <b>Python</b> kodlarını yukarıda <b>project</b> isimli dosyada bulabilirsiniz. Bilgisayarınıza <b>Python</b> yüklemek için aşağıdaki resme tıkladığınızda açılan videoyu izleyebilirsiniz. Bu videoda ayrıca <b>OpenCV</b> yüklemeye de başlıyoruz ama maalesef bir hata ile karşılaşınca yarıda kalıyor.</p>
 
 [![IMAGE ALT TEXT HERE](figure/install-python.jpg)](https://www.youtube.com/watch?v=HwQ46b3KmUw)
 
@@ -48,7 +48,7 @@ pip install pyautogui mediapipe mime
 komutlarını koşturarak bilgisayarımızda **OpenCV** koşturabilmek için gerekli olan bütün **paket** ve **kütüphane**leri yükleyin.
 
 #### Visual Studio Code'a Sanal Ortamın Kaydedilmesi/Tanıtılması
-Yukarıdaki videolarda bilgisayarımıza **Python** yükledikten sonra **opencv-env** isimli bir sanal ortam oluşturup içerisine **OpenCV**'yi ve bağımlı olduğu kütüphaneleri yükledik. Derste kullanacağımız **Visual Studio Code** (VSC) editöründe kod yazarken kullanacağımız **OpenCV** fonksiyonları hakkında yardım alabilmek için VSC'ye sanal ortamımızı kaydetmemiz/tanıtmamız lazım. Bu işlem için aşağıdaki resme tıklayınca açılan videoyu izleyin.
+<p align="justify">Yukarıdaki videolarda bilgisayarımıza <b>Python</b> yükledikten sonra <b>opencv-env</b> isimli bir sanal ortam oluşturup içerisine <b>OpenCV</b>'yi ve bağımlı olduğu kütüphaneleri yükledik. Derste kullanacağımız <b>Visual Studio Code</b> (VSC) editöründe kod yazarken kullanacağımız <b>OpenCV</b> fonksiyonları hakkında yardım alabilmek için VSC'ye sanal ortamımızı kaydetmemiz/tanıtmamız lazım. Bu işlem için aşağıdaki resme tıklayınca açılan videoyu izleyin.</p>
 
 [![IMAGE ALT TEXT HERE](figure/opencv_env_VSC.jpg)](https://youtu.be/6Z5lM1WqBXU)
 
