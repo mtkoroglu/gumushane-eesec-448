@@ -48,11 +48,11 @@ pip install pyautogui mediapipe mime
 komutlarını koşturarak bilgisayarımızda **OpenCV** koşturabilmek için gerekli olan bütün **paket** ve **kütüphane**leri yükleyin.
 
 #### Visual Studio Code'a Sanal Ortamın Kaydedilmesi/Tanıtılması
-<p align="justify">Yukarıdaki videolarda bilgisayarımıza <b>Python</b> yükledikten sonra <b>opencv-env</b> isimli bir sanal ortam oluşturup içerisine <b>OpenCV</b>'yi ve bağımlı olduğu kütüphaneleri yükledik. Derste kullanacağımız <b>Visual Studio Code</b> (VSC) editöründe kod yazarken kullanacağımız <b>OpenCV</b> fonksiyonları hakkında yardım alabilmek için VSC'ye sanal ortamımızı kaydetmemiz/tanıtmamız lazım. Bu işlem için aşağıdaki resme tıklayınca açılan videoyu izleyin.</p>
+<p align="justify">Yukarıdaki videolarda bilgisayarımıza <b>Python</b> yükledikten sonra <b>opencv-env</b> isimli bir <b>sanal ortam</b> oluşturup içerisine <b>OpenCV</b>'yi ve bağımlı olduğu kütüphaneleri yükledik. Derste kullanacağımız <b>Visual Studio Code</b> (VSC) editöründe kod yazarken kullanacağımız <b>OpenCV</b> fonksiyonları hakkında yardım alabilmek için VSC'ye sanal ortamımızı kaydetmemiz/tanıtmamız lazım. Bu işlem için aşağıdaki resme tıklayınca açılan videoyu izleyin.</p>
 
 [![IMAGE ALT TEXT HERE](figure/opencv_env_VSC.jpg)](https://youtu.be/6Z5lM1WqBXU)
 
-Ara sınavda **OpenCV**'yi bilgisayarımıza direk değil de **sanal ortam**a yüklememizle ilgili bir soru soracağım.
+Ara sınavda **OpenCV**'yi bilgisayarımıza direk değil de **sanal ortam**a yüklememizle ilgili bir soru soracağımı söylemiştim ve sordum da. Final sınavında yine sanal ortamda bir kod koşturulması ile alakalı bir soru soracağım.
 
 ## Proje 1: Resim Yükleme ve Görüntüleme (load-display-image)
 ### Yüklenen Resmin Üzerine Yazı Yazma, Resmi Yeniden Boyutlandırma, Ekranda Görüntüleme ve Dosyaya Kaydetme
@@ -281,7 +281,7 @@ kodunda oluşturduğumuz 256 satır 256 sütundan oluşan siyah, beyaz ve gri re
 
 <p align="center"><img src="figure/siyah beyaz gri.jpg" alt="siyah beyaz gri" width=%100 height=auto></p>
 
-Python'da **for** döngüsü kullanarak oluşturduğumuz 256x256'lık boş resmi dolaştığımız ve yukarıdaki çıktının aksine dinamik bir şekilde piksel değerlerini manipüle ettiğimiz (e.g., aynı satırdaki piksel değerlerini satır numarasına eşitlemek gibi) kod ve çıktısı da aşağıdadır. Kodların tam hallerini DBS'de ve yukarıda **project** dizininde **numpy** projesinde bulabilirsiniz.
+<p align="justify">Python'da <b>for</b> döngüsü kullanarak oluşturduğumuz 256x256'lık boş resmi dolaştığımız ve yukarıdaki çıktının aksine dinamik bir şekilde piksel değerlerini manipüle ettiğimiz (e.g., aynı satırdaki piksel değerlerini satır numarasına eşitlemek gibi) kod ve çıktısı da aşağıdadır. Kodların tam hallerini DBS'de ve yukarıda <b>project</b> dizininde <b>numpy</b> projesinde bulabilirsiniz.</p>
 
 ```
 for i in range(r): # satırları dolaşalım
@@ -292,10 +292,10 @@ for i in range(r): # satırları dolaşalım
 <p align="center"><img src="figure/gri tonlu desenler.jpg" alt="gri tonlu desenler" width=%100 height=auto></p>
 
 ## ARA SINAV
-Ara sınav 19 Nisan 2022 Salı günü D401'de 14:00-16:00 arasında yapılacaktır.
+Ara sınav 19 Nisan 2022 Salı günü D401'de 14:00-16:00 arasında yapıldı. Çözümlerinin videolarına DBS'den ulaşabilirsiniz.
 
 ## Proje 6 (devam): NumPy Kullanarak Resim Birleştirme ve Kendi threshold() Fonksiyonumuzu Yazma ve OpenCV ile Hız Kıyası
-Ara sınavdan sonra **numpy** paketi kullanarak genişletilmiş resimler oluşturma ile devam edeceğiz. Kendimiz bir Python fonksiyonu yazacağız ve aynı işlevi gören OpenCV fonksiyonu ile **time** paketini kullanarak hız kıyasını yapacağız. Böylece OpenCV kütüphanesinin hız bakımından optimal olduğunu görmüş olacağız.
+<p align="justify">Ara sınavdan sonra <b>numpy</b> paketi kullanarak genişletilmiş resimler oluşturma ile devam edeceğiz. Kendimiz bir Python fonksiyonu yazacağız ve aynı işlevi gören OpenCV fonksiyonu ile <b>time</b> paketini kullanarak hız kıyasını yapacağız. Böylece OpenCV kütüphanesinin hız bakımından optimal olduğunu görmüş olacağız.</p>
 
 ### Referanslar
 [1] OpenCV 4.5.5 Dökümantasyonu - https://docs.opencv.org/4.5.5/</br>
