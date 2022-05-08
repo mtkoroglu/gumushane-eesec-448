@@ -1,5 +1,5 @@
 # EESEC 448
-Merhaba arkadaşlar. Bu sayfada **OpenCV**'nin **OpenCV for Beginners** isimli resmi kursunu referans olacağız. Bu kursa 
+<p align="justify" style="font-family: Calibri">Merhaba arkadaşlar. Bu sayfada **OpenCV**'nin **OpenCV for Beginners** isimli resmi kursunu referans alacağız. Bu kursa</p>
 
 https://opencv.org/course-opencv-for-beginners/
 
