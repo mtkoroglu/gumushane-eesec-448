@@ -3,11 +3,11 @@
 
 https://opencv.org/course-opencv-for-beginners/
 
-<p align="justify">bağlantısından ulaşabilirsiniz. Kursa kayıt ücreti $117. Ben bu kursa</p>  
+<p align="justify">bağlantısından ulaşabilirsiniz. Kursa kayıt ücreti $117. Ben bu kursa çok önceden</p>  
 
 https://www.kickstarter.com/projects/opencv/opencv-for-beginners
 
-<p align="justify">bağlantısından çok önce kayıt olup $57 ödemiştim. Ayrıca **Adrian Rosebrock** tarafından kurulan **PyImageSearch University** diğer büyük bir referansımız.</p>
+<p align="justify">sayfasından kayıt olup $57 ödemiştim. Ayrıca <b>Adrian Rosebrock</b> tarafından kurulan <b>PyImageSearch University</b> diğer büyük bir referansımız.</p>
 
 https://www.pyimagesearch.com/pyimagesearch-university/
 
