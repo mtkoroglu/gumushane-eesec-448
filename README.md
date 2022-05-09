@@ -3,15 +3,16 @@
 
 https://opencv.org/course-opencv-for-beginners/
 
-bağlantısından ulaşabilirsiniz. Kursa kayıt ücreti $117. Ben bu kursa  
+<p align="justify">bağlantısından ulaşabilirsiniz. Kursa kayıt ücreti $117. Ben bu kursa</p>  
 
 https://www.kickstarter.com/projects/opencv/opencv-for-beginners
 
-bağlantısından çok önce kayıt olup $57 ödemiştim. Ayrıca **Adrian Rosebrock** tarafından kurulan **PyImageSearch University** diğer büyük bir referansımız.
+<p align="justify">bağlantısından çok önce kayıt olup $57 ödemiştim. Ayrıca **Adrian Rosebrock** tarafından kurulan **PyImageSearch University** diğer büyük bir referansımız.</p>
 
 https://www.pyimagesearch.com/pyimagesearch-university/
 
-<p align="justify">Bu plana yaklaşık olarak $300 gibi bir ücretle kaydolabiliyorsunuz. Adrian'ın <b>PyImageSearch university</b> planında </b>OpenCV 101 — OpenCV Basics</b> kursunda öğretilen konuların hepsini EEM 448'de işleyeceğiz. Sizlerin bu kurs ve planlara kaydolmanız zorunlu değil. DBS ve bu sayfayı takip ederseniz sizin için yeterli olacaktır.</p>
+<p align="justify">Bu plana yaklaşık olarak $300 gibi bir ücretle kaydolabiliyorsunuz. Adrian'ın <b>PyImageSearch University</b> planında </b>OpenCV 101 — OpenCV Basics</b> kursunda öğretilen konuların hepsini EEM 448'de işleyeceğiz. Sizlerin bu kurs ve planlara kaydolmanız zorunlu değil. Bu sayfayı ve 
+<a href="https://dbs.gumushane.edu.tr/">Ders Bilgi Sistemi</a>'ni (DBS) takip ederseniz sizin için yeterli olacaktır.</p>
 
 <p align="justify">Bu sayfadaki projelerde <b>Python 3.9.6</b> ve <b>OpenCV 4.5.5</b> kullanıyor olacağız. Aşağıda açıklamalarını/sonuçlarını gördüğünüz projelerin <b>py</b> uzantılı <b>Python</b> kodlarını yukarıda <b>project</b> isimli dosyada bulabilirsiniz. Bilgisayarınıza <b>Python</b> yüklemek için aşağıdaki resme tıkladığınızda açılan videoyu izleyebilirsiniz. Bu videoda ayrıca <b>OpenCV</b> yüklemeye de başlıyoruz ama maalesef bir hata ile karşılaşınca yarıda kalıyor.</p>
 
