@@ -296,7 +296,9 @@ for i in range(r): # satırları dolaşalım
 Ara sınav 19 Nisan 2022 Salı günü D401'de 14:00-16:00 arasında yapıldı. Çözümlerinin videolarına DBS'den ulaşabilirsiniz.
 
 ## Proje 6 (devam): NumPy Kullanarak Resim Birleştirme ve Kendi threshold() Fonksiyonumuzu Yazma ve OpenCV ile Hız Kıyası
-<p align="justify">Ara sınavdan sonra <b>numpy</b> paketi kullanarak genişletilmiş resimler oluşturma ile devam edeceğiz. Kendimiz bir Python fonksiyonu yazacağız ve aynı işlevi gören OpenCV fonksiyonu ile <b>time</b> paketini kullanarak hız kıyasını yapacağız. Böylece OpenCV kütüphanesinin hız bakımından optimal olduğunu görmüş olacağız.</p>
+<p align="justify">Ara sınavdan önceki hafta <b>numpy</b> paketini kullanmaya başladık ve ilk sentetik resimlerimizi (256 x 256 siyah, beyaz ve gri resim) oluşturduk. Sonrasında sentetik resmi oluştururken dinamik ifadeler kullandık ve gri tonlu uzayı değişik desenlerde görselleştirdik (ara sınavda karşımıza çıktı). Bu hafta <b>NumPy</b> kullanmaya devam edeceğiz ve ilk iş olarak iki resmi yatay olarak tek resim haline getireceğiz. Bunun için daha önce ara sınavda karşımıza çıkan filtreleme sorusuna bakalım.</p>
+
+<p align="center"><img src="figure/leopard merged.jpg" alt="numpy resim birleştirme" width=%100 height=auto></p>
 
 
 ## Proje 7: Yüz Tespiti (Haar Cascade metodu ile)
