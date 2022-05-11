@@ -298,7 +298,7 @@ Ara sınav 19 Nisan 2022 Salı günü D401'de 14:00-16:00 arasında yapıldı. �
 ## Proje 6 (devam): NumPy Kullanarak Resim Birleştirme ve Kendi threshold() Fonksiyonumuzu Yazma ve OpenCV ile Hız Kıyası
 <p align="justify">Ara sınavdan önceki hafta <b>numpy</b> paketini kullanmaya başladık ve ilk sentetik resimlerimizi (256 x 256 siyah, beyaz ve gri resim) oluşturduk. Sonrasında sentetik resmi oluştururken dinamik ifadeler kullandık ve gri tonlu uzayı değişik desenlerde görselleştirdik (ara sınavda karşımıza çıktı). Bu hafta <b>NumPy</b> kullanmaya devam edeceğiz ve ilk iş olarak iki resmi yatay olarak tek resim haline getireceğiz. Bunun için daha önce ara sınavda karşımıza çıkan filtreleme sorusuna bakalım.</p>
 
-<p align="center"><img src="figure/cheetah filtered merged 2.jpg" alt="numpy resim birleştirme" width=%100 height=auto></p>
+<p align="center"><img src="figure/cheetah filtered merged extended.jpg" alt="numpy resim birleştirme" width=%100 height=auto></p>
 
 ```
 (h,w,c) = img.shape
