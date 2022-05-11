@@ -309,7 +309,7 @@ mimg[h:2*h,0:w,:] = filtered2 # filtrelenmiş ikinci resmi sol alta koy
 mimg[h:2*h,w:2*w,:] = filtered3 # filtrelenmiş üçüncü resmi sağ alta koy
 ```
 
-<p align="justify">Burada birleştirilmiş resmi (mimg - merged image) oluştururken fihrist (index) kullanımı önemli. Bunu anlarsanız işler kolaylaşır. NumPy kullanarak birleştirilmiş resim oluşturma final sınavında karşımıza çıkacaktır. Sizler de yukarıdaki örnekteki çita resmini (veya kendi tercih ettiğiniz bir resmi) değişik pencere boyutları için <b>blur()</b> filtresinden geçirerek kendi birleştirilmiş resimlerinizi oluşturarak hem NumPy'ı hem matris fihrislerini öğrenin hem de final sınavına hazırlık yapın.</p>
+<p align="justify">Burada birleştirilmiş resmi (mimg - merged image) oluştururken fihrist (index) kullanımı önemli. Bunu anlarsanız işler kolaylaşır. <b>NumPy</b> kullanarak birleştirilmiş resim oluşturma final sınavında karşımıza çıkacaktır. Yukarıda verilen resmi üreten kodu <b>numpy_merge_image.py</b> ismiyle <b>numpy</b> projesinde bulabilirsiniz. Sizler de yukarıdaki örnekteki çita resmini (veya kendi tercih ettiğiniz bir resmi) değişik pencere boyutları için <b>blur()</b> filtresinden geçirerek kendi birleştirilmiş resimlerinizi oluşturarak hem NumPy'ı kullanmayı hem de matris fihrislerini öğrenin hem de final sınavına hazırlık yapın.</p>
 
 <p align="justify">Geçtiğimiz haftalarda OpenCV'nin <b>threshold()</b> komutunu kullanarak bir resmi istediğimiz bir eşik değeri ile siyah-beyaz (binary) hale getirmiştik. Şimdi burada kendi <b>threshold()</b> fonksiyonumuz yazalım, çalıştığını gördükten sonra hız olarak OpenCV ile kıyas etmek için yine <b>time</b> paketini kullanarak sinyal işleme hızımızı web kamerasından gelen video üzerine yazdıralım.</p>
 
