@@ -18,23 +18,23 @@ https://www.pyimagesearch.com/pyimagesearch-university/
 
 [![IMAGE ALT TEXT HERE](figure/install-python.jpg)](https://www.youtube.com/watch?v=HwQ46b3KmUw)
 
-Karşılaşılan hatayı çözüp **OpenCV** yüklemeyi tamamladığımız video için aşağıdaki resme tıklayabilirsiniz.
+<p align="justify">Karşılaşılan hatayı çözüp <b>OpenCV</b> yüklemeyi tamamladığımız video için aşağıdaki resme tıklayabilirsiniz.</p>
 
 [![IMAGE ALT TEXT HERE](figure/opencv-python-resized.jpg)](https://www.youtube.com/watch?v=9DwK0K8UcAw)
 #### Kullandığımız Komutlar
-Masaüstünde **EESEC 448** isimli klasörü oluşturduktan sonra **Windows PowerShell**'de gerekli **cd** komutlarıyla bu klasörün içine girin. Sonra **sanal ortam** (İng. **virtual environment**) oluşturmak için 
+<p align="justify">Masaüstünde <b>EESEC 448</b> isimli klasörü oluşturduktan sonra <b>Windows PowerShell</b>'de gerekli <b>cd</b> komutlarıyla bu klasörün içine girin. Sonra <b>sanal ortam</b> (İng. <b>virtual environment</b>) oluşturmak için</p> 
 
 ```
 python -m venv opencv-env
 ```
 
-yazın. Ardından bulunduğunuz dizinde 
+<p align="justify">yazın. Ardından bulunduğunuz dizinde</p> 
 
 ```
 .\opencv-env\Scripts\activate
 ```
 
-komutunu girerek sanal ortamı **aktif** hale getirin. Bunu müteakiben sırasıyla 
+<p align="justify">komutunu girerek sanal ortamı <b>aktif</b> hale getirin. Bunu müteakiben sırasıyla</p> 
 
 ```
 pip install opencv-contrib-python streamlit jupyter moviepy ipykernel matplotlib
@@ -46,7 +46,7 @@ ve
 pip install pyautogui mediapipe mime
 ```
 
-komutlarını koşturarak bilgisayarımızda **OpenCV** koşturabilmek için gerekli olan bütün **paket** ve **kütüphane**leri yükleyin.
+<p align="justify">komutlarını koşturarak bilgisayarımızda <b>OpenCV</b> koşturabilmek için gerekli olan bütün <b>paket</b> ve <b>kütüphane</b>leri yükleyin.</p>
 
 #### Visual Studio Code'a Sanal Ortamın Kaydedilmesi/Tanıtılması
 <p align="justify">Yukarıdaki videolarda bilgisayarımıza <b>Python</b> yükledikten sonra <b>opencv-env</b> isimli bir <b>sanal ortam</b> oluşturup içerisine <b>OpenCV</b>'yi ve bağımlı olduğu kütüphaneleri yükledik. Derste kullanacağımız <b>Visual Studio Code</b> (VSC) editöründe kod yazarken kullanacağımız <b>OpenCV</b> fonksiyonları hakkında yardım alabilmek için VSC'ye sanal ortamımızı kaydetmemiz/tanıtmamız lazım. Bu işlem için aşağıdaki resme tıklayınca açılan videoyu izleyin.</p>
@@ -264,13 +264,13 @@ Burada OpenCV kullanarak hem **video** hem **gif** animasyonu yapan kodları **p
 Yukarıda renkli resim, gri tonlu resim ve siyah beyaz resim hakkında anlattıklarımızı izleyebileceğiniz video bağlantısını DBS'de bulabilirsiniz.
 
 ## Proje 6: NumPy Kullanarak Gri Tonlu Sentetik Resim Oluşturma
-Ara sınavdan önceki dersimizde **numpy** paketine erişimi 
+<p align="justify">Ara sınavdan önceki dersimizde <b>numpy</b> paketine erişimi</p> 
 
 ```
 import numpy as np
 ```
 
-komutuyla sağlayıp **numpy** paketi içinde tanımlı **zeros** ve **ones** komutlarıyla boş resim oluşturup bu resmin piksel değerlerine [0-255] arasında değişik değerler atamayı gördük. Aşağıdaki ilk resimde
+<p align="justify">komutuyla sağlayıp <b>numpy</b> paketi içinde tanımlı <b>zeros</b> ve <b>ones</b> komutlarıyla boş resim oluşturup bu resmin piksel değerlerine [0-255] arasında değişik değerler atamayı gördük. Aşağıdaki ilk resimde</p>
 
 ```
 imgBlack = np.zeros((256,256), np.uint8)
