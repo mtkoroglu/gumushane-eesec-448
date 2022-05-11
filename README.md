@@ -309,16 +309,19 @@ mimg[h:2*h,0:w,:] = filtered2 # filtrelenmiş ikinci resmi sol alta koy
 mimg[h:2*h,w:2*w,:] = filtered3 # filtrelenmiş üçüncü resmi sağ alta koy
 ```
 
-Burada birleştirilmiş resmi (mimg - merged image) oluştururken fihrist (index) kullanımı önemli. Bunu anlarsanız işler kolaylaşır.
+<p align="justify">Burada birleştirilmiş resmi (mimg - merged image) oluştururken fihrist (index) kullanımı önemli. Bunu anlarsanız işler kolaylaşır. NumPy kullanarak birleştirilmiş resim oluşturma final sınavında karşımıza çıkacaktır. Sizler de yukarıdaki örnekteki çita resmini (veya kendi tercih ettiğiniz bir resmi) değişik pencere boyutları için <b>blur()</b> filtresinden geçirerek kendi birleştirilmiş resimlerinizi oluşturarak hem NumPy'ı hem matris fihrislerini öğrenin hem de final sınavına hazırlık yapın.</p>
+
+<p align="justify">Geçtiğimiz haftalarda OpenCV'nin <b>threshold()</b> komutunu kullanarak bir resmi istediğimiz bir eşik değeri ile siyah-beyaz (binary) hale getirmiştik. Şimdi burada kendi <b>threshold()</b> fonksiyonumuz yazalım, çalıştığını gördükten sonra hız olarak OpenCV ile kıyas etmek için yine <b>time</b> paketini kullanarak sinyal işleme hızımızı web kamerasından gelen video üzerine yazdıralım.</p>
+
 
 ## Proje 7: Yüz Tespiti (Haar Cascade metodu ile)
 
 ### Referanslar
-[1] OpenCV 4.5.5 Dökümantasyonu - https://docs.opencv.org/4.5.5/</br>
-[2] FPS animasyonu - https://news.productioncrate.com/tag/fps/</br>
-[3] OpenCV'de Görüntü Filtreleme (Bulandırma) [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2021/04/28/opencv-smoothing-and-blurring/</br>
-[4] OpenCV'de **time** paketi kullanılarak FPS hesaplanması - https://www.geeksforgeeks.org/python-displaying-real-time-fps-at-which-webcam-video-file-is-processed-using-opencv/</br>
-[5] OpenCV'de Renk Uzayları Arasında Dönüşüm - https://www.pyimagesearch.com/2021/04/28/opencv-color-spaces-cv2-cvtcolor/</br>
+<p align="justify">[1] OpenCV 4.5.5 Dökümantasyonu - https://docs.opencv.org/4.5.5/</p></br>
+<p align="justify">[2] FPS animasyonu - https://news.productioncrate.com/tag/fps/</p></br>
+<p align="justify">[3] OpenCV'de Görüntü Filtreleme (Bulandırma) [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2021/04/28/opencv-smoothing-and-blurring/</p></br>
+<p align="justify">[4] OpenCV'de **time** paketi kullanılarak FPS hesaplanması - https://www.geeksforgeeks.org/python-displaying-real-time-fps-at-which-webcam-video-file-is-processed-using-opencv/</p></br>
+<p align="justify">[5] OpenCV'de Renk Uzayları Arasında Dönüşüm - https://www.pyimagesearch.com/2021/04/28/opencv-color-spaces-cv2-cvtcolor/</p></br>
 [6] OpenCV'de **VideoWrite()** komutuyla video oluşturma - https://docs.opencv.org/4.x/dd/d43/tutorial_py_video_display.html</br>
 [7] OpenCV'de **imageio** paketiyle **gif** animasyon yapma - https://pysource.com/2021/03/25/create-an-animated-gif-in-real-time-with-opencv-and-python/</br>
 [8] Standard Kütüphane ve **numpy** ile Rasgele Sayı, Dizi ve Matris Üretme - https://machinelearningmastery.com/how-to-generate-random-numbers-in-python/</br>
