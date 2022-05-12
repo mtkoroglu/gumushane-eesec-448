@@ -313,6 +313,22 @@ mimg[h:2*h,w:2*w,:] = filtered3 # filtrelenmiş üçüncü resmi sağ alta koy
 
 <p align="justify">Geçtiğimiz haftalarda OpenCV'nin <b>threshold()</b> komutunu kullanarak bir resmi istediğimiz bir eşik değeri ile siyah-beyaz (binary) hale getirmiştik. Şimdi burada kendi <b>threshold()</b> fonksiyonumuz yazalım, çalıştığını gördükten sonra hız olarak OpenCV ile kıyas etmek için yine <b>time</b> paketini kullanarak sinyal işleme hızımızı web kamerasından gelen video üzerine yazdıralım.</p>
 
+```
+def threshold(gray, T):
+    bw = np.zeros_like(gray)
+    for i in range(gray.shape[0]): # satırları tara
+        for j in range(gray.shape[1]): # sütünlarını tara
+            if (gray[i,j] > T):
+                bw[i,j] = 255
+    return bw
+```
+
+<p align="justify">OpenCV'nin <b>threshold()</b>fonksiyonunu aşağıdaki gibi iptal ederek kendi yazdığımız fonksiyonu çağırıyoruz.</p>
+
+```
+# T, frameBW = cv2.threshold(frameGray, T, 255, cv2.THRESH_BINARY)
+frameBW = threshold(frameGray, T)
+```
 
 ## Proje 7: Yüz Tespiti (Haar Cascade metodu ile)
 
