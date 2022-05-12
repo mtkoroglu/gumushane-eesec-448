@@ -295,7 +295,7 @@ for i in range(r): # satırları dolaşalım
 ## ARA SINAV
 Ara sınav 19 Nisan 2022 Salı günü D401'de 14:00-16:00 arasında yapıldı. Çözümlerinin videolarına DBS'den ulaşabilirsiniz.
 
-## Proje 6 (devam): NumPy Kullanarak Resim Birleştirme ve Kendi threshold() Fonksiyonumuzu Yazma ve OpenCV ile Hız Kıyası
+## Proje 6 (devam): NumPy Kullanarak Resim Birleştirme
 <p align="justify">Ara sınavdan önceki hafta <b>numpy</b> paketini kullanmaya başladık ve ilk sentetik resimlerimizi (256 x 256 siyah, beyaz ve gri resim) oluşturduk. Sonrasında sentetik resmi oluştururken dinamik ifadeler kullandık ve gri tonlu uzayı değişik desenlerde görselleştirdik (ara sınavda karşımıza çıktı). Bu hafta <b>NumPy</b> kullanmaya devam edeceğiz ve ilk iş olarak iki resmi yatay olarak tek resim haline getireceğiz. Bunun için daha önce ara sınavda karşımıza çıkan filtreleme sorusuna bakalım.</p>
 
 <p align="center"><img src="figure/cheetah filtered merged extended.jpg" alt="numpy resim birleştirme" width=%100 height=auto></p>
@@ -309,8 +309,31 @@ mimg[h:2*h,0:w,:] = filtered2 # filtrelenmiş ikinci resmi sol alta koy
 mimg[h:2*h,w:2*w,:] = filtered3 # filtrelenmiş üçüncü resmi sağ alta koy
 ```
 
-<p align="justify">Burada birleştirilmiş resmi (mimg - merged image) oluştururken fihrist (index) kullanımı önemli. Bunu anlarsanız işler kolaylaşır. <b>NumPy</b> kullanarak birleştirilmiş resim oluşturma final sınavında karşımıza çıkacaktır. Yukarıda verilen resmi üreten kodu <b>numpy_merge_image.py</b> ismiyle <b>numpy</b> projesinde bulabilirsiniz. Sizler de yukarıdaki örnekteki çita resmini (veya kendi tercih ettiğiniz bir resmi) değişik pencere boyutları için <b>blur()</b> filtresinden geçirerek kendi birleştirilmiş resimlerinizi oluşturarak hem NumPy'ı kullanmayı hem de matris fihrislerini öğrenin hem de final sınavına hazırlık yapın.</p>
+<p align="justify">Burada birleştirilmiş resmi (mimg - merged image) oluştururken fihrist (index) kullanımı önemli. Bunu anlarsanız işler kolaylaşır. <b>NumPy</b> kullanarak birleştirilmiş resim oluşturma final sınavında karşımıza çıkacaktır. Yukarıda verilen resmi üreten kodu <b>numpy_merge_image.py</b> ismiyle <b>numpy</b> projesinde bulabilirsiniz. Sizler de yukarıdaki örnekteki çita resmini (veya kendi tercih ettiğiniz bir resmi) değişik pencere boyutları için <b>blur()</b> filtresinden geçirerek kendi birleştirilmiş resimlerinizi oluşturarak hem NumPy'ı kullanmayı hem de matris fihrislerini öğrenin hem de final sınavına hazırlık yapın. Derste iki web kamerasının görüntülerini birleştirmeye de baktık.</p>
 
+```
+cap1 = cv2.VideoCapture(0) # web kamerası 1'i aç
+cap2 = cv2.VideoCapture(1) # web kamerası 2'yi aç
+while True:
+    ret1, frame1 = cap1.read()
+    ret2, frame2 = cap2.read()
+    (h,w,c) = frame1.shape
+    frame1 = cv2.putText(frame1, 'CAM-00', (30,50), 1, 2, (0, 0, 255), 2, 1)
+    frame2 = cv2.putText(frame2, 'CAM-01', (30,50), 1, 2, (0, 0, 255), 2, 1)
+    # numpy kullanarak stereo resmi birleştirelim
+    frame = np.zeros((h,2*w,c), np.uint8)
+    frame[0:h,0:w,:] = frame1
+    frame[0:h,w:2*w,:] = frame2
+    cv2.imshow('web kamerasi stereo', frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'): # eğer bir an bile c'ye basarsa
+        break
+cap1.release()
+cap2.release()
+cv2.destroyAllWindows()
+```
+
+<p align="center"><img src="figure/stereo resim 1.jpg" alt="numpy webcam resim birleştirme" width=%100 height=auto></p>
+##### Kendi threshold() Fonksiyonumuzu Yazma ve OpenCV ile Hız Kıyası
 <p align="justify">Geçtiğimiz haftalarda OpenCV'nin <b>threshold()</b> komutunu kullanarak bir resmi istediğimiz bir eşik değeri ile siyah-beyaz (binary) hale getirmiştik. Şimdi burada kendi <b>threshold()</b> fonksiyonumuz yazalım, çalıştığını gördükten sonra hız olarak OpenCV ile kıyas etmek için yine <b>time</b> paketini kullanarak sinyal işleme hızımızı web kamerasından gelen video üzerine yazdıralım.</p>
 
 ```
@@ -323,7 +346,7 @@ def threshold(gray, T):
     return bw
 ```
 
-<p align="justify">OpenCV'nin <b>threshold()</b>fonksiyonunu aşağıdaki gibi iptal ederek kendi yazdığımız fonksiyonu çağırıyoruz.</p>
+<p align="justify">OpenCV'nin <b>threshold()</b> fonksiyonunu aşağıdaki gibi iptal ederek kendi yazdığımız fonksiyonu çağırıyoruz.</p>
 
 ```
 # T, frameBW = cv2.threshold(frameGray, T, 255, cv2.THRESH_BINARY)
