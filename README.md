@@ -333,6 +333,7 @@ cv2.destroyAllWindows()
 ```
 
 <p align="center"><img src="figure/stereo resim 1.jpg" alt="numpy webcam resim birleştirme" width=%100 height=auto></p>
+
 ##### Kendi threshold() Fonksiyonumuzu Yazma ve OpenCV ile Hız Kıyası
 <p align="justify">Geçtiğimiz haftalarda OpenCV'nin <b>threshold()</b> komutunu kullanarak bir resmi istediğimiz bir eşik değeri ile siyah-beyaz (binary) hale getirmiştik. Şimdi burada kendi <b>threshold()</b> fonksiyonumuz yazalım, çalıştığını gördükten sonra hız olarak OpenCV ile kıyas etmek için yine <b>time</b> paketini kullanarak sinyal işleme hızımızı web kamerasından gelen video üzerine yazdıralım.</p>
 
