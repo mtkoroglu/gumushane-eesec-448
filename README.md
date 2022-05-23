@@ -335,7 +335,7 @@ cv2.destroyAllWindows()
 <p align="center"><img src="figure/stereo resim 1.jpg" alt="numpy webcam resim birleştirme" width=%100 height=auto></p>
 
 #### Kendi threshold() Fonksiyonumuzu Yazma ve OpenCV ile Hız Kıyası
-<p align="justify">Geçtiğimiz haftalarda OpenCV'nin <b>threshold()</b> komutunu kullanarak bir resmi istediğimiz bir eşik değeri ile siyah-beyaz (binary) hale getirmiştik. Şimdi burada kendi <b>threshold()</b> fonksiyonumuz yazalım, çalıştığını gördükten sonra hız olarak OpenCV ile kıyas etmek için yine <b>time</b> paketini kullanarak sinyal işleme hızımızı web kamerasından gelen video üzerine yazdıralım.</p>
+<p align="justify">Geçtiğimiz haftalarda OpenCV'nin <b>threshold()</b> komutunu kullanarak bir resmi istediğimiz bir eşik değeri ile siyah-beyaz (binary) hale getirmiştik. Şimdi burada kendi <b>threshold()</b> fonksiyonumuz yazalım ve hız olarak OpenCV ile kıyas etmek için (daha önceden başka yerlerde de kullandığımız) <b>time</b> paketini kullanarak sinyal işleme hızımızı FPS olarak hesaplayıp web kamerası tarafından yakalanan video üzerine yazdıralım.</p>
 
 ```
 def threshold(gray, T):
@@ -354,7 +354,11 @@ def threshold(gray, T):
 frameBW = threshold(frameGray, T)
 ```
 
-## Proje 7: Yüz Tespiti (Haar Cascade metodu ile)
+## Proje 7: Yüz Tespiti (Face Detection - Haar Cascade metodu ile)
+
+## Proje 8: Yüz Tespiti (Face Detection - OpenCV'den bir Deep Learning metodu ile)
+
+## Proje 9: Stereo Kamera ile (Pseudo) Derinlik Hesabı
 
 ### Referanslar
 <p align="justify">[1] OpenCV 4.5.5 Dökümantasyonu - https://docs.opencv.org/4.5.5/</p>
