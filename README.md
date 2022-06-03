@@ -356,6 +356,7 @@ frameBW = threshold(frameGray, T)
 
 ## Proje 7: Yüz Tespiti (Face Detection - Haar Cascade metodu ile)
 <p text-align="justify">Dersin video linkleri DBS'dedir.</p>
+
 ##### Haar Cascade Metodu ile Resim Üzerinde Yüz Tespiti
 ```
 print('[INFO] loading face detector...')
