@@ -371,7 +371,7 @@ cv2.imshow('face detection with haar cascade', img)
 cv2.waitKey(0)
 ```
 
-<p align="center"><img src="figure/web cam face detection.jpg" alt="numpy webcam resim birleştirme" width=%100 height=auto></p>
+<p align="center"><img src="figure/web cam face detection haar cascade.jpg" alt="web cam face detection with haar cascade" width=%100 height=auto></p>
 
 ## Proje 8: Yüz Tespiti (Face Detection - OpenCV'den bir Deep Learning metodu ile)
 
