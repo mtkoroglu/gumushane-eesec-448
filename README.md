@@ -356,9 +356,26 @@ frameBW = threshold(frameGray, T)
 
 ## Proje 7: Yüz Tespiti (Face Detection - Haar Cascade metodu ile)
 
+```
+print('[INFO] loading face detector...')
+detector = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+img = cv2.imread('image/IMG_20220522_145111.jpg')
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+print('[INFO] performing face detection...')
+rects = detector.detectMultiScale(gray, scaleFactor=1.05, minNeighbors=5, 
+                        minSize=(30,30), flags=cv2.CASCADE_SCALE_IMAGE)
+print('[INFO] %i face(s) detected.' %len(rects))
+for (x,y,w,h) in rects:
+    cv2.rectangle(img, (x,y), (x+w,y+h), (0,255,0), 9)
+cv2.imshow('face detection with haar cascade', img)
+cv2.waitKey(0)
+```
+
+<p align="center"><img src="figure/web cam face detection.jpg" alt="numpy webcam resim birleştirme" width=%100 height=auto></p>
+
 ## Proje 8: Yüz Tespiti (Face Detection - OpenCV'den bir Deep Learning metodu ile)
 
-## Proje 9: Stereo Kamera ile (Pseudo) Derinlik Hesabı
+## Proje 9: Yüz Tespiti Metodları Hız Kıyası
 
 ### Referanslar
 <p align="justify">[1] OpenCV 4.5.5 Dökümantasyonu - https://docs.opencv.org/4.5.5/</p>
