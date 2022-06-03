@@ -355,7 +355,7 @@ frameBW = threshold(frameGray, T)
 ```
 
 ## Proje 7: Yüz Tespiti (Face Detection - Haar Cascade metodu ile)
-
+##### Haar Cascade Metodu ile Resim Üzerinde Yüz Tespiti
 ```
 print('[INFO] loading face detector...')
 detector = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
@@ -372,6 +372,40 @@ cv2.waitKey(0)
 ```
 
 <p align="center"><img src="figure/haar cascade face detection.jpg" alt="face detection with haar cascade" width=%100 height=auto></p>
+
+##### Haar Cascade Metodu ile Web Kamerası Üzerinde Yüz Tespiti (ve FPS hesabı)
+```
+import cv2
+import time
+from collections import deque
+import numpy as np
+print('[INFO] loading haar cascade face detector...')
+detector = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+cap = cv2.VideoCapture(1)
+previousTime = time.time()
+fps = deque(maxlen=100)
+while cap.isOpened() == True:
+    ret, frame = cap.read()
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    rects = detector.detectMultiScale(gray, scaleFactor=1.05, minNeighbors=5,
+                                    minSize=(30,30), flags=cv2.CASCADE_SCALE_IMAGE)
+    for (x,y,w,h) in rects:
+        cv2.rectangle(frame, (x,y), (x+w,y+h), (0,255,0), 2)
+    currentTime = time.time()
+    fpsCurrent = 1 / (currentTime-previousTime)
+    fps.append(fpsCurrent)
+    fpsAvg = np.mean(fps)
+    cv2.putText(frame, 'fps = %.2f' %fpsAvg, (420,30), 0, 1, (0,0,0), 2)
+    cv2.imshow('web kamerasi video', frame)
+    previousTime = currentTime
+    if cv2.waitKey(1) & 0xFF == ord('q'): # eğer bir an bile q'ya basarsa
+        cv2.imwrite('face detection haar cascade web cam.jpg', frame, [cv2.IMWRITE_JPEG_QUALITY, 100])
+        break
+cap.release()
+cv2.destroyAllWindows()
+```
+
+<p align="center"><img src="figure/haar cascade face detection web cam.jpg" alt="web cam face detection with haar cascade" width=%100 height=auto></p>
 
 ## Proje 8: Yüz Tespiti (Face Detection - OpenCV'den bir Deep Learning metodu ile)
 
