@@ -40,7 +40,7 @@ pip install pyautogui mediapipe mime
 
 [![IMAGE ALT TEXT HERE](figure/opencv_env_VSC.jpg)](https://youtu.be/6Z5lM1WqBXU)
 
-Ara sınavda **OpenCV**'yi bilgisayarımıza direk değil de **sanal ortam**a yüklememizle ilgili bir soru soracağımı söylemiştim ve sordum da. Final sınavında yine sanal ortamda bir kod koşturulması ile alakalı bir soru soracağım.
+<p align="justify">Ara sınavda OpenCV'yi bilgisayarımıza direk değil de sanal ortama yüklemeyle/kurmayla ilgili bir soru soracağımı söylemiştim ve sordum da. Final sınavında yine sanal ortamda bir kod koşturulması ile alakalı bir soru soracağım.</p>
 
 ## Proje 1: Resim Yükleme ve Görüntüleme (load-display-image)
 ### Yüklenen Resmin Üzerine Yazı Yazma, Resmi Yeniden Boyutlandırma, Ekranda Görüntüleme ve Dosyaya Kaydetme
@@ -397,22 +397,19 @@ cv2.destroyAllWindows()
 <p align="center"><img src="figure/haar cascade face detection web cam.jpg" alt="web cam face detection with haar cascade" width=%100 height=auto></p>
 
 ## Proje 8: Yüz Tespiti (Face Detection - OpenCV'den bir Deep Learning metodu ile)
-
+<p text-align="justify">Dersi bu sefer DBS'de kayıt seçeneğiyle kaydettik, 15. Hafta başlığı altındaki bağlantıdan izleyebilirsiniz.</p>
 
 <h3>Referanslar</h3>
 <ol>
     <li>OpenCV 4.5.5 Dökümantasyonu - https://docs.opencv.org/4.5.5/</li>
     <li>FPS animasyonu - https://news.productioncrate.com/tag/fps/</li>
+    <li>OpenCV'de Görüntü Filtreleme (Bulandırma) [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2021/04/28/opencv-smoothing-and-blurring/</li>
+    <li>OpenCV'de **time** paketi kullanılarak FPS hesaplanması - https://www.geeksforgeeks.org/python-displaying-real-time-fps-at-which-webcam-video-file-is-processed-using-opencv/</li>
+    <li>OpenCV'de Renk Uzayları Arasında Dönüşüm - https://www.pyimagesearch.com/2021/04/28/opencv-color-spaces-cv2-cvtcolor/</li>
+    <li>Standard Kütüphane ve **numpy** ile Rasgele Sayı, Dizi ve Matris Üretme - https://machinelearningmastery.com/how-to-generate-random-numbers-in-python/</li>
+    <li>OpenCV'de Eşikleme (Thresholding) [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2021/04/28/opencv-thresholding-cv2-threshold/</li>
+    <li>OpenCV'de <b>Haar Cascade</b> Metodu ile Yüz Tespiti [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2021/04/05/opencv-face-detection-with-haar-cascades/</li>
+    <li>Haar Cascade ile Yüz ve Göz Tespiti (OpenCV tutorial) - https://docs.opencv.org/4.x/db/d28/tutorial_cascade_classifier.html</li>
+    <li>OpenCV'de <b>VideoWrite()</b> komutuyla video oluşturma - https://docs.opencv.org/4.x/dd/d43/tutorial_py_video_display.html</li>
+    <li>OpenCV'de <b>imageio</b> paketiyle <b>gif</b> animasyon yapma - https://pysource.com/2021/03/25/create-an-animated-gif-in-real-time-with-opencv-and-python/</li>
 </ol>
-
-<p align="justify">[3] OpenCV'de Görüntü Filtreleme (Bulandırma) [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2021/04/28/opencv-smoothing-and-blurring/</p>
-<p align="justify">[4] OpenCV'de **time** paketi kullanılarak FPS hesaplanması - https://www.geeksforgeeks.org/python-displaying-real-time-fps-at-which-webcam-video-file-is-processed-using-opencv/</p>
-<p align="justify">[5] OpenCV'de Renk Uzayları Arasında Dönüşüm - https://www.pyimagesearch.com/2021/04/28/opencv-color-spaces-cv2-cvtcolor/</p>
-<p align="justify">[6] OpenCV'de **VideoWrite()** komutuyla video oluşturma - https://docs.opencv.org/4.x/dd/d43/tutorial_py_video_display.html</p>
-[7] OpenCV'de **imageio** paketiyle **gif** animasyon yapma - https://pysource.com/2021/03/25/create-an-animated-gif-in-real-time-with-opencv-and-python/</br>
-[8] Standard Kütüphane ve **numpy** ile Rasgele Sayı, Dizi ve Matris Üretme - https://machinelearningmastery.com/how-to-generate-random-numbers-in-python/</br>
-[9] OpenCV'de Eşikleme (Thresholding) [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2021/04/28/opencv-thresholding-cv2-threshold/</br>
-[10] OpenCV'de **Haar Cascade** Metodu ile Yüz Tespiti [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2021/04/05/opencv-face-detection-with-haar-cascades/</br>
-[11] Raspberry Pi ve OpenCV kullanarak Pan-Tilt Kamera ile Yüz Takibi [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2019/04/01/pan-tilt-face-tracking-with-a-raspberry-pi-and-opencv/</br>
-[12] Haar Cascade ile Yüz ve Göz Tespiti (OpenCV tutorial) - https://docs.opencv.org/4.x/db/d28/tutorial_cascade_classifier.html</br>
-[13] OpenCV ile Yeşil Top Tespiti (Takibi) - https://www.pyimagesearch.com/2015/09/14/ball-tracking-with-opencv/</br>
