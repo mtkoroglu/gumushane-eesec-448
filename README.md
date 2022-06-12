@@ -1,18 +1,5 @@
-# EESEC 448
-<p align="justify" style="font-family: Calibri">Merhaba arkadaşlar. Bu sayfada <b>OpenCV</b>'nin <b>OpenCV for Beginners</b> isimli resmi kursunu referans alacağız. Bu kursa</p>
-
-https://opencv.org/course-opencv-for-beginners/
-
-<p align="justify">bağlantısından ulaşabilirsiniz. Kursa kayıt ücreti $117. Ben bu kursa çok önceden</p>  
-
-https://www.kickstarter.com/projects/opencv/opencv-for-beginners
-
-<p align="justify">sayfasından kayıt olup $57 ödemiştim. Ayrıca <b>Adrian Rosebrock</b> tarafından kurulan <b>PyImageSearch University</b> diğer büyük bir referansımız.</p>
-
-https://www.pyimagesearch.com/pyimagesearch-university/
-
-<p align="justify">Bu plana yaklaşık olarak $300 gibi bir ücretle kaydolabiliyorsunuz. Adrian'ın <b>PyImageSearch University</b> planında </b>OpenCV 101 — OpenCV Basics</b> kursunda öğretilen konuların hepsini EEM 448'de işleyeceğiz. Sizlerin bu kurs ve planlara kaydolmanız zorunlu değil. Bu sayfayı ve 
-<a href="https://dbs.gumushane.edu.tr/">Ders Bilgi Sistemi</a>'ni (DBS) takip ederseniz sizin için yeterli olacaktır.</p>
+<h1>EESEC 448</h1>
+<p align="justify" style="font-family: Calibri">Merhaba arkadaşlar. Dersimizde mühendisler, bilim adamları ve hobiciler tarafından en fazla tercih edilen görüntü işleme kütüphanesi olan <a href="https://opencv.org"><b>OpenCV</b></a>'yi kullanacağız. Bu sayfada <a href="https://opencv.org/course-opencv-for-beginners/"<b>OpenCV for Beginners</b> isimli OpenCV resmi kursunu referans alacağız. Bu kursa kayıt ücreti $117. Ben bu kursa çok önceden <a href="https://www.kickstarter.com/projects/opencv/opencv-for-beginners">kickstarter</a>'dan kayıt olup $57 ödemiştim. Ayrıca <b>Adrian Rosebrock</b> tarafından kurulan <a href="https://www.pyimagesearch.com/pyimagesearch-university/"><b>PyImageSearch University</b></a> diğer çok önemli bir referansımız. Bu plana yaklaşık olarak $300 gibi bir ücretle kaydolabiliyorsunuz. Adrian'ın <b>PyImageSearch University</b> planında </b>OpenCV 101 — OpenCV Basics</b> kursunda öğretilen konuların hepsini EEM 448'de işleyeceğiz. Sizlerin bu kurs ve planlara kaydolmanız zorunlu değil. Bu sayfayı ve <a href="https://dbs.gumushane.edu.tr/">Ders Bilgi Sistemi</a>'ni (DBS) takip ederseniz iyi olur.</p>
 
 <p align="justify">Bu sayfadaki projelerde <b>Python 3.9.6</b> ve <b>OpenCV 4.5.5</b> kullanıyor olacağız. Aşağıda açıklamalarını/sonuçlarını gördüğünüz projelerin <b>py</b> uzantılı <b>Python</b> kodlarını yukarıda <b>project</b> isimli dosyada bulabilirsiniz. Bilgisayarınıza <b>Python</b> yüklemek için aşağıdaki resme tıkladığınızda açılan videoyu izleyebilirsiniz. Bu videoda ayrıca <b>OpenCV</b> yüklemeye de başlıyoruz ama maalesef bir hata ile karşılaşınca yarıda kalıyor.</p>
 
