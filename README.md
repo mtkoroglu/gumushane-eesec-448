@@ -398,11 +398,13 @@ cv2.destroyAllWindows()
 
 ## Proje 8: Yüz Tespiti (Face Detection - OpenCV'den bir Deep Learning metodu ile)
 
-## Proje 9: Yüz Tespiti Metodları Hız Kıyası
 
-### Referanslar
-<p align="justify">[1] OpenCV 4.5.5 Dökümantasyonu - https://docs.opencv.org/4.5.5/</p>
-<p align="justify">[2] FPS animasyonu - https://news.productioncrate.com/tag/fps/</p>
+<h3>Referanslar</h3>
+<ol>
+    <li>OpenCV 4.5.5 Dökümantasyonu - https://docs.opencv.org/4.5.5/</li>
+    <li>FPS animasyonu - https://news.productioncrate.com/tag/fps/</li>
+</ol>
+
 <p align="justify">[3] OpenCV'de Görüntü Filtreleme (Bulandırma) [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2021/04/28/opencv-smoothing-and-blurring/</p>
 <p align="justify">[4] OpenCV'de **time** paketi kullanılarak FPS hesaplanması - https://www.geeksforgeeks.org/python-displaying-real-time-fps-at-which-webcam-video-file-is-processed-using-opencv/</p>
 <p align="justify">[5] OpenCV'de Renk Uzayları Arasında Dönüşüm - https://www.pyimagesearch.com/2021/04/28/opencv-color-spaces-cv2-cvtcolor/</p>
