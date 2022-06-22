@@ -361,6 +361,24 @@ cv2.waitKey(0)
 ```
 
 <p align="center"><img src="figure/haar cascade face detection.jpg" alt="face detection with haar cascade" width=%100 height=auto></p>
+##### Haar Cascade Metodu ile Web Kamerası Üzerinde Yüz Tespiti (Final Sınavı Sorusu)
+```
+1  import cv2
+2  detector = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+3  cap = cv2.VideoCapture(1)
+4  while True:
+5      ret, frame = cap.read()
+6      gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+7      rects = detector.detectMultiScale(gray, scaleFactor=1.05, minNeighbors=5)
+8      for (x,y,w,h) in rects:
+9          cv2.rectangle(frame, (x,y), (x+w,y+h), (0,255,0), 2)
+10     cv2.imshow('Haar Cascade yuz tespiti', frame)
+11     if cv2.waitKey(1) == 27: # ESC'ye basarsa programdan çık
+12         break
+13  cap.release()
+14  cv2.destroyAllWindows()
+```
+
 
 ##### Haar Cascade Metodu ile Web Kamerası Üzerinde Yüz Tespiti (ve FPS hesabı)
 ```
@@ -373,7 +391,7 @@ detector = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 cap = cv2.VideoCapture(1)
 previousTime = time.time()
 fps = deque(maxlen=100)
-while cap.isOpened() == True:
+while True:
     ret, frame = cap.read()
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     rects = detector.detectMultiScale(gray, scaleFactor=1.05, minNeighbors=5,
