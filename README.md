@@ -361,7 +361,9 @@ cv2.waitKey(0)
 ```
 
 <p align="center"><img src="figure/haar cascade face detection.jpg" alt="face detection with haar cascade" width=%100 height=auto></p>
+
 ##### Haar Cascade Metodu ile Web Kamerası Üzerinde Yüz Tespiti (Final Sınavı Sorusu)
+
 ```
 1  import cv2
 2  detector = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
