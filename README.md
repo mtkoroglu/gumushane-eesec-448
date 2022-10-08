@@ -44,7 +44,7 @@ pip install pyautogui mediapipe mime
 
 ## Proje 1: Resim Yükleme ve Görüntüleme (load-display-image)
 ### Yüklenen Resmin Üzerine Yazı Yazma, Resmi Yeniden Boyutlandırma, Ekranda Görüntüleme ve Dosyaya Kaydetme
-<p align="justify">Bu egzersizde <strong>OpenCV</strong> kütüphanesinden <b>imread()</b>, **putText()**, **resize()**, **imshow()** ve **imwrite()** fonksiyonlarını kullanacağız. Resim yüklemek için kullandığımız fonksiyon olan **imread()**, argüman (yani giriş) olarak uzantısıyla beraber resim/fotoğraf ismi kabul ediyor. Yani fonksiyona *string* veri tipinde resmin uzantılı ismini giriş olarak veriyoruz. Mesela burada fotoğrafımızın ismi **IMG_20210616_202539.jpg** olduğundan **imread('IMG_20210616_202539.jpg')** şeklinde fonksiyonu çağırdığımızda resmi bizim ismini verdiğimiz değişkene atıyor. Bu arada gözden kaçırmayın, bütün fonksiyonları her zaman **cv2** anahtar kelimemizin sonuna **nokta** koyup çağırıyoruz, çünkü **cv2** yazdığımız kodda **OpenCV** kütüphanesini temsil ediyor. Zaten bu yüzden her kodumuzun başında **import cv2** diye bir komutla **OpenCV**'yi aktif hale getirmiş oluyoruz. Sonuç olarak, eğer **IMG_20210616_202539.jpg** isimli bir fotoğrafı **OpenCV**'de **resim** isminde bir değişkene atamak istiyorsak, o zaman aşağıdaki kodu koşturmalıyız.</p>
+<p align="justify">Bu egzersizde <strong>OpenCV</strong> kütüphanesinin <b>imread()</b>, <b>putText()</b>, <b>resize()</b>, <b>imshow()</b> ve <b>imwrite()</b> fonksiyonlarını kullanacağız. Resim yüklemek için kullandığımız fonksiyon olan <b>imread()</b>, argüman (yani giriş) olarak uzantısıyla beraber resim/fotoğraf ismi kabul ediyor. Yani fonksiyona <i>string</i> veri tipinde resmin uzantılı ismini giriş olarak veriyoruz. Mesela burada fotoğrafımızın ismi <b>IMG_20210616_202539.jpg</b> olduğundan <b>imread('IMG_20210616_202539.jpg')</b> şeklinde fonksiyonu çağırdığımızda resmi bizim ismini verdiğimiz değişkene atıyor. Bu arada gözden kaçırmayın, bütün fonksiyonları her zaman <b>cv2</b> anahtar kelimemizin sonuna <b>nokta</b> koyup çağırıyoruz, çünkü <b>cv2</b> yazdığımız kodda <b>OpenCV</b> kütüphanesini temsil ediyor. Zaten bu yüzden her kodumuzun başında <b>import cv2</b> diye bir komutla <b>OpenCV</b>'yi aktif hale getirmiş oluyoruz. Sonuç olarak, eğer <b>IMG_20210616_202539.jpg</b> isimli bir fotoğrafı OpenCV'de <b>resim</b> isminde bir değişkene atamak istiyorsak, o zaman aşağıdaki kodu koşturmalıyız.</p>
 
 ```
 import cv2
@@ -342,7 +342,7 @@ frameBW = threshold(frameGray, T)
 ```
 
 ## Proje 7: Yüz Tespiti (Face Detection - Haar Cascade metodu ile)
-<p text-align="justify">Dersin video linkleri DBS'dedir.</p>
+<p text-align="justify">Kodları yukarıda project/face-detection klasöründe bulabilirsiniz.</p>
 
 ##### Haar Cascade Metodu ile Resim Üzerinde Yüz Tespiti
 ```
@@ -362,7 +362,7 @@ cv2.waitKey(0)
 
 <p align="center"><img src="figure/haar cascade face detection.jpg" alt="face detection with haar cascade" width=%100 height=auto></p>
 
-##### Haar Cascade Metodu ile Web Kamerası Üzerinde Yüz Tespiti (Final Sınavı Sorusu)
+<h4>Haar Cascade Metodu ile Web Kamerası Üzerinde Yüz Tespiti (Final Sınavı Sorusu)</h4>
 
 ```
 1  import cv2
