@@ -81,18 +81,18 @@ cv2.imshow("Uzerine yazi yazilmis ve yeniden boyutlandirilmis resim", kucukResim
 cv2.waitKey(0) # klavyede herhangi bir tuşa basana kadar ekranda görüntüle
 ```
 
-## Proje 2: Web Kamerası (web-cam-stream)
-Video dediğimiz şey ard arda yakalanan (İng. **capture**) resimlerin ekranda seri halde görüntülenmesinden başka birşey değil. Burada **FPS** kavramı karşımıza çıkıyor. Yani **Frame per Second**, Türkçesi **saniyedeki kare sayısı**. Aşağıdaki animasyonda [2] aynı hareketin değişik FPS değerlerinde yakalanmış halini izleyebilirsiniz. Animasyonda da görüldüğü gibi yüksek FPS değerleri ayrıntıları gözlemleyebilmeyi artırsa da daha fazla işlem yapıldığından dolayı bilgisayarı yoracaktır. Karşımıza çıkan FPS kavramını Sinyaller-Sistemler ve Haberleşme derslerinde gördüğünüz **örnekleme frekansı** (İng. sampling frequency) olarak düşünebilirsiniz.
+<h2>Proje 2: Web Kamerası (web-cam-stream)</h2>
+<p>Video dediğimiz şey ard arda yakalanan (İng. <b>capture</b>) resimlerin ekranda seri halde görüntülenmesinden başka birşey değil. Burada <b>FPS</b> kavramı karşımıza çıkıyor. Yani <b>Frame per Second</b>, Türkçesi <b>saniyedeki kare sayısı</b>. Aşağıdaki animasyonda [2] aynı hareketin değişik FPS değerlerinde yakalanmış halini görüyorsunuz. Yüksek FPS değerleri ayrıntıları gözlemleyebilmeyi artırsa da daha fazla işlem yapıldığından dolayı bilgisayarı yoracaktır. Karşımıza çıkan FPS kavramını Sinyaller-Sistemler ve Haberleşme derslerinde gördüğünüz <b>örnekleme frekansı</b> (İng. sampling frequency) olarak düşünebilirsiniz.
 
 <p align="center"><img src="https://www.productioncrate.com/news/wp-content/uploads/2019/08/ezgif-1-e18c2f9c89ad.gif" alt="FPS simulation" width=%100 height=auto></p>
 
-Genelde FPS değeri standart web kameraları için 30. Bilgisayarımızın web kamerasını OpenCV kullanarak aşağıdaki gibi açabiliriz.
+<p align="justify">Genelde FPS değeri standart web kameraları için 30. Bilgisayarımızın web kamerasını OpenCV kullanarak aşağıdaki gibi açabiliriz.</p>
 
 ```
 cap = cv2.VideoCapture(0)
 ```
 
-<p align="justify">Burada <b>VideoCapture</b> web kamerasına erişmek için bizim kullanımımıza sunulmuş OpenCV'nin **videoio** ana modülünde yer alan bir sınıf (class). Bu komuta 0 girişini verdik çünkü bilgisayarımızda eğer bir web kamerası varsa OpenCV o kameraya 0 kodunu atamış. Eğer birden fazla kamera varsa, o zaman argüman olarak 0 değil de 1, 2, ... girebiliriz. Bu arada <b>VideoCapture()</b> komutunun bize döndürdüğü değişkene <em>capture</em> kelimesinin kısaltması olan <b>cap</b> ismini uygun bulduk zira <em>capture</em> yakalamak demek ki web kamerası da saniyede otuz kez görüntüyü yakalayarak bize video sağlamış oluyor. OpenCV'de <b>VideoCapture</b> sınıfı web kamerası başarıyla açıldı mı açılmadı mı kontrol etmemiz için Türkçesi **acildi mi?** olarak tercüme edilebilecek bir fonksiyon kullanımımıza sunuyor: **isOpened()**. Yukarıda **VideoCapture()** komutunun bize döndürdüğü **cap** değişkenini kullanarak kamera açıldı mı açılmadı mı aşağıdaki gibi kontrol edelim.</p>
+<p align="justify">Burada <b>VideoCapture</b> web kamerasına erişmek için bizim kullanımımıza sunulmuş OpenCV'nin **videoio** ana modülünde yer alan bir sınıf (class). Bu komuta 0 girişini verdik çünkü bilgisayarımızda eğer bir web kamerası varsa OpenCV o kameraya 0 kodunu atamış. Eğer birden fazla kamera varsa, o zaman argüman olarak 0 değil de 1, 2, ... girebiliriz. Bu arada <b>VideoCapture()</b> komutunun bize döndürdüğü değişkene <em>capture</em> kelimesinin kısaltması olan <b>cap</b> ismini uygun bulduk zira <em>capture</em> yakalamak demek ki web kamerası da saniyede otuz kez görüntüyü yakalayarak bize video sağlamış oluyor. OpenCV'de <b>VideoCapture</b> sınıfı web kamerası başarıyla açıldı mı açılmadı mı kontrol etmemiz için Türkçesi <b>acildi mi?</b> olarak tercüme edilebilecek bir fonksiyon kullanımımıza sunuyor: <b>isOpened()</b>. Yukarıda <b>VideoCapture()</b> komutunun bize döndürdüğü <b>cap</b> değişkenini kullanarak kamera açıldı mı açılmadı mı aşağıdaki gibi kontrol edelim.</p>
 
 ```
 if (cap.isOpened() == False): ## eğer açılmadıysa
