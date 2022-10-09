@@ -92,7 +92,7 @@ cv2.waitKey(0) # klavyede herhangi bir tuşa basana kadar ekranda görüntüle
 cap = cv2.VideoCapture(0)
 ```
 
-<p align="justify">Burada <b>VideoCapture</b> web kamerasına erişmek için bizim kullanımımıza sunulmuş OpenCV'nin **videoio** ana modülünde yer alan bir sınıf (class). Bu komuta 0 girişini verdik çünkü bilgisayarımızda eğer bir web kamerası varsa OpenCV o kameraya 0 kodunu atamış. Eğer birden fazla kamera varsa, o zaman argüman olarak 0 değil de 1, 2, ... girebiliriz. Bu arada <b>VideoCapture()</b> komutunun bize döndürdüğü değişkene <em>capture</em> kelimesinin kısaltması olan <b>cap</b> ismini uygun bulduk zira <em>capture</em> yakalamak demek ki web kamerası da saniyede otuz kez görüntüyü yakalayarak bize video sağlamış oluyor. OpenCV'de <b>VideoCapture</b> sınıfı web kamerası başarıyla açıldı mı açılmadı mı kontrol etmemiz için Türkçesi <b>acildi mi?</b> olarak tercüme edilebilecek bir fonksiyon kullanımımıza sunuyor: <b>isOpened()</b>. Yukarıda <b>VideoCapture()</b> komutunun bize döndürdüğü <b>cap</b> değişkenini kullanarak kamera açıldı mı açılmadı mı aşağıdaki gibi kontrol edelim.</p>
+<p align="justify">Burada <b>VideoCapture</b> web kamerasına erişmek için bizim kullanımımıza sunulmuş OpenCV'nin <b>videoio</b> ana modülünde yer alan bir sınıf (class). Bu komuta 0 girişini verdik çünkü bilgisayarımızda eğer bir web kamerası varsa OpenCV o kameraya 0 kodunu atamış. Eğer birden fazla kamera varsa, o zaman argüman olarak 0 değil de 1, 2, ... girebiliriz. Bu arada <b>VideoCapture()</b> komutunun bize döndürdüğü değişkene <em>capture</em> kelimesinin kısaltması olan <b>cap</b> ismini uygun bulduk zira <em>capture</em> yakalamak demek ki web kamerası da saniyede otuz kez görüntüyü yakalayarak bize video sağlamış oluyor. OpenCV'de <b>VideoCapture</b> sınıfı web kamerası başarıyla açıldı mı açılmadı mı kontrol etmemiz için Türkçesi <b>acildi mi?</b> olarak tercüme edilebilecek bir fonksiyon kullanımımıza sunuyor: <b>isOpened()</b>. Yukarıda <b>VideoCapture()</b> komutunun bize döndürdüğü <b>cap</b> değişkenini kullanarak kamera açıldı mı açılmadı mı aşağıdaki gibi kontrol edelim.</p>
 
 ```
 if (cap.isOpened() == False): ## eğer açılmadıysa
@@ -101,7 +101,7 @@ else: ## eğer açıldıysa
     print('Kameranın FPS değeri %i.' %cap.get(cv2.CAP_PROP_FPS))
 ```
 
-Eğer kamera yoksa veya erişimde (veya bağlantıda) bir sıkıntı yaşandıysa o zaman ekrana **Web kamerasına erişimde sorun yaşandı!** yazılacak. Aksi durumda kameradan kareler (İng. frame) sürekli geliyor olacak ve web kamerasının FPS değerini ekrana basacağız. Kameraya başarıyla eriştiğimizi kabul ederek devam ediyoruz. Şimdi görüntü sürekli gelmeye devam edeceğinden, web kamerası kare yakaladığı müddetçe aktif olacak bir döngü oluşturalım. Bu döngü içine her girişte web kamerasından resmi alıp **frame** isimli bir değişkene atayalım. Döngüden çıkmadan yakalanan renkli resmi ekranda **imshow()** komutu ile görüntüleyelim ve eğer kullanıcı **'q'** tuşuna bir an bile basarsa (imlecin görüntülediğimiz video ekranı üzerine tıklı olması lazım) o zaman o anda **frame** değişkeninde RAM hafızadaki resmi hard diskte dosyaya yazıp hem döngüden çıkalım hem de programı sonlandıralım.
+<p align="align>"Eğer kamera yoksa veya erişimde (veya bağlantıda) bir sıkıntı yaşandıysa o zaman ekrana <b>Web kamerasına erişimde sorun yaşandı!</b> yazılacak. Aksi durumda kameradan kareler (İng. frame) sürekli geliyor olacak ve web kamerasının FPS değerini ekrana basacağız. Kameraya başarıyla eriştiğimizi kabul ederek devam ediyoruz. Şimdi görüntü sürekli gelmeye devam edeceğinden, web kamerası kare yakaladığı müddetçe aktif olacak bir döngü oluşturalım. Bu döngü içine her girişte web kamerasından resmi alıp <b>frame</b> isimli bir değişkene atayalım. Döngüden çıkmadan yakalanan renkli resmi ekranda <b>imshow()</b> komutu ile görüntüleyelim ve eğer kullanıcı <b>'q'</b> tuşuna bir an bile basarsa (imlecin görüntülediğimiz video ekranı üzerine tıklı olması lazım) o zaman o anda <b>frame</b> değişkeninde RAM hafızadaki resmi hard diskte dosyaya yazıp hem döngüden çıkalım hem de programı sonlandıralım.</p>
 
 ```
 import cv2
@@ -124,11 +124,11 @@ cap.release() # release serbest bırak demek
 cv2.destroyAllWindows() # bütün pencereleri kapat ve programı sonlandır
 ```
 
-Video için aşağıdaki resme tıklayınız.
+<p align="align>"Video için aşağıdaki resme tıklayınız.</p>
 [![IMAGE ALT TEXT HERE](https://www.manmade2.com/wp-content/uploads/2016/10/webCm1.png)](https://youtu.be/0LjEFyVVs0g)
 
-## Proje 3: Filtreleme (filtering)
-Görüntü işleme denince belki de akla gelen ilk şey olan **filtreleme** ile devam ediyoruz. Burada OpenCV kütüphanesinin Görüntü İşleme ana modülünde (**imgproc**) hazır olan filtrelerden normalize edilmiş kutu filtresi (İng. normalized box filter) **blur()**, istatistikteki en popüler dağılım olan Gaussian (öbür ismiyle Normal) fonksiyonu kullanan Gaussian filtresi **GaussianFilter()**, yine istatistikte bir algoritma olarak karşımıza çıkan medyan filtresi **medianBlur()** ve de Gaussian filtresinin piksel şiddet değişimlerinin çok olduğu yerleri bulandırmayan ve resmi aynen Snapshot uygulamasında olduğu gibi oldukça artistik hale getiren versiyonu olan **BilateralFilter()** komutlarını kullanarak ilk önce web kamerasından gelen video akışını filtreleyeceğiz. Ardından da aynı komutları tek bir resim üzerine uygulayıp sonuçları inceleyeceğiz (**ÖDEV 1**). Yukarıda isimleri verilen filtrelerle ilgili bir tutorial'a ihtiyacı olanlar derste baktığımız [3]'den faydalanabilirler. Yazdığımız kod aşağıda.
+<h2>Proje 3: Filtreleme (filtering)</h2>
+Görüntü işleme denince belki de akla gelen ilk şey olan <b>filtreleme</b> ile devam ediyoruz. Burada OpenCV kütüphanesinin Görüntü İşleme ana modülünde (**imgproc**) hazır olan filtrelerden normalize edilmiş kutu filtresi (İng. normalized box filter) **blur()**, istatistikteki en popüler dağılım olan Gaussian (öbür ismiyle Normal) fonksiyonu kullanan Gaussian filtresi **GaussianFilter()**, yine istatistikte bir algoritma olarak karşımıza çıkan medyan filtresi **medianBlur()** ve de Gaussian filtresinin piksel şiddet değişimlerinin çok olduğu yerleri bulandırmayan ve resmi aynen Snapshot uygulamasında olduğu gibi oldukça artistik hale getiren versiyonu olan **BilateralFilter()** komutlarını kullanarak ilk önce web kamerasından gelen video akışını filtreleyeceğiz. Ardından da aynı komutları tek bir resim üzerine uygulayıp sonuçları inceleyeceğiz (**ÖDEV 1**). Yukarıda isimleri verilen filtrelerle ilgili bir tutorial'a ihtiyacı olanlar derste baktığımız [3]'den faydalanabilirler. Yazdığımız kod aşağıda.
 
 ```
 import cv2
@@ -158,7 +158,7 @@ Bu kodun değişik filtre ve parametreler için koşturulmasını görmek için 
 
 [![IMAGE ALT TEXT HERE](https://docs.opencv.org/3.4/filter.jpg)](https://youtu.be/gbO0RVemXB0)
 
-<h2>Proje 4: Görüntü İşleme Hızını Hesaplama (processing-speed)<h4>
+<h2>Proje 4: Görüntü İşleme Hızını Hesaplama (processing-speed)<h2>
 <p>Filtreleme dersinde kullandığımız <b>BilateralFilter()</b> komutu üç girişe sahipti. İlk girişi olan pencere boyutu parametresinin filtrelemeye olan etkisini yukarıdaki videoda ve derste görmüştük. Bilateral filtre gördüğümüz öbür üç filtreden farklı olarak pencere boyutunun artmasıyla (artan işlem yükünden dolayı) sinyal işleme hızını temsil eden FPS'yi gözle farkedilebilir derecede azaltıyor. Biz de derste bu hızı Python'da <b>time</b> paketini [4] kullanarak FPS'yi hesaplayıp resim üzerine <b>putText()</b> komutu ile yazdıracağız. Aşağıdaki kodun yazılmasını ve koşturulmasını kodun altındaki resme tıklayarak izleyebilirsiniz.</p>
 
 ```
