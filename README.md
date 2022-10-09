@@ -82,7 +82,7 @@ cv2.waitKey(0) # klavyede herhangi bir tuşa basana kadar ekranda görüntüle
 ```
 
 <h2>Proje 2: Web Kamerası (web-cam-stream)</h2>
-<p>Video dediğimiz şey ard arda yakalanan (İng. <b>capture</b>) resimlerin ekranda seri halde görüntülenmesinden başka birşey değil. Burada <b>FPS</b> kavramı karşımıza çıkıyor. Yani <b>Frame per Second</b>, Türkçesi <b>saniyedeki kare sayısı</b>. Aşağıdaki animasyonda [2] aynı hareketin değişik FPS değerlerinde yakalanmış halini görüyorsunuz. Yüksek FPS değerleri ayrıntıları gözlemleyebilmeyi artırsa da daha fazla işlem yapıldığından dolayı bilgisayarı yoracaktır. Karşımıza çıkan FPS kavramını Sinyaller-Sistemler ve Haberleşme derslerinde gördüğünüz <b>örnekleme frekansı</b> (İng. sampling frequency) olarak düşünebilirsiniz.
+<p align="justify">Video dediğimiz şey ard arda yakalanan (İng. <b>capture</b>) resimlerin ekranda seri halde görüntülenmesinden başka birşey değil. Burada <b>FPS</b> kavramı karşımıza çıkıyor. Yani <b>Frame per Second</b>, Türkçesi <b>saniyedeki kare sayısı</b>. Aşağıdaki animasyonda [2] aynı hareketin değişik FPS değerlerinde yakalanmış halini görüyorsunuz. Yüksek FPS değerleri ayrıntıları gözlemleyebilmeyi artırsa da daha fazla işlem yapıldığından dolayı bilgisayarı yoracaktır. Karşımıza çıkan FPS kavramını Sinyaller-Sistemler ve Haberleşme derslerinde gördüğünüz <b>örnekleme frekansı</b> (İng. sampling frequency) olarak düşünebilirsiniz.
 
 <p align="center"><img src="https://www.productioncrate.com/news/wp-content/uploads/2019/08/ezgif-1-e18c2f9c89ad.gif" alt="FPS simulation" width=%100 height=auto></p>
 
