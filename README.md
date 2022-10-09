@@ -225,7 +225,7 @@ imgGray[0][0]
 
 <p align="center"><img src="figure/RGB and gray scale resized.jpg" alt="RGB ve gri tonlu resim" width=%100 height=auto></p>
 
-<p align="justify">Artık her bir piksel için üç değil bir tane şiddet değeri var. Piksel şiddet değerleri bilgisayar hafızasında **uint8** veri tipine uygun olan bir **byte**'da tutuluyor. İkilik sistemi (binary) hatırlayacak olursak: 1 byte = 8 bit. Toplam alabileceği piksel şiddet değeri 2<sup>8</sup>=256. Burada 0'dan başlandığından dolayı maksimum piksel şiddet değeri 2<sup>8</sup>-1=255 olur.</p>
+<p align="justify">Artık her bir piksel için üç değil bir tane şiddet değeri var. Piksel şiddet değerleri bilgisayar hafızasında <b>uint8</b> veri tipine uygun olan bir <b>byte</b>'da tutuluyor. İkilik sistemi (binary) hatırlayacak olursak: 1 byte = 8 bit. Alabileceği piksel şiddet değerleri toplam 2<sup>8</sup>=256 tane. Burada 0'dan başlandığından dolayı maksimum piksel şiddet değeri 2<sup>8</sup>-1=255 olmakta.</p>
 
 <p align="center"><img src="figure/gray scale.jpg" alt="gri tonlar ve piksel değerleri" width=%50 height=auto></p>
 
