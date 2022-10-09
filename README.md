@@ -21,7 +21,7 @@ python -m venv opencv-env
 .\opencv-env\Scripts\activate
 ```
 
-<p align="justify">komutunu girerek sanal ortamı <b>aktif</b> hale getirin. Bunu müteakiben sırasıyla</p> 
+<p align="justify">komutunu girerek <b>opencv-env</b> isimli sanal ortamı <b>aktif</b> hale getirin. Bunu müteakiben sırasıyla</p> 
 
 ```
 pip install opencv-contrib-python streamlit jupyter moviepy ipykernel matplotlib
@@ -33,31 +33,31 @@ ve
 pip install pyautogui mediapipe mime
 ```
 
-<p align="justify">komutlarını koşturarak bilgisayarımızda <b>OpenCV</b> koşturabilmek için gerekli olan bütün <b>paket</b> ve <b>kütüphane</b>leri yükleyin.</p>
+<p align="justify">komutlarını koşturarak bilgisayarda <b>OpenCV</b> koşturabilmek için gerekli olan bütün <b>paket</b> ve <b>kütüphane</b>leri yükleyin.</p>
 
-#### Visual Studio Code'a Sanal Ortamın Kaydedilmesi/Tanıtılması
-<p align="justify">Yukarıdaki videolarda bilgisayarımıza <b>Python</b> yükledikten sonra <b>opencv-env</b> isimli bir <b>sanal ortam</b> oluşturup içerisine <b>OpenCV</b>'yi ve bağımlı olduğu kütüphaneleri yükledik. Derste kullanacağımız <b>Visual Studio Code</b> (VSC) editöründe kod yazarken kullanacağımız <b>OpenCV</b> fonksiyonları hakkında yardım alabilmek için VSC'ye sanal ortamımızı kaydetmemiz/tanıtmamız lazım. Bu işlem için aşağıdaki resme tıklayınca açılan videoyu izleyin.</p>
+<h4>Visual Studio Code'a Sanal Ortamın Kaydedilmesi/Tanıtılması</h4>
+<p align="justify">Yukarıdaki videolarda bilgisayarımıza <b>Python</b> yükledikten sonra <b>opencv-env</b> isimli bir <b>sanal ortam</b> oluşturup içerisine <b>OpenCV</b>'yi ve bağımlı olduğu kütüphaneleri yüklemeyi gördük. Derste kullanacağımız <b>Visual Studio Code</b> (VSC) editöründe kod yazarken kullanacağımız <b>OpenCV</b> fonksiyonları hakkında yardım alabilmek için VSC'ye sanal ortamımızı kaydetmemiz/tanıtmamız lazım. Bu işlem için aşağıdaki resme tıklayınca açılan videoyu izleyin.</p>
 
 [![IMAGE ALT TEXT HERE](figure/opencv_env_VSC.jpg)](https://youtu.be/6Z5lM1WqBXU)
 
-<p align="justify">Ara sınavda OpenCV'yi bilgisayarımıza direk değil de sanal ortama yüklemeyle/kurmayla ilgili bir soru soracağımı söylemiştim ve sordum da. Final sınavında yine sanal ortamda bir kod koşturulması ile alakalı bir soru soracağım.</p>
+<p align="justify"><b>Not:</b> Sınavlarda OpenCV'yi bilgisayarımıza direk değil de sanal ortama yüklemeyle/kurmayla ilgili sorular gelecektir.</p>
 
-## Proje 1: Resim Yükleme ve Görüntüleme (load-display-image)
-### Yüklenen Resmin Üzerine Yazı Yazma, Resmi Yeniden Boyutlandırma, Ekranda Görüntüleme ve Dosyaya Kaydetme
-<p align="justify">Bu egzersizde <strong>OpenCV</strong> kütüphanesinin <b>imread()</b>, <b>putText()</b>, <b>resize()</b>, <b>imshow()</b> ve <b>imwrite()</b> fonksiyonlarını kullanacağız. Resim yüklemek için kullandığımız fonksiyon olan <b>imread()</b>, argüman (yani giriş) olarak uzantısıyla beraber resim/fotoğraf ismi kabul ediyor. Yani fonksiyona <i>string</i> veri tipinde resmin uzantılı ismini giriş olarak veriyoruz. Mesela burada fotoğrafımızın ismi <b>IMG_20210616_202539.jpg</b> olduğundan <b>imread('IMG_20210616_202539.jpg')</b> şeklinde fonksiyonu çağırdığımızda resmi bizim ismini verdiğimiz değişkene atıyor. Bu arada gözden kaçırmayın, bütün fonksiyonları her zaman <b>cv2</b> anahtar kelimemizin sonuna <b>nokta</b> koyup çağırıyoruz, çünkü <b>cv2</b> yazdığımız kodda <b>OpenCV</b> kütüphanesini temsil ediyor. Zaten bu yüzden her kodumuzun başında <b>import cv2</b> diye bir komutla <b>OpenCV</b>'yi aktif hale getirmiş oluyoruz. Sonuç olarak, eğer <b>IMG_20210616_202539.jpg</b> isimli bir fotoğrafı OpenCV'de <b>resim</b> isminde bir değişkene atamak istiyorsak, o zaman aşağıdaki kodu koşturmalıyız.</p>
+<h2>Proje 1: Resim Yükleme ve Görüntüleme (load-display-image)</h2>
+<h3>Yüklenen Resmin Üzerine Yazı Yazma, Resmi Yeniden Boyutlandırma, Ekranda Görüntüleme ve Dosyaya Kaydetme</h3>
+<p align="justify">Bu egzersizde <b>OpenCV</b> kütüphanesinin <b>imread()</b>, <b>putText()</b>, <b>resize()</b>, <b>imshow()</b> ve <b>imwrite()</b> fonksiyonlarını kullanacağız. Resim yüklemek için kullandığımız fonksiyon olan <b>imread()</b>, argüman (yani giriş) olarak uzantısıyla beraber resim/fotoğraf ismi kabul ediyor. Yani fonksiyona <i>string</i> veri tipinde resmin uzantılı ismini giriş olarak veriyoruz. Mesela burada fotoğrafımızın ismi <b>IMG_20210616_202539.jpg</b> olduğundan <b>imread('IMG_20210616_202539.jpg')</b> şeklinde fonksiyonu çağırdığımızda resmi bizim ismini verdiğimiz değişkene atıyor. Bu arada gözden kaçırmayın, bütün fonksiyonları her zaman <b>cv2</b> anahtar kelimemizin sonuna <b>nokta</b> koyup çağırıyoruz, çünkü <b>cv2</b> yazdığımız kodda <b>OpenCV</b> kütüphanesini temsil ediyor. Zaten bu yüzden her kodumuzun başında <b>import cv2</b> diye bir komutla <b>OpenCV</b>'yi aktif hale getirmiş oluyoruz. Sonuç olarak, eğer <b>IMG_20210616_202539.jpg</b> isimli bir fotoğrafı OpenCV'de <b>resim</b> isminde bir değişkene atamak istiyorsak, o zaman aşağıdaki kodu koşturmalıyız.</p>
 
 ```
 import cv2
 resim = cv2.imread('IMG_20210616_202539.jpg')
 ```
 
-Aşağıdaki kod resmin **yüksekliğini** (height), **genişliğini** (width) ve BGR (Blue-Green-Red yani Mavi-Yeşil-Kırmızı) kanal sayısını (channels) **print** komutuyla ekrana basıyor. Burada yükseklik **satır sayısı**na, genişlik **sütun sayısı**na eşit. Aşağıdaki kod satırında **resim.shape[0]** ve **resim.shape[1]** komutları sırasıyla resmin yükseklik ve genişliğini piksel cinsinden bir sayı olarak ekrana basıyor. Kanal sayısı olan **resim.shape[2]** hakkında ara sınavdan önceki haftalarda konuşacağız.
+<p align="justify">Aşağıdaki kod resmin <b>yüksekliğini</b> (height), <b>genişliğini</b> (width) ve BGR (Blue-Green-Red yani Mavi-Yeşil-Kırmızı) kanal sayısını (channels) <b>print</b> komutuyla ekrana basıyor. Burada yükseklik <b>satır</b> sayısına, genişlik <b>sütun</b> sayısına eşit. Aşağıdaki kod satırında <b>resim.shape[0]</b> ve <b>resim.shape[1]</b> komutları sırasıyla resmin yükseklik ve genişliğini piksel cinsinden bir sayı olarak ekrana basıyor. Kanal sayısı olan <b>resim.shape[2]</b> hakkında ara sınavdan önceki haftalarda konuşacağız.</p>
 
 ```
 print('yükseklik = %i   genişlik = %i   kanal sayısı = %i' %(resim.shape[0], resim.shape[1], resim.shape[2]))
 ```
 
-Aşağıdaki videoyu izleyerek yukarıda bir kısmı açıklanan ve tamamı aşağıda verilen kodu gerçekleyebilirsiniz.
+<p>Aşağıdaki videoyu izleyerek yukarıda bir kısmı açıklanan ve tamamı aşağıda verilen kodu gerçekleyebilirsiniz.</b>
 
 [![IMAGE ALT TEXT HERE](figure/imread_puttext_resize_imwrite.jpg)](https://youtu.be/622veo4_lDw)
 
