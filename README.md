@@ -158,7 +158,7 @@ Bu kodun değişik filtre ve parametreler için koşturulmasını görmek için 
 
 [![IMAGE ALT TEXT HERE](https://docs.opencv.org/3.4/filter.jpg)](https://youtu.be/gbO0RVemXB0)
 
-<h2>Proje 4: Görüntü İşleme Hızını Hesaplama (processing-speed)<h2>
+<h2>Proje 4: Görüntü İşleme Hızını Hesaplama (processing-speed)</h2>
 <p>Filtreleme dersinde kullandığımız <b>BilateralFilter()</b> komutu üç girişe sahipti. İlk girişi olan pencere boyutu parametresinin filtrelemeye olan etkisini yukarıdaki videoda ve derste görmüştük. Bilateral filtre gördüğümüz öbür üç filtreden farklı olarak pencere boyutunun artmasıyla (artan işlem yükünden dolayı) sinyal işleme hızını temsil eden FPS'yi gözle farkedilebilir derecede azaltıyor. Biz de derste bu hızı Python'da <b>time</b> paketini [4] kullanarak FPS'yi hesaplayıp resim üzerine <b>putText()</b> komutu ile yazdıracağız. Aşağıdaki kodun yazılmasını ve koşturulmasını kodun altındaki resme tıklayarak izleyebilirsiniz.</p>
 
 ```
