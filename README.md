@@ -128,7 +128,7 @@ cv2.destroyAllWindows() # bütün pencereleri kapat ve programı sonlandır
 [![IMAGE ALT TEXT HERE](https://www.manmade2.com/wp-content/uploads/2016/10/webCm1.png)](https://youtu.be/0LjEFyVVs0g)
 
 <h2>Proje 3: Filtreleme (filtering)</h2>
-Görüntü işleme denince belki de akla gelen ilk şey olan <b>filtreleme</b> ile devam ediyoruz. Burada OpenCV kütüphanesinin Görüntü İşleme ana modülünde (**imgproc**) hazır olan filtrelerden normalize edilmiş kutu filtresi (İng. normalized box filter) **blur()**, istatistikteki en popüler dağılım olan Gaussian (öbür ismiyle Normal) fonksiyonu kullanan Gaussian filtresi **GaussianFilter()**, yine istatistikte bir algoritma olarak karşımıza çıkan medyan filtresi **medianBlur()** ve de Gaussian filtresinin piksel şiddet değişimlerinin çok olduğu yerleri bulandırmayan ve resmi aynen Snapshot uygulamasında olduğu gibi oldukça artistik hale getiren versiyonu olan **BilateralFilter()** komutlarını kullanarak ilk önce web kamerasından gelen video akışını filtreleyeceğiz. Ardından da aynı komutları tek bir resim üzerine uygulayıp sonuçları inceleyeceğiz (**ÖDEV 1**). Yukarıda isimleri verilen filtrelerle ilgili bir tutorial'a ihtiyacı olanlar derste baktığımız [3]'den faydalanabilirler. Yazdığımız kod aşağıda.
+<p align="justify">Görüntü işleme denince belki de akla gelen ilk şey olan <b>filtreleme</b> ile devam ediyoruz. Burada OpenCV kütüphanesinin <b>imgproc</b> isimli görüntü işleme ana modülünde bulunan filtrelerden normalize edilmiş kutu filtresi (İng. normalized box filter) <b>blur()</b>, istatistikteki en popüler dağılım olan Gaussian fonksiyonu kullanan Gaussian filtresi <b>GaussianFilter()</b>, yine istatistikte bir algoritma olarak karşımıza çıkan medyan filtresi <b>medianBlur()</b> ve de Gaussian filtresinin piksel şiddet değişimlerinin çok olduğu yerleri bulandırmayan ve resmi aynen Snapshot uygulamasında olduğu gibi oldukça artistik hale getiren versiyonu olan <b>BilateralFilter()</b> komutlarını kullanarak ilk önce web kamerasından gelen video akışını filtreleyeceğiz. Ardından da aynı komutları tek bir resim üzerine uygulayıp sonuçları inceleyeceğiz. Yukarıda isimleri verilen filtrelerle ilgili bir tutorial'a ihtiyacı olanlar derste baktığımız [3]'den faydalanabilirler. Yazdığımız kod aşağıda.</p>
 
 ```
 import cv2
@@ -152,9 +152,12 @@ cap.release()
 cv2.destroyAllWindows()
 ```
 
-<p align="center"><img src="figure/birlesik resim dusuk boyut.jpg" alt="birleştirilmiş filtrelenmiş resimler" width=%100 height=auto></p>
+<figure>
+    <img src="figure/birlesik resim dusuk boyut.jpg" alt="birleştirilmiş filtrelenmiş resimler" width=%100 height=auto>
+    <figcaption>/<figcaption>
+</figure>
 
-Bu kodun değişik filtre ve parametreler için koşturulmasını görmek için aşağıdaki resme tıklayın. Açılan videoda ayrıca **EESEC 448**'de verilecek ekstra puan ve ödevlerle ilgili bilgi de mevcut. Herşeye ek olarak yaptığımız ilk iki projedeki bazı fonksiyonları kullanarak web kamerası kodu çalıştırılınca gelen video üzerine **dinamik** bir şekilde (1) yakalanan kare numarasını yazdırma, (2) farklı isimlerle resim kaydetme ve (3) kaydedilen bu resimler hakkındaki bilgiyi yine dinamik bir biçimde konsol ekranına yazdırma işlemlerini de videoda bulabilirsiniz. Videonun sonunda ilk ödev sözlü olarak açıklanıyor. Ara sınav notuna +3 puan eklemek isteyenler yazdıkları kodu bana email atsınlar. Ödevin son teslim tarihi ve vakti 31 Mart 2022 saat sabah 9:15.
+<p align="justify">Bu kodun değişik filtre ve parametreler için koşturulmasını görmek için aşağıdaki resme tıklayın. Açılan videoda ayrıca **EESEC 448**'de verilecek ekstra puan ve ödevlerle ilgili bilgi de mevcut. Herşeye ek olarak yaptığımız ilk iki projedeki bazı fonksiyonları kullanarak web kamerası kodu çalıştırılınca gelen video üzerine **dinamik** bir şekilde (1) yakalanan kare numarasını yazdırma, (2) farklı isimlerle resim kaydetme ve (3) kaydedilen bu resimler hakkındaki bilgiyi yine dinamik bir biçimde konsol ekranına yazdırma işlemlerini de videoda bulabilirsiniz. Videonun sonunda ilk ödev sözlü olarak açıklanıyor. Ara sınav notuna +3 puan eklemek isteyenler yazdıkları kodu bana email atsınlar. Ödevin son teslim tarihi ve vakti 31 Mart 2022 saat sabah 9:15.
 
 [![IMAGE ALT TEXT HERE](https://docs.opencv.org/3.4/filter.jpg)](https://youtu.be/gbO0RVemXB0)
 
