@@ -187,8 +187,8 @@ cv2.destroyAllWindows()
 
 Dersi hatırlayacak olursak, ilk önce hızını ölçmek istediğimiz **BilateralFilter()** komutundan hemen önce bilgisayarın içindeki kronometreden faydalanarak **timeStart** ismiyle zamanı yakalamıştık. Görüntü işlemeyi yaptıktan hemen sonra **timeStop** ismiyle yine zamanı yakalayıp **timeElapsed = timeStop - timeStart** şeklinde geçen zamanı hesaplamıştık. Daha sonra kodun üzerinde düşündüğümüzde sonsuz döngüde olduğumuzu göz önünde bulundurarak iki ayrı zaman yakalama yerine bir kez zamanı da yakalayarak görüntü işleme hızımızı ölçebileceğimizi anlamıştık. Yukarıdaki kod bu ikinci metoda ait. Bu metodda döngünün sonundan başa dönmeden hemen önce **timePrevious = timeCurrent** şeklinde yukarıda hesapta kullanılan şu andaki zamanı bir sonraki adım için geçmiş zaman haline getirme işlemi mutlaka yapılmak zorunda. Döngüye her başlandığında zaten yeri geldiğinde o andaki zaman **timeCurrent = time.time()** komutuyla yakalanıyor. Bu işin mantığını kendiniz biraz düşünerek anlamanız lazım.
 
-## Proje 5: Piksel Şiddet Değerleri, Renkli (BGR) - Gri Tonlu - Siyah Beyaz Resimler (bgr-gray-bw)
-İkinci hafta yaptığımız ilk projede öğrendiğimiz bazı bilgileri burada kullanacağız. Şimdi **albert_einstein.jpg** isminde bir fotoğrafı (yukarıda **project/color-space** dizininde bulabilirsiniz) OpenCV kullanarak bilgisayarımıza okuyalım ve bu renkli resmi analiz edelim. Aşağıdaki kod resmi okur ve ekrana sırasıyla resmin **yüksekliğini** ve **genişliğini** piksel cinsinden basar. Ayrıca fotoğrafın **kanal** sayısı denilen bilgiyi ekrana yazar.
+<h2>Proje 5: Piksel Şiddet Değerleri, Renkli (BGR) - Gri Tonlu - Siyah Beyaz Resimler (bgr-gray-bw)</h2>
+<p align="justify">İkinci hafta yaptığımız ilk projede öğrendiğimiz bazı bilgileri burada kullanacağız. Şimdi <b>albert_einstein.jpg</b> isminde bir fotoğrafı (yukarıda <b>project/color-space</b> dizininde bulabilirsiniz) OpenCV kullanarak bilgisayarımıza okuyalım ve bu renkli resmi analiz edelim. Aşağıdaki kod resmi okur ve ekrana sırasıyla resmin <b>yüksekliğini</b> ve <b>genişliğini</b> piksel cinsinden basar. Ayrıca fotoğrafın <b>kanal</b> sayısı denilen bilgiyi ekrana yazar.</p>
 
 ```
 img = cv2.imread('albert_einstein.jpg')
@@ -196,21 +196,21 @@ print('Yükseklik = %i piksel   Genişlik = %i piksel' %(img.shape[0], img.shape
 print('Kanal sayısı = %i' %img.shape[2])
 ```
 
-Burada kanal sayısının renkli bir resim için üç olduğunu görüyoruz. Bu şekilde üç kanalın oluşturmuş olduğu renkli bir resme **RGB** resim deniyor. Baş harfleri **Red**-**Green**-**Blue** yani **Kırmızı**-**Yeşil**-**Mavi**. **Not:** İnsan gözünün yaklaşık olarak kırmızıya %30, yeşile %60 ve maviye %10 duyarlı olduğu kabul ediliyor.
-#### Piksel Şiddet Değerleri
-Python konsolunda yüklenen fotoğrafın ilk pikselinin (i.e., sol en üst piksel) şiddet değerine ulaşmak için
+<p align="justify">Burada kanal sayısının renkli bir resim için üç olduğunu görüyoruz. Bu şekilde üç kanalın oluşturmuş olduğu renkli bir resme <b>RGB</b> resim deniyor. Bu harfler <b>Red</b>-<b>Green</b>-<b>Blue</b> yani <b>Kırmızı</b>-<b>Yeşil</b>-<b>Mavi</b>'den geliyor. <b>Not:</b> İnsan gözünün yaklaşık olarak kırmızıya %30, yeşile %60 ve maviye %10 duyarlı olduğu kabul ediliyor.</p>
+<h4>Piksel Şiddet Değerleri</h4>
+<p align="align">Python konsolunda yüklenen fotoğrafda ilk pikselin (i.e., sol en üst piksel) şiddet değerine ulaşmak için</p>
 
 ```
 img[0][0]
 ```
 
-yazarız. Alternatif olarak 
+<p align="justify">yazarız. Alternatif olarak</p>
 
 ```
 img[0,0]
 ```
 
-de yazılabilir. Bize bir dizi halinde üç değer döndürdüğü gibi veri tipini de **uint8** olarak gösteriyor. Bir pikselin şiddet değeri **8 bit unsigned integer** yani 8 bitlik (1 byte) işaretsiz tam sayı aralığında olabiliyor. Tek kanal için 0 kodu siyahı, 255 ise beyazı temsil ediyor. Ara değerler gri tonları oluşturuyor. Sonuç olarak üç kanalın farklı kombinasyonları aşağıdaki gibi renkleri oluşturuyor. Aşağıda RGB kübünü görebilirsiniz ([5]'in izni ile).
+<p align="justify">de yazılabilir. Bize bir dizi halinde üç değer döndürdüğü gibi veri tipini de **uint8** olarak gösteriyor. Bir pikselin şiddet değeri <b>8 bit unsigned integer</b> yani 8 bitlik (1 byte) işaretsiz tam sayı aralığında olabilir. Tek kanal için 0 kodu siyahı, 255 ise beyazı temsil ediyor. Ara değerler gri tonları oluşturuyor. Sonuç olarak üç kanalın farklı kombinasyonları aşağıdaki gibi renkleri oluşturuyor. Aşağıda RGB kübünü görebilirsiniz ([5]'in izni ile).</p>
 
 <p align="center"><img src="figure/opencv_color_spaces_rgb_cube.png" alt="RGB kübü renk kodu örnekleri" height="300"></p>
 
@@ -279,10 +279,7 @@ for i in range(r): # satırları dolaşalım
 
 <p align="center"><img src="figure/gri tonlu desenler.jpg" alt="gri tonlu desenler" width=%100 height=auto></p>
 
-## ARA SINAV
-Ara sınav 19 Nisan 2022 Salı günü D401'de 14:00-16:00 arasında yapıldı. Çözümlerinin videolarına DBS'den ulaşabilirsiniz.
-
-## Proje 6 (devam): NumPy Kullanarak Resim Birleştirme
+<h2>Proje 6 (devam): NumPy Kullanarak Resim Birleştirme</h2>
 <p align="justify">Ara sınavdan önceki hafta <b>numpy</b> paketini kullanmaya başladık ve ilk sentetik resimlerimizi (256 x 256 siyah, beyaz ve gri resim) oluşturduk. Sonrasında sentetik resmi oluştururken dinamik ifadeler kullandık ve gri tonlu uzayı değişik desenlerde görselleştirdik (ara sınavda karşımıza çıktı). Bu hafta <b>NumPy</b> kullanmaya devam edeceğiz ve ilk iş olarak iki resmi yatay olarak tek resim haline getireceğiz. Bunun için daha önce ara sınavda karşımıza çıkan filtreleme sorusuna bakalım.</p>
 
 <p align="center"><img src="figure/cheetah filtered merged extended.jpg" alt="numpy resim birleştirme" width=%100 height=auto></p>
@@ -417,7 +414,7 @@ cv2.destroyAllWindows()
 <p align="center"><img src="figure/haar cascade face detection web cam.jpg" alt="web cam face detection with haar cascade" width=%100 height=auto></p>
 
 <h2>Proje 8: Yüz Tespiti (Face Detection - OpenCV'den bir Deep Learning metodu ile)</h2>
-<p text-align="justify">Dersi bu sefer DBS'de kayıt seçeneğiyle kaydettik, 15. Hafta başlığı altındaki bağlantıdan izleyebilirsiniz.</p>
+<p text-align="justify">Burada referans alacağımız tutorial [10]'da Adrian tarafından hazırlanmış. Normalde OpenCV harka bir kütüphane olduğundan böyle tutorial'lar olmadan bile ne yapacağınızı bildiğiniz takdirde kendi kodunuzu <a href="https://docs.opencv.org/">OpenCV dökümantasyonu</a>ndan faydalanarak rahatça yazabilirsiniz. Ancak burada bu durum söz konusu değil. Adım adım Adrian'ı takip edeceğiz</p>
 
 <h3>Referanslar</h3>
 <ol>
