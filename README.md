@@ -154,15 +154,11 @@ cv2.destroyAllWindows()
 
 <figure>
     <img src="figure/birlesik resim dusuk boyut.jpg" alt="birleştirilmiş filtrelenmiş resimler" width=%100 height=auto>
-    <figcaption>/<figcaption>
+    <figcaption>Filtreleme sonucu elde edilen resimler<figcaption>
 </figure>
 
-<p align="justify">Bu kodun değişik filtre ve parametreler için koşturulmasını görmek için aşağıdaki resme tıklayın. Açılan videoda ayrıca **EESEC 448**'de verilecek ekstra puan ve ödevlerle ilgili bilgi de mevcut. Herşeye ek olarak yaptığımız ilk iki projedeki bazı fonksiyonları kullanarak web kamerası kodu çalıştırılınca gelen video üzerine **dinamik** bir şekilde (1) yakalanan kare numarasını yazdırma, (2) farklı isimlerle resim kaydetme ve (3) kaydedilen bu resimler hakkındaki bilgiyi yine dinamik bir biçimde konsol ekranına yazdırma işlemlerini de videoda bulabilirsiniz. Videonun sonunda ilk ödev sözlü olarak açıklanıyor. Ara sınav notuna +3 puan eklemek isteyenler yazdıkları kodu bana email atsınlar. Ödevin son teslim tarihi ve vakti 31 Mart 2022 saat sabah 9:15.
-
-[![IMAGE ALT TEXT HERE](https://docs.opencv.org/3.4/filter.jpg)](https://youtu.be/gbO0RVemXB0)
-
 <h2>Proje 4: Görüntü İşleme Hızını Hesaplama (processing-speed)</h2>
-<p>Filtreleme dersinde kullandığımız <b>BilateralFilter()</b> komutu üç girişe sahipti. İlk girişi olan pencere boyutu parametresinin filtrelemeye olan etkisini yukarıdaki videoda ve derste görmüştük. Bilateral filtre gördüğümüz öbür üç filtreden farklı olarak pencere boyutunun artmasıyla (artan işlem yükünden dolayı) sinyal işleme hızını temsil eden FPS'yi gözle farkedilebilir derecede azaltıyor. Biz de derste bu hızı Python'da <b>time</b> paketini [4] kullanarak FPS'yi hesaplayıp resim üzerine <b>putText()</b> komutu ile yazdıracağız. Aşağıdaki kodun yazılmasını ve koşturulmasını kodun altındaki resme tıklayarak izleyebilirsiniz.</p>
+<p align="justify">Filtreleme dersinde kullandığımız <b>BilateralFilter()</b> komutu üç girişe sahipti. İlk girişi olan pencere boyutu parametresinin filtrelemeye olan etkisini yukarıdaki videoda ve derste görmüştük. Bilateral filtre gördüğümüz öbür üç filtreden farklı olarak pencere boyutunun artmasıyla (artan işlem yükünden dolayı) sinyal işleme hızını temsil eden FPS'yi gözle farkedilebilir derecede azaltıyor. Biz de derste bu hızı Python'da <b>time</b> paketini [4] kullanarak FPS'yi hesaplayıp resim üzerine <b>putText()</b> komutu ile yazdıracağız. Aşağıdaki kodun yazılmasını ve koşturulmasını kodun altındaki resme tıklayarak izleyebilirsiniz.</p>
 
 ```
 import cv2
@@ -188,7 +184,7 @@ cv2.destroyAllWindows()
 
 [![görüntü işleme hızını hesaplama](figure/bilateral_filter_processing_speed.jpg)](https://youtu.be/07E6AFL08DA)
 
-Dersi hatırlayacak olursak, ilk önce hızını ölçmek istediğimiz **BilateralFilter()** komutundan hemen önce bilgisayarın içindeki kronometreden faydalanarak **timeStart** ismiyle zamanı yakalamıştık. Görüntü işlemeyi yaptıktan hemen sonra **timeStop** ismiyle yine zamanı yakalayıp **timeElapsed = timeStop - timeStart** şeklinde geçen zamanı hesaplamıştık. Daha sonra kodun üzerinde düşündüğümüzde sonsuz döngüde olduğumuzu göz önünde bulundurarak iki ayrı zaman yakalama yerine bir kez zamanı da yakalayarak görüntü işleme hızımızı ölçebileceğimizi anlamıştık. Yukarıdaki kod bu ikinci metoda ait. Bu metodda döngünün sonundan başa dönmeden hemen önce **timePrevious = timeCurrent** şeklinde yukarıda hesapta kullanılan şu andaki zamanı bir sonraki adım için geçmiş zaman haline getirme işlemi mutlaka yapılmak zorunda. Döngüye her başlandığında zaten yeri geldiğinde o andaki zaman **timeCurrent = time.time()** komutuyla yakalanıyor. Bu işin mantığını kendiniz biraz düşünerek anlamanız lazım.
+<p align="justify">Dersi hatırlayacak olursak, ilk önce hızını ölçmek istediğimiz <b>BilateralFilter()</b> komutundan hemen önce bilgisayarın içindeki kronometreden faydalanarak <b>timeStart</b> ismiyle zamanı yakalamıştık. Görüntü işlemeyi yaptıktan hemen sonra <b>timeStop</b> ismiyle yine zamanı yakalayıp <b>timeElapsed = timeStop - timeStart</b> şeklinde geçen zamanı hesaplamıştık. Daha sonra kodun üzerinde düşündüğümüzde sonsuz döngüde olduğumuzu göz önünde bulundurarak iki ayrı zaman yakalama yerine sadece bir kez zamanı yakalayarak görüntü işleme hızımızı ölçebileceğimizi anlamıştık. Yukarıdaki kod bu ikinci metoda ait. Bu yöntemde döngünün sonundan başa dönmeden hemen önce <b>timePrevious = timeCurrent</b> şeklinde yukarıda hesapta kullanılan şu anki zamanı bir sonraki adım için geçmiş zaman haline getirme işlemi mutlaka yapılmak zorunda. Döngüye her başlandığında yeri geldiğinde o andaki zaman <b>timeCurrent = time.time()</b> komutuyla zaten yakalanıyor. Bu işin mantığını üzerinde düşünerek anlamanız lazım.
 
 <h2>Proje 5: Piksel Şiddet Değerleri, Renkli (BGR) - Gri Tonlu - Siyah Beyaz Resimler (bgr-gray-bw)</h2>
 <p align="justify">İkinci hafta yaptığımız ilk projede öğrendiğimiz bazı bilgileri burada kullanacağız. Şimdi <b>albert_einstein.jpg</b> isminde bir fotoğrafı (yukarıda <b>project/color-space</b> dizininde bulabilirsiniz) OpenCV kullanarak bilgisayarımıza okuyalım ve bu renkli resmi analiz edelim. Aşağıdaki kod resmi okur ve ekrana sırasıyla resmin <b>yüksekliğini</b> ve <b>genişliğini</b> piksel cinsinden basar. Ayrıca fotoğrafın <b>kanal</b> sayısı denilen bilgiyi ekrana yazar.</p>
@@ -217,7 +213,7 @@ img[0,0]
 
 <p align="center"><img src="figure/opencv_color_spaces_rgb_cube.png" alt="RGB kübü renk kodu örnekleri" height="300"></p>
 
-Renkli resmi yukarıda bahsettiğimiz RGB ağırlıkları olan (0.3, 0.6, 0.1) ile gri tonlu bir resme dönüştürmek ve yeni oluşan gri tonlu resimde yukarıda incelediğimiz sol üst pikselin yeni oluşan şiddet değerini görüntülemek için aşağıdaki satırları koşturalım. Burada kullandığımız **cvtColor()** fonksiyonu **convert color** kısaltması, Türkçe olarak renk uzayları arasında dönüşüm manasına geliyor.
+<p align="justify">Renkli resmi yukarıda bahsettiğimiz RGB ağırlıkları olan (0.3, 0.6, 0.1) ile gri tonlu bir resme dönüştürmek ve yeni oluşan gri tonlu resimde yukarıda incelediğimiz sol üst pikselin yeni oluşan şiddet değerini görüntülemek için aşağıdaki satırları koşturalım. Burada kullandığımız <b>cvtColor()</b> fonksiyonu <b>convert color</b> kısaltması, Türkçe olarak renk uzayları arasında dönüşüm manasına geliyor.</p>
 
 ```
 imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
