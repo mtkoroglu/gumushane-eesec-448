@@ -379,7 +379,7 @@ cv2.waitKey(0)
 ```
 
 
-##### Haar Cascade Metodu ile Web Kamerası Üzerinde Yüz Tespiti (ve FPS hesabı)
+<h4>Haar Cascade Metodu ile Web Kamerası Üzerinde Yüz Tespiti (ve FPS hesabı)</h4>
 ```
 import cv2
 import time
@@ -414,7 +414,7 @@ cv2.destroyAllWindows()
 <p align="center"><img src="figure/haar cascade face detection web cam.jpg" alt="web cam face detection with haar cascade" width=%100 height=auto></p>
 
 <h2>Proje 8: Yüz Tespiti (Face Detection - OpenCV'den bir Deep Learning metodu ile)</h2>
-<p text-align="justify">Burada referans alacağımız tutorial [10]'da Adrian tarafından hazırlanmış. Normalde OpenCV harka bir kütüphane olduğundan böyle tutorial'lar olmadan bile ne yapacağınızı bildiğiniz takdirde kendi kodunuzu <a href="https://docs.opencv.org/">OpenCV dökümantasyonu</a>ndan faydalanarak rahatça yazabilirsiniz. Ancak burada bu durum söz konusu değil. Adım adım Adrian'ı takip edeceğiz</p>
+<p align="justify">Burada referans alacağımız tutorial [10]'da Adrian tarafından hazırlanmış. Normalde OpenCV harka bir kütüphane olduğundan böyle tutorial'lar olmadan bile ne yapacağınızı bildiğiniz takdirde kendi kodunuzu <a href="https://docs.opencv.org/">OpenCV dökümantasyonu</a>ndan faydalanarak rahatça yazabilirsiniz. Ancak burada bu durum söz konusu değil. Adım adım Adrian'ı takip edeceğiz</p>
 
 <h3>Referanslar</h3>
 <ol>
