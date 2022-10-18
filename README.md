@@ -416,6 +416,8 @@ cv2.destroyAllWindows()
 <h2>Proje 8: Derin Öğrenme ile Yüz Tespiti (Face Detection with Deep Learning)</h2>
 <p align="justify">Burada referans alacağımız tutorial [10]'da Adrian tarafından hazırlanmış. Normalde OpenCV harika bir kütüphane olduğundan böyle tutorial'lar olmadan bile (ne yapacağınızı bildiğiniz takdirde) kendi kodunuzu <a href="https://docs.opencv.org/">OpenCV dökümantasyonu</a>ndan faydalanarak rahatça yazabilirsiniz. Ancak burada bu durum söz konusu değil. Adım adım Adrian'ı takip edeceğiz.</p>
 
+<p align="justify">Adrian OpenCV'nin 2017 Ağustos'unda Deep Neural Network (dnn) ana modülünü (ekstra bir modül değil de standart bir modül olarak) hizmete sunduğunu ve bu modülün içinde derin öğrenme kullanan yüz tespiti metodları olduğunu söylüyor. Bunlardan bir tanesi <a href="https://github.com/arrybn">Aleksandr Rybnikov</a> tarafından OpenCV dnn modülüne dahil edilen ResNet tabanlı bir derin öğrenme yüz tespit metodu. Bu metod popüler yapay zeka kütüphanelerinden biri olan <a href="https://caffe.berkeleyvision.org/"Caffe</a>'den model mimarisini ve eğitilmiş modelin ağırlıklarını giriş olarak kullanarak görüntüdeki yüzleri oldukça yüksek bir performansla (e.g., Haar Cascade sonuçları ile kıyaslanabilir) tespit ediyor.</p>
+
 <h3>Referanslar</h3>
 <ol>
     <li>OpenCV 4.5.5 Dökümantasyonu - https://docs.opencv.org/4.5.5/</li>
