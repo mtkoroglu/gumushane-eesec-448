@@ -416,7 +416,7 @@ cv2.destroyAllWindows()
 
 <p align="center"><img src="figure/haar cascade face detection web cam.jpg" alt="web cam face detection with haar cascade" width=%100 height=auto></p>
 
-## Proje 8: Yüz Tespiti (Face Detection - OpenCV'den bir Deep Learning metodu ile)
+<h2>Proje 8: Yüz Tespiti (Face Detection - OpenCV'den bir Deep Learning metodu ile)</h2>
 <p text-align="justify">Dersi bu sefer DBS'de kayıt seçeneğiyle kaydettik, 15. Hafta başlığı altındaki bağlantıdan izleyebilirsiniz.</p>
 
 <h3>Referanslar</h3>
@@ -424,12 +424,13 @@ cv2.destroyAllWindows()
     <li>OpenCV 4.5.5 Dökümantasyonu - https://docs.opencv.org/4.5.5/</li>
     <li>FPS animasyonu - https://news.productioncrate.com/tag/fps/</li>
     <li>OpenCV'de Görüntü Filtreleme (Bulandırma) [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2021/04/28/opencv-smoothing-and-blurring/</li>
-    <li>OpenCV'de **time** paketi kullanılarak FPS hesaplanması - https://www.geeksforgeeks.org/python-displaying-real-time-fps-at-which-webcam-video-file-is-processed-using-opencv/</li>
+    <li>OpenCV'de <b>time</b> paketi kullanılarak FPS hesaplanması - https://www.geeksforgeeks.org/python-displaying-real-time-fps-at-which-webcam-video-file-is-processed-using-opencv/</li>
     <li>OpenCV'de Renk Uzayları Arasında Dönüşüm - https://www.pyimagesearch.com/2021/04/28/opencv-color-spaces-cv2-cvtcolor/</li>
     <li>Standard Kütüphane ve **numpy** ile Rasgele Sayı, Dizi ve Matris Üretme - https://machinelearningmastery.com/how-to-generate-random-numbers-in-python/</li>
     <li>OpenCV'de Eşikleme (Thresholding) [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2021/04/28/opencv-thresholding-cv2-threshold/</li>
     <li>OpenCV'de <b>Haar Cascade</b> Metodu ile Yüz Tespiti [A. Rosebrock, pyimagesearch.com] - https://www.pyimagesearch.com/2021/04/05/opencv-face-detection-with-haar-cascades/</li>
     <li>Haar Cascade ile Yüz ve Göz Tespiti (OpenCV tutorial) - https://docs.opencv.org/4.x/db/d28/tutorial_cascade_classifier.html</li>
+    <li>OpenCV'de Derin Öğrenme ile Yüz Tespiti [A. Rosebrock, pyimagesearch.com] - https://pyimagesearch.com/2018/02/26/face-detection-with-opencv-and-deep-learning/</li>
     <li>OpenCV'de <b>VideoWrite()</b> komutuyla video oluşturma - https://docs.opencv.org/4.x/dd/d43/tutorial_py_video_display.html</li>
     <li>OpenCV'de <b>imageio</b> paketiyle <b>gif</b> animasyon yapma - https://pysource.com/2021/03/25/create-an-animated-gif-in-real-time-with-opencv-and-python/</li>
 </ol>
