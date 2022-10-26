@@ -3,7 +3,7 @@
 
 <p align="justify">Bu sayfadaki projelerde <b>Python 3.9.6</b> ve dersin yapıldığı zamanda hazır olan en güncel <a href="https://opencv.org/">OpenCV</a> versiyonunu kullanıyor olacağız. Aşağıda açıklamalarını/sonuçlarını gördüğünüz projelerin <b>py</b> uzantılı <b>Python</b> kodlarını yukarıda <b>project</b> isimli dosyada bulabilirsiniz.
 <h4>Python Yüklenmesi</h4>
-<p align="justify">İnternette genelde <a href="https://www.anaconda.com/">Anaconda</a> paketi ile beraber yüklenen Python'ı biz direk olarak <a href="https://python.org">resmî web sitesinden</a> indireceğiz. Siteye gittiğimizde "Downloads" yazan indirme tabının üzerine geldiğimizde aşağıdaki gibi bir görüntü karşımıza çıkmakta.</p>
+<p align="justify">İnternette genelde <a href="https://www.anaconda.com/">Anaconda</a> paketi ile beraber yüklenen Python'ı biz direk olarak <a href="https://python.org">resmî web sitesinden</a> indireceğiz. Siteye gittiğimizde fare ile "Downloads" sekmesinin üzerine geldiğimizde aşağıdaki gibi bir görüntü karşımıza çıkmakta.</p>
 
 <figure>
     <img src="figure/python_dot_org.png" alt="python.org Downloads" width=600px height=auto>
