@@ -6,7 +6,7 @@
 <p align="justify">İnternette genelde <a href="https://www.anaconda.com/">Anaconda</a> paketi ile beraber yüklenen Python'ı biz direk olarak <a href="https://python.org">resmî web sitesinden</a> indireceğiz. Siteye gittiğimizde "Downloads" yazan indirme tabının üzerine geldiğimizde aşağıdaki gibi bir görüntü karşımıza çıkmakta.</p>
 
 <figure>
-    <img src="figure/python_dot_org.png" alt="python.org Downloads" width=400px height=auto>
+    <img src="figure/python_dot_org.png" alt="python.org Downloads" width=600px height=auto>
     <figcaption>Python resmî web sitesi (Downloads).</figcaption>
 </figure>
 
