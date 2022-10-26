@@ -5,7 +5,7 @@
 <h4>Python Yüklenmesi</h4>
 <p align="justify">İnternette genelde <a href="https://www.anaconda.com/">Anaconda</a> paketi ile beraber yüklenen Python'ı biz direk olarak <a href="https://python.org">resmî web sitesinden</a> indireceğiz. Siteye gittiğimizde "Downloads" yazan indirme tabının üzerine geldiğimizde aşağıdaki gibi bir görüntü karşımıza çıkmakta.</p>
 <figure>
-<img src="" alt="python.org Downloads" width=200px height=auto>
+<img src="python_dot_org.png" alt="python.org Downloads" width=200px height=auto>
 <figcaption>Python resmî web sitesi (Downloads)</figcaption>
 </figure>
 <h4>Kullanacağımız Komutlar</h4>
