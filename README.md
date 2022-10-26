@@ -6,14 +6,14 @@
 <p align="justify">İnternette genelde <a href="https://www.anaconda.com/">Anaconda</a> paketi ile beraber yüklenen Python'ı biz direk olarak <a href="https://python.org">resmî web sitesinden</a> indireceğiz. Siteye gittiğimizde "Downloads" yazan indirme tabının üzerine geldiğimizde aşağıdaki gibi bir görüntü karşımıza çıkmakta.</p>
 
 <figure>
-    <img src="figure/python_dot_org.png" alt="python.org Downloads" width=300px height=auto>
+    <img src="figure/python_dot_org.png" alt="python.org Downloads" width=400px height=auto>
     <figcaption>Python resmî web sitesi (Downloads).</figcaption>
 </figure>
 
 <p align="justify">Gelen sayfada Windows için Python sürümleri yer almakta. Sol taraftaki kararlı sürümlerden aşağıdaki (kırmızı renk ile) gösterilen Python 3.9.6'nın Windows 64-bit için (yeşil renk ile) gösterilen yükleyicisine tıklıyoruz ve <b>python-3.9.6-amd64.exe</b> dosyasını indiriyoruz.</p>
 
 <figure>
-    <img src="figure/python 3.9.6 indir.jpg" alt="Python 3.9.6 indir" width=200px height=auto>
+    <img src="figure/python 3.9.6 indir.jpg" alt="Python 3.9.6 indir" width=400px height=auto>
     <figcaption>Python'ın uygun bir sürümünün indirilmesi.</figcaption>
 </figure>
 <h4>Kullanacağımız Komutlar</h4>
