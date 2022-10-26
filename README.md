@@ -7,15 +7,15 @@
 
 <figure>
     <img src="figure/python_dot_org.png" alt="python.org Downloads" width=600px height=auto>
-    <figcaption>Python resmî web sitesi (Downloads).</figcaption>
 </figure>
 
 <p align="justify">Gelen sayfada Windows için Python sürümleri yer almakta. Sol taraftaki kararlı sürümlerden aşağıdaki (kırmızı renk ile) gösterilen Python 3.9.6'nın Windows 64-bit için (yeşil renk ile) gösterilen yükleyicisine tıklıyoruz ve <b>python-3.9.6-amd64.exe</b> dosyasını indiriyoruz.</p>
 
 <figure>
     <img src="figure/python 3.9.6 indir.jpg" alt="Python 3.9.6 indir" width=400px height=auto>
-    <figcaption>Python'ın uygun bir sürümünün indirilmesi.</figcaption>
 </figure>
+
+<p align="justify">Yukarıda dikkat edilmesi gereken önemli bir nokta kırmızı renkle gösterilen Python sürümünün altında koyu renkle yazılan not uyarısında belirtilen Windows versiyon uyumluluğu. Eğer bilgisayarda işletim sistemi olarak Windows 7 veya önceki Windows sürümleri yüklüyse o zaman doğal olarak Python 3.9.6'dan daha eski bir sürüm yüklemek gerekir.</p>
 <h4>Kullanacağımız Komutlar</h4>
 <p align="justify">Masaüstünde <strong>EESEC 448</strong> isimli klasörü oluşturduktan sonra <b>Windows PowerShell</b>'de gerekli <b>cd</b> komutlarıyla bu klasörün içine girin. Sonra <b>sanal ortam</b> (İng. <b>virtual environment</b>) oluşturmak için</p> 
 
