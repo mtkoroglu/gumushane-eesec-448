@@ -5,7 +5,7 @@ from collections import deque
 
 # load our serialized model from disk
 print("[INFO] loading model...")
-net = cv2.dnn.readNetFromCaffe('requirement/deploy.prototxt.txt', 'requirement/res10_300x300_ssd_iter_140000.caffemodel')
+net = cv2.dnn.readNetFromCaffe('deploy.prototxt.txt', 'res10_300x300_ssd_iter_140000.caffemodel')
 conf = 0.5 # minimum probability to filter weak detections
 fps = deque(maxlen=100)
 k = 0 # index for saving screenshot to file

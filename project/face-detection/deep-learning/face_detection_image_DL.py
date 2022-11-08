@@ -4,14 +4,11 @@ import cv2
 # load our serialized model from disk
 print("[INFO] loading model...")
 # dnn deep neural network
-net = cv2.dnn.readNetFromCaffe('requirement/deploy.prototxt.txt', 'requirement/res10_300x300_ssd_iter_140000.caffemodel')
-conf = 0.4 # minimum probability to filter weak detections
-
-
-# IMG_20220522_145111.jpg IMG_20220605_150433.jpg IMG_20220604_135426.jpg IMG_20220604_140145.jpg
+net = cv2.dnn.readNetFromCaffe('deploy.prototxt.txt', 'res10_300x300_ssd_iter_140000.caffemodel')
+conf = 0.14 # minimum probability to filter weak detections
 # load the input image and construct an input blob for the image
 # by resizing to a fixed 300x300 pixels and then normalizing it
-image = cv2.imread('image/tahaSharp.bmp') # iron_chic.jpg rooster.jpg
+image = cv2.imread('../image/IMG_20220620_184956.jpg') # iron_chic.jpg rooster.jpg
 (h, w) = image.shape[:2]
 blob = cv2.dnn.blobFromImage(cv2.resize(image, (300, 300)), 1.0,
 	(300, 300), (104.0, 177.0, 123.0))
@@ -44,7 +41,7 @@ for i in range(0, detections.shape[2]):
 		cv2.rectangle(image, (startX, startY), (endX, endY), color, 7)
 		cv2.putText(image, text, (startX+10, y-10), 0, 1.5, color, 5)
 # save output image
-cv2.imwrite('result/taha phd columbus DL.jpg', image, [cv2.IMWRITE_JPEG_QUALITY, 100])
+cv2.imwrite('../result/football.jpg', image, [cv2.IMWRITE_JPEG_QUALITY, 100])
 # show the output image
 s = 0.3
 rimage = cv2.resize(image, (int(s*image.shape[1]), int(s*image.shape[0])), cv2.INTER_LINEAR)
