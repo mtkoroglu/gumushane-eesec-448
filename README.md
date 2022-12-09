@@ -1,7 +1,15 @@
-<h1>EESEC 448</h1>
+<h1>EESEC 448 - Görüntü İşleme</h1>
 <p align="justify" style="font-family: Calibri">Merhaba arkadaşlar. Dersimizde mühendisler, bilim adamları ve hobiciler tarafından en fazla tercih edilen görüntü işleme kütüphanesi olan <a href="https://opencv.org" target="_blank"><b>OpenCV</b></a>'yi kullanacağız. Bu sayfada <a href="https://opencv.org/course-opencv-for-beginners/"<b>OpenCV for Beginners</b></a> isimli OpenCV resmi kursunu referans alacağız. Bu kursa kayıt ücreti $117. Ben bu kursa çok önceden <a href="https://www.kickstarter.com/projects/opencv/opencv-for-beginners">kickstarter</a>'dan kayıt olup $57 ödemiştim. Ayrıca <b>Adrian Rosebrock</b> tarafından kurulan <a href="https://www.pyimagesearch.com/pyimagesearch-university/"><b>PyImageSearch University</b></a> diğer çok önemli bir referansımız. Bu plana yaklaşık olarak $300 gibi bir ücretle kaydolabiliyorsunuz. Adrian'ın <b>PyImageSearch University</b> planında </b>OpenCV 101 — OpenCV Basics</b> kursunda öğretilen konuların hepsini EEM 448'de işleyeceğiz. Sizlerin bu kurs ve planlara kaydolmanız zorunlu değil. Bu sayfayı ve <a href="https://dbs.gumushane.edu.tr/" target="_blank">Ders Bilgi Sistemi</a>'ni (DBS) takip etmeniz yeterli.</p>
 
 <p align="justify">Bu sayfadaki projelerde <b>Python 3.9.6</b> ve dersin yapıldığı zamanda hazır olan en güncel <a href="https://opencv.org/">OpenCV</a> versiyonunu kullanıyor olacağız. Aşağıda açıklamalarını/sonuçlarını gördüğünüz projelerin <b>py</b> uzantılı <b>Python</b> kodlarını yukarıda <b>project</b> isimli dosyada bulabilirsiniz.
+
+<h2>Bilgisayarlı Görü</h2>
+<p align="justify">Bilgisayarlı görü (İng. computer vision) uygulamaları günümüzde mühendisliğin en çok çalışma yapılan alanlarından biri olmakla beraber belki de bu alanlar arasında en ilgi çekici olanıdır. Bilgisayarlı görü, ışığın farklı dalga boylarını değişik kalitelerde yakalayabilen çeşitli kameraların (e.g., RGB, termal, kızılötesi) çektiği fotoğraf ve videolardan aynen insanlar gibi çıkarımlarda bulunabilen (e.g., nesne tanıma) disiplinler arası bir bilimsel alandır. Ayrıca akademik/endüstriyel çalışmalarda finansal yatırımların en fazla yapıldığı alan sayılabilecek yapay zekânın içerisinde en fazla bütçe ayrılan bölüm olduğu da söylenebilir. Bilgisayarlı görüyle sık sık karıştırılan görüntü işleme, aşağıdaki şekilde de görülebileceği gibi bilgisayarlı görüden farklı olup onun bir alt dalıdır. Bilgisayarlı görü yakalanan resimlerden yeni çıkarımlarda bulunurken görüntü işlemede çıktı bir resimdir.</p>
+
+<figure>
+    <img src="https://drive.google.com/uc?id=1-igvMY-je_2Bv5yx7yFkKReHrtTWusR8X/view?usp=share_link" alt="görüntü işleme ve bilgisayarlı görü" width=300px height=auto>
+</figure>
+
 <h4>Python Yüklenmesi</h4>
 <p align="justify">İnternette genelde <a href="https://www.anaconda.com/">Anaconda</a> paketi ile beraber yüklenen Python'ı biz direk olarak <a href="https://python.org">resmî web sitesinden</a> indireceğiz. Siteye gittiğimizde fare ile "Downloads" sekmesinin üzerine geldiğimizde aşağıdaki gibi bir görüntü karşımıza çıkmakta.</p>
 
