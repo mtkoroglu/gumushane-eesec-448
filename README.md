@@ -7,7 +7,7 @@
 <p align="justify">Bilgisayarlı görü (İng. computer vision) uygulamaları günümüzde mühendisliğin en çok çalışma yapılan alanlarından biri olmakla beraber belki de bu alanlar arasında en ilgi çekici olanıdır. Bilgisayarlı görü, ışığın farklı dalga boylarını değişik kalitelerde yakalayabilen çeşitli kameraların (e.g., RGB, termal, kızılötesi) çektiği fotoğraf ve videolardan aynen insanlar gibi çıkarımlarda bulunabilen (e.g., nesne tanıma) disiplinler arası bir bilimsel alandır. Ayrıca akademik/endüstriyel çalışmalarda finansal yatırımların en fazla yapıldığı alan sayılabilecek yapay zekânın içerisinde en fazla bütçe ayrılan bölüm olduğu da söylenebilir. Bilgisayarlı görüyle sık sık karıştırılan görüntü işleme, aşağıdaki şekilde de görülebileceği gibi bilgisayarlı görüden farklı olup onun bir alt dalıdır. Bilgisayarlı görü yakalanan resimlerden yeni çıkarımlarda bulunurken görüntü işlemede çıktı bir resimdir.</p>
 
 <figure>
-    <img src="https://drive.google.com/uc?id=1igvMY-je_2Bv5yx7yFkKReHrtTWusR8X" alt="görüntü işleme ve bilgisayarlı görü" width=60% height=auto>
+    <img src="https://drive.google.com/uc?id=1igvMY-je_2Bv5yx7yFkKReHrtTWusR8X" alt="görüntü işleme ve bilgisayarlı görü" width=500px height=auto>
 </figure>
 
 <h4>Python Yüklenmesi</h4>
