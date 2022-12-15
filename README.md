@@ -14,7 +14,7 @@
 <p align="justify">İnternette genelde <a href="https://www.anaconda.com/">Anaconda</a> paketi ile beraber yüklenen Python'ı biz direk olarak <a href="https://python.org">resmî web sitesinden</a> indireceğiz. Siteye gittiğimizde fare ile "Downloads" sekmesinin üzerine geldiğimizde aşağıdaki gibi bir görüntü karşımıza çıkmakta.</p>
 
 <figure>
-    <a href="https://python.org"><img src="figure/python_dot_org.png" alt="python.org Downloads" width=600px height=auto></a>
+    <a href="https://python.org" target="_blank"><img src="figure/python_dot_org.png" alt="python.org Downloads" width=600px height=auto></a>
 </figure>
 
 <p align="justify">Gelen sayfada Windows için Python sürümleri yer almakta. Sol taraftaki kararlı sürümlerden aşağıdaki (kırmızı renk ile) gösterilen Python 3.9.6'nın Windows 64-bit için (yeşil renk ile) gösterilen yükleyicisine tıklıyoruz ve <b>python-3.9.6-amd64.exe</b> dosyasını indiriyoruz.</p>
