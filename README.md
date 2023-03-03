@@ -177,7 +177,7 @@ cv2.destroyAllWindows()
 
 <figure>
     <img src="figure/birlesik resim dusuk boyut.jpg" alt="birleştirilmiş filtrelenmiş resimler" width=%100 height=auto>
-    <figcaption>Filtreleme sonucu elde edilen resimler<figcaption>
+    <figcaption>Filtreleme sonucu elde edilen resimler</figcaption>
 </figure>
 
 <h2>Proje 4: Görüntü İşleme Hızını Hesaplama (processing-speed)</h2>
