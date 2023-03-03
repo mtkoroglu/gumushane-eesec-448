@@ -60,7 +60,7 @@ pip install pyautogui mediapipe mime
 <h4>Visual Studio Code'a Sanal Ortamın Kaydedilmesi/Tanıtılması</h4>
 <p align="justify">Yukarıdaki videolarda bilgisayarımıza <b>Python</b> yükledikten sonra <b>opencv-env</b> isimli bir <b>sanal ortam</b> oluşturup içerisine <b>OpenCV</b>'yi ve bağımlı olduğu kütüphaneleri yüklemeyi gördük. Derste kullanacağımız <b>Visual Studio Code</b> (VSC) editöründe kod yazarken kullanacağımız <b>OpenCV</b> fonksiyonları hakkında yardım alabilmek için VSC'ye sanal ortamımızı kaydetmemiz/tanıtmamız lazım. Bu işlem için aşağıdaki resme tıklayınca açılan videoyu izleyin.</p>
 
-[![IMAGE ALT TEXT HERE](figure/opencv_env_VSC.jpg)](https://youtu.be/6Z5lM1WqBXU)
+[![IMAGE ALT TEXT HERE](figure/opencv_env_VSC.jpg)](https://www.youtube.com/watch?v=GRy45pZqcjI)
 
 <p align="justify"><b>Not:</b> Sınavlarda OpenCV'yi bilgisayarımıza direk değil de sanal ortama yüklemeyle/kurmayla ilgili sorular gelecektir.</p>
 
