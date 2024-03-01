@@ -1,14 +1,7 @@
 <h1>EESEC 448 - Görüntü İşleme</h1>
-<p align="justify" style="font-family: Calibri">Merhaba arkadaşlar. Dersimizde mühendisler, bilim adamları ve hobiciler tarafından en fazla tercih edilen görüntü işleme kütüphanesi olan <a href="https://opencv.org" target="_blank"><b>OpenCV</b></a>'yi kullanacağız. Bu sayfada <a href="https://opencv.org/course-opencv-for-beginners/"<b>OpenCV for Beginners</b></a> isimli OpenCV resmi kursunu referans alacağız. Bu kursa kayıt ücreti $117. Ben bu kursa çok önceden <a href="https://www.kickstarter.com/projects/opencv/opencv-for-beginners">kickstarter</a>'dan kayıt olup $57 ödemiştim. Ayrıca <b>Adrian Rosebrock</b> tarafından kurulan <a href="https://www.pyimagesearch.com/pyimagesearch-university/"><b>PyImageSearch University</b></a> diğer çok önemli bir referansımız. Bu plana yaklaşık olarak $300 gibi bir ücretle kaydolabiliyorsunuz. Adrian'ın <b>PyImageSearch University</b> planında </b>OpenCV 101 — OpenCV Basics</b> kursunda öğretilen konuların hepsini EEM 448'de işleyeceğiz. Sizlerin bu kurs ve planlara kaydolmanız zorunlu değil. Bu sayfayı ve <a href="https://dbs.gumushane.edu.tr/" target="_blank">Ders Bilgi Sistemi</a>'ni (DBS) takip etmeniz yeterli.</p>
+<p align="justify">Merhaba arkadaşlar. Dersimizde mühendisler, bilim adamları ve hobiciler tarafından en fazla tercih edilen görüntü işleme kütüphanesi olan <a href="https://opencv.org" target="_blank"><b>OpenCV</b></a>'yi kullanacağız. Bu sayfada <a href="https://opencv.org/course-opencv-for-beginners/"<b>OpenCV for Beginners</b></a> isimli OpenCV resmi kursundan ve ayrıca <b>Adrian Rosebrock</b> tarafından kurulan <a href="https://www.pyimagesearch.com/pyimagesearch-university/"><b>PyImageSearch University</b></a> platformunda yer alan kurslardan faydalanacağız. Sizlerin bu kurs ve planlara kaydolmanız zorunlu değil. Bu sayfayı ve <a href="https://dbs.gumushane.edu.tr/" target="_blank">Ders Bilgi Sistemi</a>'ni (DBS) takip etmeniz yeterli.</p>
 
-<p align="justify">Bu sayfadaki projelerde Python'un güncel sürümleriden birisini (e.g., Python 3.9.6 veya Python 3.10.8) ve dersin yapıldığı zamanda kullanıma sunulmuş en güncel <a href="https://opencv.org/">OpenCV</a> kütüphanesini kullanıyor olacağız. Aşağıda gördüğünüz projelerin <b>py</b> uzantılı <b>Python</b> kodlarını yukarıda <b>project</b> isimli dosyadan indirebilir ve bilgisayarınızda koşturabilirsiniz. Ancak sizlere kodları kendiniz yazmanızı tavsiye ediyorum.
-
-<h2>Bilgisayarlı Görü</h2>
-<p align="justify">Bilgisayarlı görü (İng. computer vision) uygulamaları günümüzde mühendisliğin en çok çalışma yapılan alanlarından biri olmakla beraber belki de bu alanlar arasında en ilgi çekici olanıdır. Bilgisayarlı görü, ışığın farklı dalga boylarını değişik kalitelerde yakalayabilen çeşitli kameraların (e.g., RGB, termal, kızılötesi) çektiği fotoğraf ve videolardan aynen insanlar gibi çıkarımlarda bulunabilen (e.g., nesne tanıma) disiplinler arası bir bilimsel alandır. Ayrıca akademik/endüstriyel çalışmalarda finansal yatırımların en fazla yapıldığı alan sayılabilecek yapay zekânın içerisinde en fazla bütçe ayrılan bölüm olduğu da söylenebilir. Bilgisayarlı görüyle sık sık karıştırılan görüntü işleme, aşağıdaki şekilde de görülebileceği gibi bilgisayarlı görüden farklı olup onun bir alt dalıdır. Bilgisayarlı görü yakalanan resimlerden yeni çıkarımlarda bulunurken görüntü işlemede çıktı bir resimdir.</p>
-
-<figure>
-    <img src="https://drive.google.com/uc?export=view&id=19_u9hmw4fJ2Myy9yFO8-rn1tTaJ8c-Va" alt="görüntü işleme ve bilgisayarlı görü" width=500px height=auto>
-</figure>
+<p align="justify">Bu sayfadaki projelerde Python'un güncel sürümlerinden birisini ve dersin yapıldığı dönemde kullanımda olan en güncel <b>OpenCV</b> kütüphanesini kullanıyor olacağız. Aşağıda gördüğünüz projelerin <b>py</b> uzantılı <b>Python</b> kodlarını yukarıda <b>project</b> isimli dosyadan indirebilir ve bilgisayarınızda koşturabilirsiniz. Ancak sizlere kodları kendiniz satır satır yazmanızı tavsiye ediyorum. Bu şekilde hem Python hem OpenCV anlamada kendinizi geliştirirsiniz.</p>
 
 <h4>Python Yüklenmesi</h4>
 <p align="justify">İnternette genelde <a href="https://www.anaconda.com/">Anaconda</a> paketi ile beraber yüklenen Python'ı biz direk olarak <a href="https://python.org">resmî web sitesinden</a> indireceğiz. Siteye gittiğimizde fare ile "Downloads" sekmesinin üzerine geldiğimizde aşağıdaki gibi bir görüntü karşımıza çıkmakta.</p>
@@ -63,6 +56,13 @@ pip install pyautogui mediapipe mime
 [![IMAGE ALT TEXT HERE](figure/opencv_env_VSC.jpg)](https://www.youtube.com/watch?v=GRy45pZqcjI)
 
 <p align="justify"><b>Not:</b> Sınavlarda OpenCV'yi bilgisayarımıza direk değil de sanal ortama yüklemeyle/kurmayla ilgili sorular gelecektir.</p>
+
+<h2>Bilgisayarlı Görü</h2>
+<p align="justify">Bilgisayarlı görü (İng. computer vision) uygulamaları günümüzde mühendisliğin en çok çalışma yapılan alanlarından biri olmakla beraber belki de bu alanlar arasında en ilgi çekici olanıdır. Bilgisayarlı görü, ışığın farklı dalga boylarını değişik kalitelerde yakalayabilen çeşitli kameraların (e.g., RGB, termal, kızılötesi) çektiği fotoğraf ve videolardan aynen insanlar gibi çıkarımlarda bulunabilen (e.g., nesne tanıma) disiplinler arası bir bilimsel alandır. Ayrıca akademik/endüstriyel çalışmalarda finansal yatırımların en fazla yapıldığı alan sayılabilecek yapay zekânın içerisinde en fazla bütçe ayrılan bölüm olduğu da söylenebilir. Bilgisayarlı görüyle sık sık karıştırılan görüntü işleme, aşağıdaki şekilde de görülebileceği gibi bilgisayarlı görüden farklı olup onun bir alt dalıdır. Bilgisayarlı görü yakalanan resimlerden yeni çıkarımlarda bulunurken görüntü işlemede çıktı bir resimdir.</p>
+
+<figure>
+    <img src="https://drive.google.com/uc?export=view&id=19_u9hmw4fJ2Myy9yFO8-rn1tTaJ8c-Va" alt="görüntü işleme ve bilgisayarlı görü" width=500px height=auto>
+</figure>
 
 <h2>Proje 1: Resim Yükleme ve Görüntüleme (load-display-image)</h2>
 <h3>Yüklenen Resmin Üzerine Yazı Yazma, Resmi Yeniden Boyutlandırma, Ekranda Görüntüleme ve Dosyaya Kaydetme</h3>
