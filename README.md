@@ -39,7 +39,7 @@ py -m venv opencv-env
 <p align="justify">komutunu girerek <b>opencv-env</b> isimli sanal ortamı <b>aktif</b> hale getirin. Bunu müteakiben sırasıyla</p> 
 
 ```
-pip install opencv-contrib-python streamlit jupyter moviepy ipykernel matplotlib
+pip install opencv-contrib-python streamlit moviepy matplotlib
 ```
 
 ve
